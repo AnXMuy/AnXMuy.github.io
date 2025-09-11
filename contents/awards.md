@@ -1,16 +1,16 @@
 
-- Outstanding Graduate Award (CUMT), 2025.
+- **Silver Medal**, ICPC Shaanxi Provincial Programming Contest, 2025
+  
+- **Excellence Award** (Finalist, **sole team from Northwest China**), AI+ College Innovation Program, AI Technology Track, 2025
 
-- National Scholarship for Graduate Student, 2024.
+- “Shuiyou” First-Class Scholarship (**Top 4** students in university), 2024
 
-- First-Prize Scholarship (CUMT), 2024.
+-** First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division), 2024
 
-- First-Prize Scholarship (CUMT), 2023.
+- **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA, 2024
 
-- Freshman Scholarship (CUMT), 2022.
+- **Bronze Medal**, ICPC Shaanxi Provincial Programming Contest, 2024
 
-- Outstanding Graduation Project Award (Jiangsu Province), 2022.
+- **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division), 2023
 
-- First-Prize Enterprise Scholarship (CUMT), 2020.
-
-- First-Prize Scholarship (CUMT), 2019.
+- Third-Class Scholarship, Xi'an Jiaotong University, 2023
