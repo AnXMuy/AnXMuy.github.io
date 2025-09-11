@@ -5,7 +5,7 @@
 
 - “Shuiyou” First-Class Scholarship (**Top 4** students in university), 2024
 
--** First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division), 2024
+- ** First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division), 2024
 
 - **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA, 2024
 
