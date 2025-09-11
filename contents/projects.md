@@ -1,5 +1,5 @@
 #### Math Modeling
-I collaborated with Xiao Enze and Zhao Wenmo from Xi 'an Jiaotong University on mathematical model-related work. Some of the achievements are as follows:
+I collaborated with Xiao Enze and Zhao Wenmo from Xi 'an Jiaotong University on mathematical modeling. Some of the achievements are as follows:
 
 - [Optimization of smoke screen grenade deployment Strategy Based on Greedy Algorithm and variable step size search, CN, 2025(to be updated)]()
 
