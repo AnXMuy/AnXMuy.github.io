@@ -9,13 +9,13 @@ I collaborated with Xiao Enze and Zhao Wenmo from Xi 'an Jiaotong University on 
 
 - [Design of Secondary Reflection Energy Convergence System Based on Group Stepwise Optimization Strategy, CN, 2024](./MathModeling/基于分组步进式优化策略的二次反射能量汇聚系统设计.pdf)
 
-- [Safe or not-A Prediction and Programming Model, EN, 2024](./MathModeling/Safe or not-A Prediction and Programming Model.pdf)
+- [Safe or not-A Prediction and Programming Model, EN, 2024](./MathModeling/Safeornot-APredictionandProgrammingModel.pdf)
 
-- [Calculation And Optimization of Reflection Light Convergence, EN, 2024](./MathModeling/Calculation And Optimization of Reflection Light Convergence.pdf)
+- [Calculation And Optimization of Reflection Light Convergence, EN, 2024](./MathModeling/CalculationAndOptimizationofReflectionLightConvergence.pdf)
 
 - [Thermal power calculation and layout optimization design of solar tower-type solar thermal mirror field, CN, 2023](./MathModeling/太阳能塔式光热镜场的热功率计算及布局优化设计.pdf)
 
 - [Analysis of apple tree canopy Structure and light and shadow conditions based on ray tracing, CN, 2023](./MathModeling/基于光线追踪的苹果树树冠结构与受光和阴影情况分析.pdf)
 
-- [The Analysis of Wordle on Prediction and Classification, EN, 2023](./MathModeling/The Analysis of Wordle on Prediction and Classification.pdf)
+- [The Analysis of Wordle on Prediction and Classification, EN, 2023](./MathModeling/TheAnalysisofWordleonPredictionandClassification.pdf)
 
