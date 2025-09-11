@@ -2,7 +2,7 @@
 
 - Body movement, wings follow - Drone control based on human motion language recognition, 2024--[_Project Plan_](AnXMuy.github.io/contents/UAV/v1)
 
-- MotionPilotX-
+- MotionPilotX- Dynamic Posture Intelligent Control Unmanned Aerial Vehicle, 2025--[_Project Plan_](AnXMuy.github.io/contents/UAV/v2)
 
 #### Mathematical Modeling
 I collaborated with Enze Xiao and Wenmo Zhao from Xi 'an Jiaotong University on mathematical modeling. Some of the achievements are as follows:
