@@ -49,16 +49,27 @@ Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu M
 - [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2024.11* . 
+
+- *2025.10* **National Scholarship**
+- *2025.10* "Outstanding Student", Xi'an Jiaotong University
+- *2024.11* “Shuiyou” First-Class Scholarship (**Top 4** students in university)
+- *2024.11* "Outstanding Student", Xi'an Jiaotong University
+- *2023.11* Third-Class Scholarship, Xi'an Jiaotong University
+
+# 🏆 Competitions
+
+- *2025* **Second Prize**, The 9th National Laser Radar Conference Point Cloud Intelligent Analysis Competition "Extraction and Vectorization of Urban Road Lane Lines" Competition
+- *2025* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
+- *2025* **Silver Medal**, ICPC Shaanxi Provincial Programming Contest
+- *2025* **Excellence Award** (Finalist, **sole team from Northwest China**), AI+ College Innovation Program, AI Technology Track
+- *2024* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
+- *2024* **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
+- *2024* **Bronze Medal**, ICPC Shaanxi Provincial Programming Contest
+- *2023* **Honorable Prize**, Mathematical Contest in Modeling (MCM), USA
+- *2023* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
 
 # 📖 Educations
 - *2023.09 - (now)*, Artificial Intelligence Experimental Class, Xi 'an Jiaotong University (Outstanding Talent Program). 
 - *2021.09 - (now)*, Young Gifted Program. 
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
