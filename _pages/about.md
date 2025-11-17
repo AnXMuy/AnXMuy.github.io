@@ -35,7 +35,7 @@ I'm currently an undergraduate student with the [College of Artificial Intellige
 
 [DescribeEarth: Describe Anything for Remote Sensing Images](https://arxiv.org/abs/2509.25654)
 
-Kaiyu Li^*^, **Zixuan Jiang^*^**, Xiangyong Cao^☨^, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang
+Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang
 
 **Open-source**: [code](https://github.com/earth-insights/DescribeEarth), [dataset](https://huggingface.co/datasets/earth-insights/DE-Dataset), [benchmark](https://huggingface.co/datasets/earth-insights/DE-Benchmark)
 - We introduce geo-spatial detailed localized captioning.
@@ -46,7 +46,7 @@ Kaiyu Li^*^, **Zixuan Jiang^*^**, Xiangyong Cao^☨^, Jiayu Wang, Yuchen Xiao, D
 </div>
 </div>
 
-- [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao^☨^, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
+- [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
 
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
