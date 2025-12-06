@@ -16,7 +16,7 @@ main:
     url: "/#-educations"
 
   - title: "Competitions"
-    url: "/#-conpetitions"
+    url: "/#-competitions"
 
   - title: "Internships"
     url: "/#-internships"
