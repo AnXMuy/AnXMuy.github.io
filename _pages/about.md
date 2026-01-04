@@ -59,15 +59,19 @@ Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu M
 
 # 🏆 Competitions
 
+## AI Competitions
+
 - *2025* **Second Prize**, The 9th National Laser Radar Conference Point Cloud Intelligent Analysis Competition "Extraction and Vectorization of Urban Road Lane Lines" Competition
-- *2025* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
 - *2025* **Silver Medal**, ICPC Shaanxi Provincial Programming Contest
 - *2025* **Excellence Award** (Finalist, **sole team from Northwest China**), AI+ College Innovation Program, AI Technology Track
-- *2024* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
-- *2024* **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
 - *2024* **Bronze Medal**, ICPC Shaanxi Provincial Programming Contest
+
+## Math Modeling
+
+- *2023~2025* **3 × First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
+- *2024* **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
 - *2023* **Honorable Prize**, Mathematical Contest in Modeling (MCM), USA
-- *2023* **First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
+
 
 # 📖 Educations
 - *2023.09 - (now)*, Artificial Intelligence Experimental Class, Xi 'an Jiaotong University (Outstanding Talent Program). 
