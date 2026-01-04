@@ -25,7 +25,7 @@ I'm currently an undergraduate student with the [College of Artificial Intellige
 
 # 🔥 News
 
-- *2025.10*: &nbsp;🔥 The **National Scholarship** has been confirmed. 
+- *2025.10*: &nbsp;🔥🔥 The **National Scholarship** has been confirmed! 
 - *2025.10*: &nbsp;🎉🎉 **DescribeEarth** has been **open-source**! The code is available @ [github](https://github.com/earth-insights/DescribeEarth)
 - *2025.09*: &nbsp;🎉🎉 **DescribeEarth** has been public on [arxiv](https://arxiv.org/abs/2509.25654)
 
