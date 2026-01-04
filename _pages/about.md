@@ -25,6 +25,7 @@ I'm currently an undergraduate student with the [College of Artificial Intellige
 
 # 🔥 News
 
+- *2025.10*: &nbsp;🔥 The **National Scholarship** has been confirmed. 
 - *2025.10*: &nbsp;🎉🎉 **DescribeEarth** has been **open-source**! The code is available @ [github](https://github.com/earth-insights/DescribeEarth)
 - *2025.09*: &nbsp;🎉🎉 **DescribeEarth** has been public on [arxiv](https://arxiv.org/abs/2509.25654)
 
@@ -52,7 +53,7 @@ Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu M
 
 - *2025.10* **National Scholarship**
 - *2025.10* "Outstanding Student", Xi'an Jiaotong University
-- *2024.11* “Shuiyou” First-Class Scholarship (**Top 4** students in university)
+- *2024.11* “**Shuiyou**” First-Class Scholarship (**Top 4** students in university)
 - *2024.11* "Outstanding Student", Xi'an Jiaotong University
 - *2023.11* Third-Class Scholarship, Xi'an Jiaotong University
 
