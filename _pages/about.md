@@ -9,29 +9,18 @@ redirect_from:
 ---
 
 <style>
-    /* 按钮样式 */
-    .copy-email-btn {
-        background-color: #007BFF; /* 专业的蓝色背景 */
-        color: white; /* 白色文字 */
-        border: none; /* 无边框 */
-        padding: 10px 20px; /* 内边距 */
-        border-radius: 5px; /* 圆角 */
+    /* 邮件文本链接样式 */
+    .copy-email-text {
+        color: #007BFF; /* 蓝色，看起来像链接 */
         cursor: pointer; /* 鼠标悬停时显示为指针 */
-        font-size: 16px; /* 字体大小 */
         font-weight: bold; /* 字体加粗 */
-        transition: background-color 0.3s ease, transform 0.1s ease; /* 平滑过渡效果 */
-        position: relative; /* 用于定位提示信息 */
-        vertical-align: middle; /* 垂直居中对齐 */
+        transition: color 0.3s ease; /* 颜色变化过渡效果 */
     }
 
     /* 鼠标悬停效果 */
-    .copy-email-btn:hover {
-        background-color: #0056b3; /* 悬停时加深背景色 */
-    }
-    
-    /* 鼠标点击效果 */
-    .copy-email-btn:active {
-        transform: scale(0.98); /* 点击时轻微缩小 */
+    .copy-email-text:hover {
+        text-decoration: underline; /* 悬停时添加下划线 */
+        color: #0056b3; /* 悬停时加深颜色 */
     }
 </style>
 
@@ -48,7 +37,7 @@ redirect_from:
 
 I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021
 
-**Ask Me Anything Through <button class="copy-email-btn" id="emailBtn" data-email="andrewjiang@stu.xjtu.edu.cn">Email</button>!**
+**Ask Me Anything Through** <span class="copy-email-text" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Email</span>!
 
 # 🔥 News
 
@@ -110,23 +99,27 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 - *2023.11- (now)*, **Research Intern** @ Xi'an Jiaotong University, Adviser: Prof. Xiangyong Cao.
 
 
+
 <script>
-    const emailBtn = document.getElementById('emailBtn');
+    const emailText = document.getElementById('emailText');
     
-    emailBtn.addEventListener('click', function() {
+    emailText.addEventListener('click', function() {
         const email = this.getAttribute('data-email');
         
         // 使用 Clipboard API 复制文本
         navigator.clipboard.writeText(email).then(() => {
             // 复制成功
             const originalText = this.textContent;
-            this.textContent = 'Copied!';
-            this.style.backgroundColor = '#28a745'; // 变成绿色背景
             
-            // 2秒后恢复原始文本和颜色
+            this.textContent = 'Copied!';
+            this.style.color = '#28a745'; // 变成绿色
+            this.style.textDecoration = 'none'; // 暂时去掉下划线
+            
+            // 2秒后恢复原始文本和样式
             setTimeout(() => {
                 this.textContent = originalText;
-                this.style.backgroundColor = '#007BFF'; // 恢复蓝色背景
+                this.style.color = ''; // 恢复默认颜色（由CSS类控制）
+                this.style.textDecoration = ''; // 恢复默认样式
             }, 2000);
             
         }).catch(err => {
@@ -136,4 +129,6 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
         });
     });
 </script>
+
+
 
