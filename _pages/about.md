@@ -21,10 +21,11 @@ redirect_from:
 
 I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021
 
-**Ask Me Anything Through** [email](andrewjiang@stu.xjtu.edu.cn)! 
+**Ask Me Anything Through** <button type="button" onclick="navigator.clipboard.writeText('andrewjiang@stu.xjtu.edu.cn')"> Email </button>! 
 
 # 🔥 News
 
+- *2025.12*: &nbsp;🎉🎉 Receive a pre-admission offer from Shanghai Innovation Institute through the 2026 Golden Autumn Camp! 
 - *2025.10*: &nbsp;🔥🔥 The **National Scholarship** has been confirmed! 
 - *2025.10*: &nbsp;🎉🎉 **DescribeEarth** has been **open-source**! The code is available @ [github](https://github.com/earth-insights/DescribeEarth)
 - *2025.09*: &nbsp;🎉🎉 **DescribeEarth** has been public on [arxiv](https://arxiv.org/abs/2509.25654)
