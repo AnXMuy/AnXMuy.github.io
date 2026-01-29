@@ -8,6 +8,33 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+    /* 按钮样式 */
+    .copy-email-btn {
+        background-color: #007BFF; /* 专业的蓝色背景 */
+        color: white; /* 白色文字 */
+        border: none; /* 无边框 */
+        padding: 10px 20px; /* 内边距 */
+        border-radius: 5px; /* 圆角 */
+        cursor: pointer; /* 鼠标悬停时显示为指针 */
+        font-size: 16px; /* 字体大小 */
+        font-weight: bold; /* 字体加粗 */
+        transition: background-color 0.3s ease, transform 0.1s ease; /* 平滑过渡效果 */
+        position: relative; /* 用于定位提示信息 */
+        vertical-align: middle; /* 垂直居中对齐 */
+    }
+
+    /* 鼠标悬停效果 */
+    .copy-email-btn:hover {
+        background-color: #0056b3; /* 悬停时加深背景色 */
+    }
+    
+    /* 鼠标点击效果 */
+    .copy-email-btn:active {
+        transform: scale(0.98); /* 点击时轻微缩小 */
+    }
+</style>
+
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
@@ -21,11 +48,11 @@ redirect_from:
 
 I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021
 
-**Ask Me Anything Through** <button type="button" onclick="navigator.clipboard.writeText('andrewjiang@stu.xjtu.edu.cn')"> Email </button>! 
+**Ask Me Anything Through** <button class="copy-email-btn" id="emailBtn" data-email="andrewjiang@stu.xjtu.edu.cn">Email</button>!
 
 # 🔥 News
 
-- *2025.12*: &nbsp;🎉🎉 Receive a pre-admission offer from Shanghai Innovation Institute through the 2026 Golden Autumn Camp! 
+- *2025.12*: &nbsp;🔥🔥 Receive a pre-admission offer from [Shanghai Innovation Institute](https://www.sii.edu.cn/) through the 2026 Golden Autumn Camp! 
 - *2025.10*: &nbsp;🔥🔥 The **National Scholarship** has been confirmed! 
 - *2025.10*: &nbsp;🎉🎉 **DescribeEarth** has been **open-source**! The code is available @ [github](https://github.com/earth-insights/DescribeEarth)
 - *2025.09*: &nbsp;🎉🎉 **DescribeEarth** has been public on [arxiv](https://arxiv.org/abs/2509.25654)
@@ -37,9 +64,10 @@ I'm currently an undergraduate student with the [College of Artificial Intellige
 
 [DescribeEarth: Describe Anything for Remote Sensing Images](https://arxiv.org/abs/2509.25654)
 
-Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang
+Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang
 
 **Open-source**: [code](https://github.com/earth-insights/DescribeEarth), [dataset](https://huggingface.co/datasets/earth-insights/DE-Dataset), [benchmark](https://huggingface.co/datasets/earth-insights/DE-Benchmark)
+
 - We introduce geo-spatial detailed localized captioning.
 - We build the first describe anything model in remote sensing.
 - We release the related dataset and benchmark.
@@ -73,9 +101,39 @@ Kaiyu Li*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu M
 - *2024* **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
 - *2023* **Honorable Prize**, Mathematical Contest in Modeling (MCM), USA
 
-
 # 📖 Educations
+
 - *2023.09 - (now)*, Artificial Intelligence Experimental Class, Xi 'an Jiaotong University (Outstanding Talent Program). 
 - *2021.09 - (now)*, Young Gifted Program. 
 
 # 💻 Internships
+- *2023.11- (now)*, **Research Intern** @ Xi'an Jiaotong University, Adviser: Prof. Xiangyong Cao.
+
+
+<script>
+    const emailBtn = document.getElementById('emailBtn');
+    
+    emailBtn.addEventListener('click', function() {
+        const email = this.getAttribute('data-email');
+        
+        // 使用 Clipboard API 复制文本
+        navigator.clipboard.writeText(email).then(() => {
+            // 复制成功
+            const originalText = this.textContent;
+            this.textContent = 'Copied!';
+            this.style.backgroundColor = '#28a745'; // 变成绿色背景
+            
+            // 2秒后恢复原始文本和颜色
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.style.backgroundColor = '#007BFF'; // 恢复蓝色背景
+            }, 2000);
+            
+        }).catch(err => {
+            // 复制失败
+            console.error('Failed to copy email: ', err);
+            alert('复制失败，请手动复制: ' + email);
+        });
+    });
+</script>
+
