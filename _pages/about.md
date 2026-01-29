@@ -8,19 +8,33 @@ redirect_from:
   - /about.html
 ---
 
+<!-- 语言切换按钮 (右上角) -->
+<div style="text-align: right; margin-bottom: 20px;">
+    <a href="/cn/" style="
+        display: inline-block;
+        padding: 5px 10px;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+    " onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor='transparent'">
+        🇨🇳 中文
+    </a>
+</div>
+
 <style>
     /* 邮件文本链接样式 */
     .copy-email-text {
-        color: #007BFF; /* 蓝色，看起来像链接 */
-        cursor: pointer; /* 鼠标悬停时显示为指针 */
-        font-weight: bold; /* 字体加粗 */
-        transition: color 0.3s ease; /* 颜色变化过渡效果 */
+        color: #007BFF;
+        cursor: pointer;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
-
-    /* 鼠标悬停效果 */
     .copy-email-text:hover {
-        text-decoration: underline; /* 悬停时添加下划线 */
-        color: #0056b3; /* 悬停时加深颜色 */
+        text-decoration: underline;
+        color: #0056b3;
     }
 </style>
 
@@ -35,13 +49,13 @@ redirect_from:
 
 # 👋 About Me
 
-I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021
+I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021.
 
 **Ask Me Anything Through** <span class="copy-email-text" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Email</span>!
 
 # 🔥 News
 
-- *2025.12*: &nbsp;🔥🔥 Receive a pre-admission offer from [Shanghai Innovation Institute](https://www.sii.edu.cn/) through the 2026 Golden Autumn Camp! 
+- *2025.12*: &nbsp;🔥🔥 Receive a pre-admission offer from [Shanghai Inno-Edu Academy](https://www.sii.edu.cn/) through the 2026 Golden Autumn Camp! 
 - *2025.10*: &nbsp;🔥🔥 The **National Scholarship** has been confirmed! 
 - *2025.10*: &nbsp;🎉🎉 **DescribeEarth** has been **open-source**! The code is available @ [github](https://github.com/earth-insights/DescribeEarth)
 - *2025.09*: &nbsp;🎉🎉 **DescribeEarth** has been public on [arxiv](https://arxiv.org/abs/2509.25654)
@@ -96,39 +110,25 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 - *2021.09 - (now)*, Young Gifted Program. 
 
 # 💻 Internships
-- *2023.11- (now)*, **Research Intern** @ Xi'an Jiaotong University, Adviser: Prof. Xiangyong Cao.
-
-
 
 <script>
     const emailText = document.getElementById('emailText');
-    
-    emailText.addEventListener('click', function() {
-        const email = this.getAttribute('data-email');
-        
-        // 使用 Clipboard API 复制文本
-        navigator.clipboard.writeText(email).then(() => {
-            // 复制成功
-            const originalText = this.textContent;
-            
-            this.textContent = 'Copied!';
-            this.style.color = '#28a745'; // 变成绿色
-            this.style.textDecoration = 'none'; // 暂时去掉下划线
-            
-            // 2秒后恢复原始文本和样式
-            setTimeout(() => {
-                this.textContent = originalText;
-                this.style.color = ''; // 恢复默认颜色（由CSS类控制）
-                this.style.textDecoration = ''; // 恢复默认样式
-            }, 2000);
-            
-        }).catch(err => {
-            // 复制失败
-            console.error('Failed to copy email: ', err);
-            alert('复制失败，请手动复制: ' + email);
+    if(emailText) {
+        emailText.addEventListener('click', function() {
+            const email = this.getAttribute('data-email');
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = this.textContent;
+                this.textContent = 'Copied!';
+                this.style.color = '#28a745';
+                this.style.textDecoration = 'none';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.color = '';
+                    this.style.textDecoration = '';
+                }, 2000);
+            }).catch(err => {
+                alert('Copy failed: ' + email);
+            });
         });
-    });
+    }
 </script>
-
-
-
