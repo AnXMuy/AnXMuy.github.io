@@ -97,8 +97,8 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 # 💻 Internships
 
-- Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group | Mentor: Xiangyong Cao
-- Shanghai Jiaotong University, X-LANCE Lab | Mentor: Xie Chen
+- Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group, Mentor: Xiangyong Cao
+- Shanghai Jiaotong University, X-LANCE Lab, Mentor: Xie Chen
 
 <script>
     const emailText = document.getElementById('emailText');
