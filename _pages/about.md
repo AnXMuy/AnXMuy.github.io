@@ -37,7 +37,7 @@ redirect_from:
 
 I'm currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/). Meanwhile, I have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi 'an Jiaotong University since 2021
 
-**Ask Me Anything Through** <span class="copy-email-text" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Email</span>! [_View my resume_](assets/CV.pdf)
+**Ask Me Anything Through** <span class="copy-email-text" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Email</span>! [_View my resume_](images/CV.pdf)
 
 # 🔥 News
 
@@ -96,6 +96,9 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 - *2021.09 - (now)*, Young Gifted Program. 
 
 # 💻 Internships
+
+- Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group | Mentor: Xiangyong Cao
+- Shanghai Jiaotong University, X-LANCE Lab | Mentor: Xie Chen
 
 <script>
     const emailText = document.getElementById('emailText');
