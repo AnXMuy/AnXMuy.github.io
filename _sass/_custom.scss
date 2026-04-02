@@ -1,0 +1,187 @@
+/* ===== Global visual refinement for homepage ===== */
+
+.page__content {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #243447;
+}
+
+.page__content p,
+.page__content li {
+  line-height: 1.9;
+}
+
+.page__content a {
+  text-decoration: none;
+}
+
+.page__content a:hover {
+  text-decoration: underline;
+}
+
+/* Section spacing */
+.page__content h1,
+.page__content h2,
+.page__content h3 {
+  color: #1f2d3d;
+  letter-spacing: -0.01em;
+}
+
+.page__content h1 {
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.page__content h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.page__content h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Chinese helper notes */
+.zh-note {
+  font-size: 0.93rem;
+  color: #667085;
+  line-height: 1.8;
+  margin-top: 4px;
+}
+
+.mini-note {
+  font-size: 0.9rem;
+  color: #7a8699;
+  line-height: 1.75;
+}
+
+/* Research statement intro block */
+.research-statement {
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f8fbff 0%, #f4f7fb 100%);
+  border: 1px solid #e8eef7;
+  box-shadow: 0 8px 28px rgba(31, 45, 61, 0.05);
+  margin-bottom: 1.8rem;
+}
+
+.research-statement .tagline {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: #1f4ea3;
+  font-weight: 700;
+  font-size: 0.94rem;
+  margin-bottom: 14px;
+}
+
+/* Highlight cards */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.highlight-item {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f7faff;
+  border: 1px solid #e6edf6;
+  box-shadow: 0 3px 10px rgba(31, 45, 61, 0.03);
+  font-weight: 600;
+  color: #1f3b5b;
+}
+
+/* News / lists */
+.news-list li,
+.simple-list li {
+  margin-bottom: 12px;
+}
+
+/* Publication blocks */
+.pub-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid #e8eef5;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(31, 45, 61, 0.05);
+  margin: 1rem 0 1.2rem 0;
+}
+
+.pub-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.pub-links {
+  margin-top: 8px;
+}
+
+.pub-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8f1ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Image in publication card */
+.pub-cover {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #eef2f7;
+}
+
+/* Contact / small emphasis */
+.soft-card {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #fbfcfe;
+  border: 1px solid #edf1f5;
+}
+
+/* Copy email style */
+.copy-email-text {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.copy-email-text:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .research-statement {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-card {
+    padding: 14px;
+  }
+}
