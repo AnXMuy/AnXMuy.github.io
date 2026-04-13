@@ -50,6 +50,8 @@ My research focuses on multimodal intelligence across vision, speech, and langua
 
 # 📝 Publications 
 
+## Remote Sensing Image Intepretation
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/describeearth.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -68,6 +70,23 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 </div>
 
 - [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
+
+## Human Computer Interaction
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2026</div><img src='images/interactiveasr_interspeech.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121v1)
+
+Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
+**Related Resource**: [Project page](https://interactiveasr.github.io/), [Live demo](https://i-asr.sjtuxlance.com/)
+
+- We propose $S^2ER$, a novel evaluation metric that leverages LLMs as judges to assess ASR semantic success. 
+- We develop an LLM-simulated interactive correction framework to iteratively improve ASR performance.
+
+
+</div>
+</div>
 
 # 🎖 Honors and Awards
 
