@@ -73,7 +73,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 ## Human Computer Interaction
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2026</div><img src='images/interactiveasr_interspeech.pdf' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121v1)
