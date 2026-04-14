@@ -71,12 +71,12 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 - [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
 
-## Human Computer Interaction
+## Audio Interaction
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121v1)
+[Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
 
 Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
 **Related Resource**: [Project page](https://interactiveasr.github.io/), [Live demo](https://i-asr.sjtuxlance.com/)
