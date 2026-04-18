@@ -37,7 +37,7 @@ redirect_from:
 
 I'm **Zixuan Jiang (Andrew)**, currently an undergraduate student with the [College of Artificial Intelligence](http://www.aiar.xjtu.edu.cn/), [Xi’an Jiaotong University](https://www.xjtu.edu.cn/), and have been a student of the **[Young Gifted Program](https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%B0%91%E5%B9%B4%E7%8F%AD/58501505)** at Xi’an Jiaotong University since 2021.
 
-My research focuses on multimodal intelligence across vision, speech, and language, with growing interests in omni-modal agents and human-computer interaction.
+My research focuses on multimodal intelligence across vision, speech, and natural language, with growing interests in omni-modal agents and human-computer interaction.
 
 **Ask Me Anything Through** <span class="copy-email-text" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Email</span>! [_View my resume_](images/CV.pdf)
 
@@ -79,6 +79,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 [Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
 
 Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
+
 **Related Resource**: [Project page](https://interactiveasr.github.io/), [Live demo](https://i-asr.sjtuxlance.com/)
 
 - We propose $S^2ER$, a novel evaluation metric that leverages LLMs as judges to assess ASR semantic success. 
