@@ -71,7 +71,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 - [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **Arxiv 2025**
 
-- [Advances in open vocabulary perception for remote sensing images](https://www.cjig.cn/en/article/doi/10.11834/jig.260163/), Kaiyu Li, Xiangyong Cao, **Zixuan Jiang**, Deyu Meng, **Journal of Image and Graphics 2026**
+- [Advances in open vocabulary perception for remote sensing images](https://www.cjig.cn/en/article/doi/10.11834/jig.260163/), Kaiyu Li, Xiangyong Cao☨, **Zixuan Jiang**, Deyu Meng, **Journal of Image and Graphics 2026**
 
 ## Audio Interaction
 
