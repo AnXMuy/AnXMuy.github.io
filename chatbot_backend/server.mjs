@@ -31,12 +31,42 @@ function loadKnowledgeChunks() {
 }
 
 const knowledgeChunks = loadKnowledgeChunks();
+const knowledgeFiles = Array.from(new Set(knowledgeChunks.map((x) => x.file)));
+
+const ZH_EN_TERM_MAP = {
+  '科研': 'research',
+  '研究': 'research',
+  '论文': 'publication',
+  '发表': 'publication',
+  '奖项': 'award',
+  '获奖': 'award',
+  '简历': 'cv',
+  '项目': 'project',
+  '实习': 'internship',
+  '教育': 'education',
+  '学校': 'university',
+  '语音': 'speech',
+  '遥感': 'remote sensing',
+  '多模态': 'multimodal'
+};
+
+function normalizeTerms(rawTerms) {
+  const terms = new Set(rawTerms);
+  for (const term of rawTerms) {
+    const mapped = ZH_EN_TERM_MAP[term];
+    if (mapped) {
+      mapped.split(/\s+/).forEach((x) => terms.add(x));
+    }
+  }
+  return Array.from(terms);
+}
 
 function selectContext(question, topK = 5) {
-  const terms = question
+  const baseTerms = question
     .toLowerCase()
     .split(/[^a-z0-9\u4e00-\u9fff]+/)
     .filter((w) => w.length > 1);
+  const terms = normalizeTerms(baseTerms);
 
   const scored = knowledgeChunks.map((item, idx) => {
     const lower = item.text.toLowerCase();
@@ -47,10 +77,21 @@ function selectContext(question, topK = 5) {
     return { idx, ...item, score };
   });
 
-  return scored
+  const ranked = scored
     .sort((a, b) => b.score - a.score)
-    .slice(0, topK)
-    .map((x) => `[Source: ${x.file}]\n${x.text}`);
+    .slice(0, topK);
+
+  const allZero = ranked.every((x) => x.score === 0);
+  if (allZero) {
+    const fallback = scored
+      .filter((x) => x.file === 'andrewbot_knowledge.md')
+      .slice(0, topK);
+    if (fallback.length > 0) {
+      return fallback.map((x) => `[Source: ${x.file}]\n${x.text}`);
+    }
+  }
+
+  return ranked.map((x) => `[Source: ${x.file}]\n${x.text}`);
 }
 
 function json(res, status, data) {
@@ -147,7 +188,8 @@ const server = createServer(async (req, res) => {
       ok: true,
       model: MODEL,
       knowledge_dir: KNOWLEDGE_DIR,
-      chunks: knowledgeChunks.length
+      chunks: knowledgeChunks.length,
+      files: knowledgeFiles
     });
   }
 
