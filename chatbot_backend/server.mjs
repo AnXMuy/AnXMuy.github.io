@@ -1,45 +1,56 @@
 import { createServer } from 'node:http';
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { readFileSync, readdirSync } from 'node:fs';
+import { resolve, join } from 'node:path';
 
 const PORT = Number(process.env.PORT || 8787);
 const API_KEY = process.env.DEEPSEEK_API_KEY || '';
 const API_BASE_URL = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com';
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
-const KNOWLEDGE_FILE = process.env.KNOWLEDGE_FILE || resolve(process.cwd(), 'knowledge/andrewbot_knowledge.md');
+const KNOWLEDGE_DIR = process.env.KNOWLEDGE_DIR || resolve(process.cwd(), 'knowledge');
 
-function loadKnowledge() {
-  const text = readFileSync(KNOWLEDGE_FILE, 'utf-8');
-  const chunks = text
-    .split(/\n## /g)
-    .map((section, idx) => (idx === 0 ? section : '## ' + section))
-    .map((chunk) => chunk.trim())
-    .filter(Boolean);
+function loadKnowledgeChunks() {
+  const files = readdirSync(KNOWLEDGE_DIR)
+    .filter((name) => name.endsWith('.md'))
+    .sort();
+
+  const chunks = [];
+  for (const file of files) {
+    const full = join(KNOWLEDGE_DIR, file);
+    const text = readFileSync(full, 'utf-8');
+    const sections = text
+      .split(/\n## /g)
+      .map((section, idx) => (idx === 0 ? section : '## ' + section))
+      .map((chunk) => chunk.trim())
+      .filter(Boolean);
+
+    for (const section of sections) {
+      chunks.push({ file, text: section });
+    }
+  }
   return chunks;
 }
 
-const knowledgeChunks = loadKnowledge();
+const knowledgeChunks = loadKnowledgeChunks();
 
-function selectContext(question, topK = 4) {
+function selectContext(question, topK = 5) {
   const terms = question
     .toLowerCase()
     .split(/[^a-z0-9\u4e00-\u9fff]+/)
     .filter((w) => w.length > 1);
 
-  const scored = knowledgeChunks.map((chunk, idx) => {
-    const lower = chunk.toLowerCase();
+  const scored = knowledgeChunks.map((item, idx) => {
+    const lower = item.text.toLowerCase();
     let score = 0;
     for (const t of terms) {
       if (lower.includes(t)) score += 1;
     }
-    return { idx, chunk, score };
+    return { idx, ...item, score };
   });
 
   return scored
     .sort((a, b) => b.score - a.score)
     .slice(0, topK)
-    .map((x) => x.chunk)
-    .join('\n\n');
+    .map((x) => `[Source: ${x.file}]\n${x.text}`);
 }
 
 function json(res, status, data) {
@@ -50,6 +61,11 @@ function json(res, status, data) {
     'Access-Control-Allow-Headers': 'Content-Type'
   });
   res.end(JSON.stringify(data));
+}
+
+function detectQuestionLanguage(question) {
+  const hasChinese = /[\u4e00-\u9fff]/.test(question);
+  return hasChinese ? 'Chinese' : 'English';
 }
 
 async function handleChat(req, res) {
@@ -72,13 +88,16 @@ async function handleChat(req, res) {
     return json(res, 400, { error: 'question is required.' });
   }
 
-  const context = selectContext(question, 4);
+  const language = detectQuestionLanguage(question);
+  const contextList = selectContext(question, 5);
+  const context = contextList.join('\n\n');
 
   const systemPrompt = [
     'You are AndrewBot, the official assistant for Zixuan Jiang (Andrew).',
     'Answer ONLY based on provided context.',
     'If context is insufficient, explicitly say you are not sure.',
     'Keep answers concise and factual.',
+    `Always respond in ${language}.`,
     'When possible, mention related paper title or profile link.'
   ].join(' ');
 
@@ -110,9 +129,11 @@ async function handleChat(req, res) {
 
   const data = await response.json();
   const answer = data?.choices?.[0]?.message?.content || 'No answer returned.';
+  const firstSource = contextList[0]?.match(/\[Source: ([^\]]+)\]/)?.[1] || 'knowledge';
+
   return json(res, 200, {
     answer,
-    citation: 'knowledge/andrewbot_knowledge.md'
+    citation: firstSource
   });
 }
 
@@ -122,7 +143,12 @@ const server = createServer(async (req, res) => {
   }
 
   if (req.url === '/health' && req.method === 'GET') {
-    return json(res, 200, { ok: true, model: MODEL });
+    return json(res, 200, {
+      ok: true,
+      model: MODEL,
+      knowledge_dir: KNOWLEDGE_DIR,
+      chunks: knowledgeChunks.length
+    });
   }
 
   if (req.url === '/chat' && req.method === 'POST') {
