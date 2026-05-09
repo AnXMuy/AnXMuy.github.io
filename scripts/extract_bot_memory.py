@@ -14,9 +14,9 @@ import re
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BOT_MEMORY_DIR = REPO_ROOT.parent / "bot_memory"
 OUTPUT_MD = REPO_ROOT / "knowledge" / "bot_memory_extracted.md"
-MAX_PAGES_PER_PDF = 6
-MAX_CHARS_PER_PDF = 12000
-MAX_SECTION_CHARS = 3200
+MAX_PAGES_PER_PDF = 3
+MAX_CHARS_PER_PDF = 5000
+MAX_SECTION_CHARS = 1200
 
 
 def clean_text(text: str) -> str:

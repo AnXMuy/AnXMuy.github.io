@@ -107,11 +107,18 @@ body {
     letter-spacing: 0.02em;
 }
 
+.masthead__menu,
+.masthead__menu ul,
+#site-nav {
+    background: transparent;
+}
+
 .greedy-nav .hidden-links {
     background: linear-gradient(135deg, var(--nav-deep), var(--nav-deep-2));
     border: 1px solid #0f4f9d;
     border-radius: 10px;
     box-shadow: 0 10px 24px rgba(8, 43, 92, 0.35);
+    margin-top: 8px;
 }
 
 .greedy-nav .hidden-links a {
@@ -125,6 +132,18 @@ body {
 
 .greedy-nav .hidden-links:before {
     border-color: transparent transparent #0f4f9d;
+}
+
+.greedy-nav .hidden-links:after {
+    border-color: transparent transparent #0d3f85;
+}
+
+.greedy-nav .hidden-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.greedy-nav .hidden-links li:last-child {
+    border-bottom: none;
 }
 
 .hero-intro {
