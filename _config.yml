@@ -11,7 +11,7 @@ description              : "undergraduate student, IAIR"
 repository               : "AnXMuy/AnXMuy.github.io"
 google_scholar_stats_use_cdn : true
 enable_google_scholar_stats   : true
-chat_api_base_url             : ""  # e.g. https://your-chat-api.example.com
+chat_api_base_url             : "https://anxmuy-github-io.onrender.com"
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
