@@ -28,7 +28,7 @@ redirect_from:
   <p class="hero-actions">
     <a class="hero-btn" href="images/CV.pdf">View CV</a>
     <span class="hero-email" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Copy Email</span>
-    <button class="hero-contact-btn" id="openContactModal" type="button">Contact Me Immediately</button>
+    <button class="hero-contact-btn" id="openContactModal" type="button">Ask AndrewBot</button>
   </p>
 </div>
 
@@ -36,23 +36,16 @@ redirect_from:
   <div class="contact-modal__backdrop" id="closeContactModal"></div>
   <div class="contact-modal__card" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
     <button class="contact-modal__close" id="closeContactModalBtn" type="button" aria-label="Close">&times;</button>
-    <h3 id="contactTitle">Send me a message</h3>
-    <p>I usually reply by email. Your message will be delivered via the hosted contact backend.</p>
-
-    <form id="contactForm" class="contact-form" method="POST" action="{{ site.contact_form_endpoint }}">
-      <label for="contactName">Name</label>
-      <input id="contactName" name="name" type="text" required>
-
-      <label for="contactEmail">Email</label>
-      <input id="contactEmail" name="email" type="email" required>
-
-      <label for="contactMessage">Message</label>
-      <textarea id="contactMessage" name="message" rows="5" required></textarea>
-
-      <input type="hidden" name="_subject" value="Homepage contact message">
-      <button type="submit" class="hero-btn contact-submit">Send Message</button>
-      <p class="contact-form__hint" id="contactHint"></p>
+    <h3 id="contactTitle">Ask AndrewBot</h3>
+    <p>For research/publication questions, ask the chatbot first.</p>
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message chat-message--bot">Hi, I am AndrewBot. Ask me about research, publications, awards, and projects.</div>
+    </div>
+    <form id="chatForm" class="chat-form" autocomplete="off">
+      <input id="chatInput" type="text" placeholder="Ask something about Andrew's research..." required>
+      <button type="submit" class="hero-btn">Send</button>
     </form>
+    <p class="contact-form__hint" id="chatHint"></p>
   </div>
 </div>
 
@@ -66,6 +59,10 @@ redirect_from:
 
 <span class='anchor' id='publications'></span>
 ## Publications
+
+<div class="research-helper">
+  Interested in my research? Click <strong>Ask AndrewBot</strong> for quick Q&amp;A.
+</div>
 
 ### Remote Sensing Image Interpretation
 
@@ -147,8 +144,20 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
   const closeContactModal = document.getElementById('closeContactModal');
   const closeContactModalBtn = document.getElementById('closeContactModalBtn');
   const contactModal = document.getElementById('contactModal');
-  const contactForm = document.getElementById('contactForm');
-  const contactHint = document.getElementById('contactHint');
+
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatBox = document.getElementById('chatBox');
+  const chatHint = document.getElementById('chatHint');
+  const chatApiBaseUrl = '{{ site.chat_api_base_url }}';
+
+  function appendChatMessage(content, role) {
+    const message = document.createElement('div');
+    message.className = 'chat-message ' + (role === 'user' ? 'chat-message--user' : 'chat-message--bot');
+    message.textContent = content;
+    chatBox.appendChild(message);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
 
   if (emailText) {
     emailText.addEventListener('click', function () {
@@ -157,7 +166,6 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
         const originalText = this.textContent;
         this.textContent = 'Copied';
         this.classList.add('copied');
-
         setTimeout(() => {
           this.textContent = originalText;
           this.classList.remove('copied');
@@ -196,37 +204,39 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
     }
   });
 
-  if (contactForm) {
-    const endpoint = contactForm.getAttribute('action');
-    if (!endpoint) {
-      contactHint.textContent = 'Contact backend is not configured yet. Set contact_form_endpoint in _config.yml.';
-      contactForm.addEventListener('submit', function (event) {
+  if (chatForm) {
+    if (!chatApiBaseUrl) {
+      chatHint.textContent = 'Chat API is not configured yet. Set chat_api_base_url in _config.yml.';
+      chatForm.addEventListener('submit', function (event) {
         event.preventDefault();
       });
     } else {
-      contactForm.addEventListener('submit', async function (event) {
+      chatForm.addEventListener('submit', async function (event) {
         event.preventDefault();
-        contactHint.textContent = 'Sending...';
+        const question = chatInput.value.trim();
+        if (!question) return;
 
-        const formData = new FormData(contactForm);
+        appendChatMessage(question, 'user');
+        chatInput.value = '';
+        chatHint.textContent = 'Thinking...';
 
         try {
-          const response = await fetch(endpoint, {
+          const response = await fetch(chatApiBaseUrl.replace(/\/$/, '') + '/chat', {
             method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question: question, source: 'homepage' })
           });
 
-          if (response.ok) {
-            contactHint.textContent = 'Message sent. I will reply soon.';
-            contactForm.reset();
-          } else {
-            contactHint.textContent = 'Failed to send message. Please email me directly.';
+          if (!response.ok) {
+            chatHint.textContent = 'Chat backend error.';
+            return;
           }
+
+          const data = await response.json();
+          appendChatMessage(data.answer || 'No response.', 'bot');
+          chatHint.textContent = data.citation ? ('Source: ' + data.citation) : '';
         } catch (error) {
-          contactHint.textContent = 'Network error. Please email me directly.';
+          chatHint.textContent = 'Network error when calling chatbot API.';
         }
       });
     }
