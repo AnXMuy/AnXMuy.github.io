@@ -9,14 +9,25 @@ const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
 const KNOWLEDGE_DIR = process.env.KNOWLEDGE_DIR || resolve(process.cwd(), 'knowledge');
 
 function loadKnowledgeChunks() {
-  const files = readdirSync(KNOWLEDGE_DIR)
-    .filter((name) => name.endsWith('.md'))
-    .sort();
+  function collectMarkdownFiles(dir, prefix = '') {
+    const entries = readdirSync(dir, { withFileTypes: true });
+    const acc = [];
+    for (const e of entries) {
+      const rel = prefix ? `${prefix}/${e.name}` : e.name;
+      const full = join(dir, e.name);
+      if (e.isDirectory()) {
+        acc.push(...collectMarkdownFiles(full, rel));
+      } else if (e.isFile() && e.name.endsWith('.md')) {
+        acc.push({ rel, full });
+      }
+    }
+    return acc;
+  }
+  const files = collectMarkdownFiles(KNOWLEDGE_DIR).sort((a, b) => a.rel.localeCompare(b.rel));
 
   const chunks = [];
   for (const file of files) {
-    const full = join(KNOWLEDGE_DIR, file);
-    const text = readFileSync(full, 'utf-8');
+    const text = readFileSync(file.full, 'utf-8');
     const sections = text
       .split(/\n## /g)
       .map((section, idx) => (idx === 0 ? section : '## ' + section))
@@ -24,7 +35,7 @@ function loadKnowledgeChunks() {
       .filter(Boolean);
 
     for (const section of sections) {
-      chunks.push({ file, text: section });
+      chunks.push({ file: file.rel, text: section });
     }
   }
   return chunks;
