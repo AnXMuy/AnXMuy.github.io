@@ -7,6 +7,7 @@ const API_KEY = process.env.DEEPSEEK_API_KEY || '';
 const API_BASE_URL = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com';
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
 const KNOWLEDGE_DIR = process.env.KNOWLEDGE_DIR || resolve(process.cwd(), 'knowledge');
+const PAPER_DIR_PREFIX = 'papers/';
 
 function loadKnowledgeChunks() {
   function collectMarkdownFiles(dir, prefix = '') {
@@ -43,6 +44,57 @@ function loadKnowledgeChunks() {
 
 const knowledgeChunks = loadKnowledgeChunks();
 const knowledgeFiles = Array.from(new Set(knowledgeChunks.map((x) => x.file)));
+
+function stripMdExt(name) {
+  return name.replace(/\.md$/i, '');
+}
+
+function extractPaperTitleFromFile(file) {
+  if (!file.startsWith(PAPER_DIR_PREFIX)) return '';
+  return stripMdExt(file.slice(PAPER_DIR_PREFIX.length));
+}
+
+function tokenize(text) {
+  const lower = String(text || '').toLowerCase();
+  const latin = lower.split(/[^a-z0-9]+/).filter((w) => w.length > 1);
+  const cjk = (lower.match(/[\u4e00-\u9fff]{2,}/g) || []).flatMap((x) => {
+    const grams = [];
+    for (let i = 0; i < x.length - 1; i += 1) grams.push(x.slice(i, i + 2));
+    return grams;
+  });
+  return [...latin, ...cjk];
+}
+
+function buildTf(tokens) {
+  const tf = new Map();
+  for (const t of tokens) {
+    tf.set(t, (tf.get(t) || 0) + 1);
+  }
+  return tf;
+}
+
+const chunkIndex = knowledgeChunks.map((chunk, idx) => {
+  const isPaper = chunk.file.startsWith(PAPER_DIR_PREFIX);
+  const paperTitle = extractPaperTitleFromFile(chunk.file);
+  const titleTokens = tokenize(paperTitle.replace(/[_:.-]+/g, ' '));
+  const tokens = tokenize(chunk.text);
+  return {
+    idx,
+    ...chunk,
+    isPaper,
+    paperTitle,
+    titleTokens,
+    tokens,
+    tf: buildTf(tokens)
+  };
+});
+
+const filePaperTitleTokens = new Map();
+for (const file of knowledgeFiles) {
+  const title = extractPaperTitleFromFile(file);
+  const tokens = tokenize(title.replace(/[_:.-]+/g, ' '));
+  filePaperTitleTokens.set(file, tokens);
+}
 
 const ZH_EN_TERM_MAP = {
   '科研': 'research',
@@ -83,34 +135,58 @@ function isPaperDetailQuestion(question) {
 }
 
 function selectContext(question, topK = 5) {
-  const baseTerms = question
-    .toLowerCase()
-    .split(/[^a-z0-9\u4e00-\u9fff]+/)
-    .filter((w) => w.length > 1);
+  const baseTerms = tokenize(question);
   const terms = normalizeTerms(baseTerms);
+  const termSet = new Set(terms);
 
   const paperDetailMode = isPaperDetailQuestion(question);
+  const matchedPaperFiles = knowledgeFiles.filter((file) => {
+    if (!file.startsWith(PAPER_DIR_PREFIX)) return false;
+    const titleTokens = filePaperTitleTokens.get(file) || [];
+    if (titleTokens.length === 0) return false;
+    const overlap = titleTokens.filter((t) => termSet.has(t)).length;
+    return overlap >= Math.max(2, Math.floor(titleTokens.length * 0.2));
+  });
 
-  const scored = knowledgeChunks.map((item, idx) => {
-    const lower = item.text.toLowerCase();
+  const scored = chunkIndex.map((item, idx) => {
     let score = 0;
     for (const t of terms) {
-      if (lower.includes(t)) score += 1;
+      const tf = item.tf.get(t) || 0;
+      if (tf > 0) score += 1 + Math.min(2, tf - 1) * 0.5;
     }
-    // For paper-detail questions, prioritize extracted PDF knowledge.
-    if (paperDetailMode && item.file === 'bot_memory_extracted.md') {
-      score += 3;
+    // Title hit is strong evidence for paper-specific intent.
+    for (const t of item.titleTokens) {
+      if (termSet.has(t)) score += 0.8;
     }
-    // Keep curated QA and profile documents strong for general questions.
+    if (paperDetailMode && item.isPaper) {
+      score += 2.5;
+    }
+    if (paperDetailMode && matchedPaperFiles.includes(item.file)) {
+      score += 4;
+    }
+    // Keep curated QA and profile docs strong for non-paper questions.
     if (!paperDetailMode && (item.file === 'qa_bilingual.md' || item.file === 'andrewbot_knowledge.md')) {
       score += 2;
+    }
+    if (!paperDetailMode && item.isPaper) {
+      score -= 0.5;
     }
     return { idx, ...item, score };
   });
 
-  const ranked = scored
+  let ranked = scored
     .sort((a, b) => b.score - a.score)
     .slice(0, topK);
+
+  // If paper-detail question but top-k has no paper chunk, force one paper chunk in.
+  if (paperDetailMode && !ranked.some((x) => x.isPaper)) {
+    const bestPaper = scored
+      .filter((x) => x.isPaper)
+      .sort((a, b) => b.score - a.score)[0];
+    if (bestPaper) {
+      ranked = [bestPaper, ...ranked.slice(0, Math.max(0, topK - 1))];
+    }
+  }
 
   const allZero = ranked.every((x) => x.score === 0);
   if (allZero) {
