@@ -28,19 +28,25 @@ redirect_from:
   <p class="hero-actions">
     <a class="hero-btn" href="images/CV.pdf">View CV</a>
     <span class="hero-email" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Copy Email</span>
-    <button class="hero-contact-btn" id="openContactModal" type="button">Ask AndrewBot</button>
   </p>
 </div>
 
-<div class="contact-modal" id="contactModal" aria-hidden="true">
-  <div class="contact-modal__backdrop" id="closeContactModal"></div>
-  <div class="contact-modal__card" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <button class="contact-modal__close" id="closeContactModalBtn" type="button" aria-label="Close">&times;</button>
-    <h3 id="contactTitle">Ask AndrewBot</h3>
-    <p>For research/publication questions, ask the chatbot first.</p>
+<div class="floating-chat" id="floatingChat" aria-label="AndrewBot chat window">
+  <button class="floating-chat__launcher" id="chatLauncher" type="button">Ask AndrewBot</button>
+
+  <div class="floating-chat__panel is-open" id="chatPanel">
+    <div class="floating-chat__header">
+      <strong>AndrewBot</strong>
+      <div class="floating-chat__actions">
+        <button id="chatMinimizeBtn" type="button" aria-label="Minimize">_</button>
+        <button id="chatCloseBtn" type="button" aria-label="Close">&times;</button>
+      </div>
+    </div>
+
     <div class="chat-box" id="chatBox">
       <div class="chat-message chat-message--bot">Hi, I am AndrewBot. Ask me about research, publications, awards, and projects.</div>
     </div>
+
     <form id="chatForm" class="chat-form" autocomplete="off">
       <input id="chatInput" type="text" placeholder="Ask something about Andrew's research..." required>
       <button type="submit" class="hero-btn">Send</button>
@@ -59,10 +65,6 @@ redirect_from:
 
 <span class='anchor' id='publications'></span>
 ## Publications
-
-<div class="research-helper">
-  Interested in my research? Click <strong>Ask AndrewBot</strong> for quick Q&amp;A.
-</div>
 
 ### Remote Sensing Image Interpretation
 
@@ -140,10 +142,10 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 
 <script>
   const emailText = document.getElementById('emailText');
-  const openContactModalBtn = document.getElementById('openContactModal');
-  const closeContactModal = document.getElementById('closeContactModal');
-  const closeContactModalBtn = document.getElementById('closeContactModalBtn');
-  const contactModal = document.getElementById('contactModal');
+  const chatLauncher = document.getElementById('chatLauncher');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatMinimizeBtn = document.getElementById('chatMinimizeBtn');
+  const chatCloseBtn = document.getElementById('chatCloseBtn');
 
   const chatForm = document.getElementById('chatForm');
   const chatInput = document.getElementById('chatInput');
@@ -157,6 +159,30 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
     message.textContent = content;
     chatBox.appendChild(message);
     chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function openChatPanel() {
+    chatPanel.classList.add('is-open');
+    chatPanel.classList.remove('is-hidden');
+    chatLauncher.classList.add('is-hidden');
+  }
+
+  function minimizeChatPanel() {
+    chatPanel.classList.remove('is-open');
+    chatPanel.classList.add('is-hidden');
+    chatLauncher.classList.remove('is-hidden');
+  }
+
+  if (chatLauncher) {
+    chatLauncher.addEventListener('click', openChatPanel);
+  }
+
+  if (chatMinimizeBtn) {
+    chatMinimizeBtn.addEventListener('click', minimizeChatPanel);
+  }
+
+  if (chatCloseBtn) {
+    chatCloseBtn.addEventListener('click', minimizeChatPanel);
   }
 
   if (emailText) {
@@ -175,34 +201,6 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
       });
     });
   }
-
-  function openModal() {
-    contactModal.classList.add('is-open');
-    contactModal.setAttribute('aria-hidden', 'false');
-  }
-
-  function closeModal() {
-    contactModal.classList.remove('is-open');
-    contactModal.setAttribute('aria-hidden', 'true');
-  }
-
-  if (openContactModalBtn && contactModal) {
-    openContactModalBtn.addEventListener('click', openModal);
-  }
-
-  if (closeContactModal) {
-    closeContactModal.addEventListener('click', closeModal);
-  }
-
-  if (closeContactModalBtn) {
-    closeContactModalBtn.addEventListener('click', closeModal);
-  }
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && contactModal.classList.contains('is-open')) {
-      closeModal();
-    }
-  });
 
   if (chatForm) {
     if (!chatApiBaseUrl) {

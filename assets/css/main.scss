@@ -161,29 +161,6 @@ body {
     border-bottom-color: #0d8f57;
 }
 
-.hero-contact-btn {
-    border: 1px solid #8db7ef;
-    background: #f4f9ff;
-    color: #0f3f80;
-    border-radius: 10px;
-    padding: 0.42rem 0.86rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.hero-contact-btn:hover {
-    background: #e8f2ff;
-}
-
-.research-helper {
-    background: #ecf5ff;
-    border: 1px solid #c5ddfb;
-    color: #173b72;
-    border-radius: 10px;
-    padding: 0.65rem 0.8rem;
-    margin-bottom: 1rem;
-}
-
 .page__content h2 {
     margin-top: 1.8rem;
     border-left: 4px solid var(--brand);
@@ -292,44 +269,101 @@ h1:before,
     transform: translateY(0);
 }
 
-.contact-modal {
+.floating-chat {
     position: fixed;
-    inset: 0;
+    right: 1.2rem;
+    bottom: 1.2rem;
     z-index: 1200;
+}
+
+.floating-chat__launcher {
+    border: none;
+    background: linear-gradient(125deg, #0f4c99, #1f69c7);
+    color: #fff;
+    padding: 0.62rem 0.96rem;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(16, 61, 122, 0.35);
+    cursor: pointer;
+}
+
+.floating-chat__launcher.is-hidden {
     display: none;
 }
 
-.contact-modal.is-open {
+.floating-chat__panel {
+    width: min(360px, calc(100vw - 2rem));
+    background: #fff;
+    border: 1px solid #c7dcf7;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(12, 42, 87, 0.26);
+    overflow: hidden;
+    display: none;
+}
+
+.floating-chat__panel.is-open {
     display: block;
 }
 
-.contact-modal__backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 35, 79, 0.45);
-    backdrop-filter: blur(2px);
+.floating-chat__panel.is-hidden {
+    display: none;
 }
 
-.contact-modal__card {
-    position: relative;
-    z-index: 2;
-    width: min(560px, calc(100% - 2rem));
-    margin: 8vh auto 0;
-    border-radius: 14px;
-    background: #fff;
-    border: 1px solid #c7dcf7;
-    box-shadow: 0 20px 50px rgba(12, 42, 87, 0.28);
-    padding: 1.1rem 1.1rem 1rem;
-    animation: modalIn 0.22s ease;
+.floating-chat__header {
+    background: linear-gradient(125deg, #0f4c99, #1f69c7);
+    color: #fff;
+    padding: 0.58rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.floating-chat__actions {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.floating-chat__actions button {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.16);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.floating-chat__panel > p,
+.floating-chat__panel > .chat-form,
+.floating-chat__panel > .contact-form__hint {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.floating-chat__panel > p {
+    margin-top: 0.65rem;
+    margin-bottom: 0.55rem;
+    color: #315688;
+}
+
+.floating-chat .chat-box {
+    margin: 0 0.8rem 0.65rem;
+    height: 280px;
+}
+
+.floating-chat .chat-form {
+    margin-bottom: 0.5rem;
+}
+
+.floating-chat .contact-form__hint {
+    margin-bottom: 0.72rem;
 }
 
 .contact-modal__close {
-    position: absolute;
-    right: 0.8rem;
-    top: 0.4rem;
     border: none;
     background: transparent;
-    color: #224b89;
+    color: #fff;
     font-size: 1.65rem;
     cursor: pointer;
 }
@@ -433,22 +467,21 @@ h1:before,
     padding: 0.5rem 0.65rem;
 }
 
-@keyframes modalIn {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @media (max-width: 800px) {
     .page {
         padding: 0.75rem 0.8rem;
     }
     .hero-actions {
         align-items: flex-start;
+    }
+    .floating-chat {
+        right: 0.6rem;
+        bottom: 0.6rem;
+    }
+    .floating-chat__panel {
+        width: min(360px, calc(100vw - 1.2rem));
+    }
+    .floating-chat .chat-box {
+        height: 220px;
     }
 }
