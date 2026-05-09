@@ -11,8 +11,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<div class="hero-intro">
-  <p class="hero-kicker">Multimodal Intelligence • Vision • Speech • Language</p>
+<div class="hero-intro page-reveal">
   <h1>Zixuan Jiang (Andrew)</h1>
   <p>
     I'm currently an undergraduate student with the
@@ -26,10 +25,35 @@ redirect_from:
     My research focuses on multimodal intelligence across vision, speech, and language,
     with growing interests in omni-modal agents and human-computer interaction.
   </p>
-  <p>
+  <p class="hero-actions">
     <a class="hero-btn" href="images/CV.pdf">View CV</a>
     <span class="hero-email" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Copy Email</span>
+    <button class="hero-contact-btn" id="openContactModal" type="button">Contact Me Immediately</button>
   </p>
+</div>
+
+<div class="contact-modal" id="contactModal" aria-hidden="true">
+  <div class="contact-modal__backdrop" id="closeContactModal"></div>
+  <div class="contact-modal__card" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <button class="contact-modal__close" id="closeContactModalBtn" type="button" aria-label="Close">&times;</button>
+    <h3 id="contactTitle">Send me a message</h3>
+    <p>I usually reply by email. Your message will be delivered via the hosted contact backend.</p>
+
+    <form id="contactForm" class="contact-form" method="POST" action="{{ site.contact_form_endpoint }}">
+      <label for="contactName">Name</label>
+      <input id="contactName" name="name" type="text" required>
+
+      <label for="contactEmail">Email</label>
+      <input id="contactEmail" name="email" type="email" required>
+
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" name="message" rows="5" required></textarea>
+
+      <input type="hidden" name="_subject" value="Homepage contact message">
+      <button type="submit" class="hero-btn contact-submit">Send Message</button>
+      <p class="contact-form__hint" id="contactHint"></p>
+    </form>
+  </div>
 </div>
 
 <span class='anchor' id='news'></span>
@@ -45,7 +69,7 @@ redirect_from:
 
 ### Remote Sensing Image Interpretation
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/describeearth.png' alt="DescribeEarth" width="100%"></div></div>
+<div class='paper-box page-reveal'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/describeearth.png' alt="DescribeEarth" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [DescribeEarth: Describe Anything for Remote Sensing Images](https://arxiv.org/abs/2509.25654)
@@ -67,7 +91,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 ### Audio Interaction
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
+<div class='paper-box page-reveal'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
@@ -119,6 +143,12 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 
 <script>
   const emailText = document.getElementById('emailText');
+  const openContactModalBtn = document.getElementById('openContactModal');
+  const closeContactModal = document.getElementById('closeContactModal');
+  const closeContactModalBtn = document.getElementById('closeContactModalBtn');
+  const contactModal = document.getElementById('contactModal');
+  const contactForm = document.getElementById('contactForm');
+  const contactHint = document.getElementById('contactHint');
 
   if (emailText) {
     emailText.addEventListener('click', function () {
@@ -136,5 +166,83 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
         alert('Copy failed, please copy manually: ' + email);
       });
     });
+  }
+
+  function openModal() {
+    contactModal.classList.add('is-open');
+    contactModal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal() {
+    contactModal.classList.remove('is-open');
+    contactModal.setAttribute('aria-hidden', 'true');
+  }
+
+  if (openContactModalBtn && contactModal) {
+    openContactModalBtn.addEventListener('click', openModal);
+  }
+
+  if (closeContactModal) {
+    closeContactModal.addEventListener('click', closeModal);
+  }
+
+  if (closeContactModalBtn) {
+    closeContactModalBtn.addEventListener('click', closeModal);
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && contactModal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+
+  if (contactForm) {
+    const endpoint = contactForm.getAttribute('action');
+    if (!endpoint) {
+      contactHint.textContent = 'Contact backend is not configured yet. Set contact_form_endpoint in _config.yml.';
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+      });
+    } else {
+      contactForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        contactHint.textContent = 'Sending...';
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            contactHint.textContent = 'Message sent. I will reply soon.';
+            contactForm.reset();
+          } else {
+            contactHint.textContent = 'Failed to send message. Please email me directly.';
+          }
+        } catch (error) {
+          contactHint.textContent = 'Network error. Please email me directly.';
+        }
+      });
+    }
+  }
+
+  const revealElements = document.querySelectorAll('.page-reveal');
+  if (revealElements.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach((element) => observer.observe(element));
   }
 </script>
