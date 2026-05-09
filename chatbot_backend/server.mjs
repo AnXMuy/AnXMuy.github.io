@@ -61,6 +61,16 @@ function normalizeTerms(rawTerms) {
   return Array.from(terms);
 }
 
+function isPaperDetailQuestion(question) {
+  const q = question.toLowerCase();
+  const detailTerms = [
+    'method', 'experiment', 'ablation', 'dataset', 'benchmark', 'results',
+    'contribution', 'baseline', 'architecture', 'training', 'evaluation',
+    '论文', '方法', '实验', '消融', '数据集', '结果', '贡献', '对比', '架构', '训练', '评估'
+  ];
+  return detailTerms.some((t) => q.includes(t));
+}
+
 function selectContext(question, topK = 5) {
   const baseTerms = question
     .toLowerCase()
@@ -68,11 +78,21 @@ function selectContext(question, topK = 5) {
     .filter((w) => w.length > 1);
   const terms = normalizeTerms(baseTerms);
 
+  const paperDetailMode = isPaperDetailQuestion(question);
+
   const scored = knowledgeChunks.map((item, idx) => {
     const lower = item.text.toLowerCase();
     let score = 0;
     for (const t of terms) {
       if (lower.includes(t)) score += 1;
+    }
+    // For paper-detail questions, prioritize extracted PDF knowledge.
+    if (paperDetailMode && item.file === 'bot_memory_extracted.md') {
+      score += 3;
+    }
+    // Keep curated QA and profile documents strong for general questions.
+    if (!paperDetailMode && (item.file === 'qa_bilingual.md' || item.file === 'andrewbot_knowledge.md')) {
+      score += 2;
     }
     return { idx, ...item, score };
   });
@@ -87,11 +107,11 @@ function selectContext(question, topK = 5) {
       .filter((x) => x.file === 'andrewbot_knowledge.md')
       .slice(0, topK);
     if (fallback.length > 0) {
-      return fallback.map((x) => `[Source: ${x.file}]\n${x.text}`);
+      return fallback.map((x) => ({ source: x.file, text: x.text }));
     }
   }
 
-  return ranked.map((x) => `[Source: ${x.file}]\n${x.text}`);
+  return ranked.map((x) => ({ source: x.file, text: x.text }));
 }
 
 function json(res, status, data) {
@@ -131,7 +151,9 @@ async function handleChat(req, res) {
 
   const language = detectQuestionLanguage(question);
   const contextList = selectContext(question, 5);
-  const context = contextList.join('\n\n');
+  const context = contextList
+    .map((x) => `[Source: ${x.source}]\n${x.text}`)
+    .join('\n\n');
 
   const systemPrompt = [
     'You are AndrewBot, the official assistant for Zixuan Jiang (Andrew).',
@@ -170,11 +192,13 @@ async function handleChat(req, res) {
 
   const data = await response.json();
   const answer = data?.choices?.[0]?.message?.content || 'No answer returned.';
-  const firstSource = contextList[0]?.match(/\[Source: ([^\]]+)\]/)?.[1] || 'knowledge';
+  const citations = Array.from(new Set(contextList.map((x) => x.source))).slice(0, 5);
+  const firstSource = citations[0] || 'knowledge';
 
   return json(res, 200, {
     answer,
-    citation: firstSource
+    citation: firstSource,
+    citations
   });
 }
 
