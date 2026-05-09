@@ -79,6 +79,19 @@ body {
     background: transparent;
 }
 
+.greedy-nav button {
+    background: transparent;
+    color: #e9f3ff;
+    border: 1px solid rgba(233, 243, 255, 0.45);
+    border-radius: 8px;
+}
+
+.greedy-nav .navicon,
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+    background: #e9f3ff;
+}
+
 .greedy-nav a {
     color: #e9f3ff;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -92,6 +105,26 @@ body {
 .masthead__menu-home-item a {
     font-weight: 800;
     letter-spacing: 0.02em;
+}
+
+.greedy-nav .hidden-links {
+    background: linear-gradient(135deg, var(--nav-deep), var(--nav-deep-2));
+    border: 1px solid #0f4f9d;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(8, 43, 92, 0.35);
+}
+
+.greedy-nav .hidden-links a {
+    color: #e9f3ff;
+}
+
+.greedy-nav .hidden-links a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.greedy-nav .hidden-links:before {
+    border-color: transparent transparent #0f4f9d;
 }
 
 .hero-intro {
