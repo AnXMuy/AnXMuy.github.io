@@ -1,4 +1,6 @@
 <script src="assets/js/main.min.js"></script>
 
 {% include analytics.html %}
-{% include fetch_google_scholar_stats.html %}
+{% if site.enable_google_scholar_stats %}
+  {% include fetch_google_scholar_stats.html %}
+{% endif %}

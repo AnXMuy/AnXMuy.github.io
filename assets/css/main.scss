@@ -40,15 +40,125 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+:root {
+    --bg-main: #f3f6fb;
+    --bg-surface: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #4b5563;
+    --line-soft: #dbe5f3;
+    --brand: #005bbb;
+    --brand-dark: #003d80;
+    --brand-soft: #e8f0ff;
+}
+
+body {
+    background:
+      radial-gradient(circle at 90% -10%, #d8ebff 0%, transparent 38%),
+      radial-gradient(circle at 8% 20%, #e8f3ff 0%, transparent 30%),
+      var(--bg-main);
+    color: var(--text-main);
+}
+
+.page {
+    background: var(--bg-surface);
+    border: 1px solid var(--line-soft);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    padding: 1rem 1.25rem;
+}
+
+.masthead {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.86);
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.masthead__menu-item--lang a {
+    border: 1px solid var(--brand);
+    color: var(--brand);
+    border-radius: 999px;
+    padding: 0.18rem 0.8rem;
+    font-weight: 700;
+}
+
+.masthead__menu-item--lang a:hover {
+    background: var(--brand);
+    color: #fff;
+}
+
+.hero-intro {
+    background: linear-gradient(135deg, #f8fbff, #eef5ff);
+    border: 1px solid #d8e7ff;
+    border-radius: 16px;
+    padding: 1.2rem 1.4rem;
+    margin: 0 0 1.3rem;
+}
+
+.hero-kicker {
+    margin: 0;
+    color: var(--brand-dark);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.hero-intro h1 {
+    margin: 0.4rem 0 0.7rem;
+    line-height: 1.15;
+}
+
+.hero-intro p {
+    margin-bottom: 0.65rem;
+    color: var(--text-muted);
+}
+
+.hero-btn,
+.hero-btn:visited {
+    display: inline-block;
+    background: linear-gradient(120deg, var(--brand), #0a74dd);
+    color: #fff;
+    padding: 0.45rem 0.9rem;
+    border-radius: 10px;
+    margin-right: 0.6rem;
+    font-weight: 700;
+}
+
+.hero-email {
+    color: var(--brand);
+    cursor: pointer;
+    font-weight: 700;
+    border-bottom: 1px dashed var(--brand);
+}
+
+.hero-email.copied {
+    color: #0d8f57;
+    border-bottom-color: #0d8f57;
+}
+
+.page__content h2 {
+    margin-top: 1.8rem;
+    border-left: 4px solid var(--brand);
+    padding-left: 0.65rem;
+}
+
+.page__content ul li {
+    margin-bottom: 0.35rem;
+}
+
 .paper-box {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
+    border: 1px solid #e3ecfa;
+    border-radius: 14px;
+    background: #fcfdff;
     padding: 2em 0;
     position: relative;
+    margin: 0.9rem 0;
+    padding: 1.2rem;
 
     .paper-box-image {
         display: flex;
@@ -117,7 +227,7 @@ h1:before,
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #00369f;
+    background-color: var(--brand-dark);
     font-size: .8em;
     z-index: 2;
 }

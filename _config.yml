@@ -10,6 +10,7 @@ title                    : "Zixuan Jiang"
 description              : "undergraduate student, IAIR"
 repository               : "AnXMuy/AnXMuy.github.io"
 google_scholar_stats_use_cdn : true
+enable_google_scholar_stats   : false
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
