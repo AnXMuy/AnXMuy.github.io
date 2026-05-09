@@ -86,6 +86,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 </div>
 
 - [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **arXiv 2025**
+- [The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results](https://arxiv.org/abs/2604.11998), Xingyu Qiu, Yuqian Fu, Jiawei Geng, Bin Ren, ..., **Zixuan Jiang**, ... and others, **arXiv 2026 (CVPRW @ NTIRE)**
 - [Advances in open vocabulary perception for remote sensing images](https://www.cjig.cn/en/article/doi/10.11834/jig.260163/), Kaiyu Li, Xiangyong Cao☨, **Zixuan Jiang**, Deyu Meng, **Journal of Image and Graphics 2026**
 
 ### Audio Interaction
