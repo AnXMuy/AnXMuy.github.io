@@ -1,26 +1,45 @@
 import { createServer } from 'node:http';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const PORT = Number(process.env.PORT || 8787);
 const API_KEY = process.env.DEEPSEEK_API_KEY || '';
 const API_BASE_URL = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com';
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
-const SKILL_FILE = process.env.BOT_SKILL_FILE || resolve(process.cwd(), 'chatbot_backend', 'skill.md');
 
-function loadSkillPrompt() {
-  try {
-    const text = readFileSync(SKILL_FILE, 'utf-8').trim();
-    if (!text) {
-      return 'Keep a concise, direct, factual tone. If unsure, say so clearly.';
-    }
-    return text;
-  } catch {
-    return 'Keep a concise, direct, factual tone. If unsure, say so clearly.';
+const DEFAULT_SKILL_PROMPT = 'Keep a concise, direct, factual tone. If unsure, say so clearly.';
+
+function resolveSkillPath() {
+  const fromEnv = process.env.BOT_SKILL_FILE;
+  const candidates = [
+    fromEnv,
+    resolve(process.cwd(), 'skill.md'),
+    resolve(process.cwd(), 'chatbot_backend', 'skill.md'),
+    resolve(process.cwd(), '..', 'chatbot_backend', 'skill.md')
+  ].filter(Boolean);
+
+  for (const p of candidates) {
+    if (existsSync(p)) return p;
   }
+  return null;
 }
 
-const skillPrompt = loadSkillPrompt();
+function loadSkillPrompt() {
+  const skillPath = resolveSkillPath();
+  if (!skillPath) {
+    return { prompt: DEFAULT_SKILL_PROMPT, path: null };
+  }
+
+  try {
+    const text = readFileSync(skillPath, 'utf-8').trim();
+    if (!text) {
+      return { prompt: DEFAULT_SKILL_PROMPT, path: skillPath };
+    }
+    return { prompt: text, path: skillPath };
+  } catch {
+    return { prompt: DEFAULT_SKILL_PROMPT, path: skillPath };
+  }
+}
 
 function json(res, status, data) {
   res.writeHead(status, {
@@ -58,6 +77,7 @@ async function handleChat(req, res) {
   }
 
   const language = detectQuestionLanguage(question);
+  const { prompt: skillPrompt } = loadSkillPrompt();
 
   const baseSystemPrompt = [
     'You are AndrewBot, the official assistant for Zixuan Jiang (Andrew).',
@@ -69,7 +89,7 @@ async function handleChat(req, res) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${API_KEY}`
+      Authorization: `Bearer ${API_KEY}`
     },
     body: JSON.stringify({
       model: MODEL,
@@ -94,8 +114,8 @@ async function handleChat(req, res) {
 
   return json(res, 200, {
     answer,
-    citation: 'skill.md',
-    citations: ['skill.md']
+    citation: '',
+    citations: []
   });
 }
 
@@ -105,11 +125,13 @@ const server = createServer(async (req, res) => {
   }
 
   if (req.url === '/health' && req.method === 'GET') {
+    const skill = loadSkillPrompt();
     return json(res, 200, {
       ok: true,
       mode: 'skill-first',
       model: MODEL,
-      skill_file: SKILL_FILE
+      skill_file: skill.path,
+      skill_loaded: Boolean(skill.path)
     });
   }
 
