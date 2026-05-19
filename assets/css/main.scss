@@ -779,6 +779,14 @@ body {
     animation: bot-glow 1.6s ease-in-out infinite;
 }
 
+.floating-chat__panel.is-hidden {
+    display: none;
+}
+
+.floating-chat__panel.is-open {
+    display: block;
+}
+
 .floating-chat__header {
     background: linear-gradient(120deg, #f3f3f3, #d6d6d6);
     color: #111;
