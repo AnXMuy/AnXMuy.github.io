@@ -785,6 +785,11 @@ body {
 
 .floating-chat__panel.is-open {
     display: block;
+    position: fixed;
+    left: clamp(1rem, 4vw, 2.2rem);
+    bottom: 1rem;
+    width: min(380px, calc(100vw - 1.4rem));
+    z-index: 1500;
 }
 
 .floating-chat__header {
@@ -805,15 +810,19 @@ body {
 
 @media (max-width: 800px) {
     .sidebar-bot {
-        position: fixed;
-        left: 0.65rem;
-        right: 0.65rem;
+        position: sticky;
+        left: auto;
+        right: auto;
         bottom: 0.6rem;
-        z-index: 1300;
+        z-index: auto;
         margin-top: 0;
     }
-    .floating-chat__panel {
-        max-height: 42vh;
+    .floating-chat__panel.is-open {
+        left: 0.65rem;
+        right: 0.65rem;
+        width: auto;
+        bottom: 0.6rem;
+        max-height: 52vh;
         overflow: hidden;
     }
     .floating-chat .chat-box {
