@@ -84,34 +84,9 @@
       if (chatPanel.dataset.bound === '1') return;
       chatPanel.dataset.bound = '1';
 
-      function positionChatPanel(launcherRect) {
-        if (!chatLauncher || !chatPanel.classList.contains('is-open')) return;
-        const rect = launcherRect || chatLauncher.getBoundingClientRect();
-        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        const isMobile = viewportWidth <= 800;
-
-        if (isMobile) {
-          chatPanel.style.left = '0.65rem';
-          chatPanel.style.right = '0.65rem';
-          chatPanel.style.bottom = '0.6rem';
-          chatPanel.style.width = 'auto';
-          return;
-        }
-
-        const panelWidth = Math.min(380, viewportWidth - 24);
-        const left = Math.max(12, Math.min(rect.left, viewportWidth - panelWidth - 12));
-        const bottom = Math.max(12, window.innerHeight - rect.bottom + 6);
-        chatPanel.style.right = 'auto';
-        chatPanel.style.left = left + 'px';
-        chatPanel.style.bottom = bottom + 'px';
-        chatPanel.style.width = panelWidth + 'px';
-      }
-
       function openChatPanel() {
-        const launcherRect = chatLauncher ? chatLauncher.getBoundingClientRect() : null;
         chatPanel.classList.add('is-open');
         chatPanel.classList.remove('is-hidden');
-        positionChatPanel(launcherRect);
         if (chatLauncher) chatLauncher.classList.add('is-hidden');
       }
 
@@ -124,8 +99,6 @@
       if (chatLauncher) chatLauncher.addEventListener('click', openChatPanel);
       if (chatMinimizeBtn) chatMinimizeBtn.addEventListener('click', minimizeChatPanel);
       if (chatCloseBtn) chatCloseBtn.addEventListener('click', minimizeChatPanel);
-      window.addEventListener('resize', positionChatPanel);
-      window.addEventListener('scroll', positionChatPanel, { passive: true });
 
       if (!chatApiBaseUrl) {
         chatHint.textContent = 'Chat API is not configured yet.';

@@ -88,6 +88,9 @@ h3 {
     background: linear-gradient(135deg, var(--nav-deep), var(--nav-deep-2));
     border-bottom: 1px solid #0f4f9d;
     box-shadow: 0 8px 20px rgba(8, 43, 92, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 1200;
 }
 
 .greedy-nav {
@@ -808,8 +811,8 @@ body::before {
 
 #main {
     background: transparent;
-    margin-top: 1.35rem !important;
-    padding-top: 0.2rem !important;
+    margin-top: 0.45rem !important;
+    padding-top: 0 !important;
 }
 
 .page {
@@ -942,10 +945,18 @@ body::before {
     margin-top: 0 !important;
     position: fixed !important;
     left: auto !important;
-    right: max(0.9rem, env(safe-area-inset-right)) !important;
-    bottom: max(0.9rem, env(safe-area-inset-bottom)) !important;
+    right: max(1rem, env(safe-area-inset-right)) !important;
+    bottom: max(1rem, env(safe-area-inset-bottom)) !important;
     z-index: 1500 !important;
     width: auto !important;
+}
+
+#floatingChat .floating-chat__panel.is-open {
+    position: fixed !important;
+    right: max(1rem, env(safe-area-inset-right)) !important;
+    bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 2.9rem) !important;
+    left: auto !important;
+    width: min(360px, calc(100vw - 1.4rem)) !important;
 }
 
 .page__content > .section-block:first-of-type {
@@ -968,6 +979,13 @@ body::before {
         right: max(0.6rem, env(safe-area-inset-right)) !important;
         left: auto !important;
         bottom: max(0.6rem, env(safe-area-inset-bottom)) !important;
+    }
+    #floatingChat .floating-chat__panel.is-open {
+        right: max(0.6rem, env(safe-area-inset-right)) !important;
+        left: auto !important;
+        bottom: calc(max(0.6rem, env(safe-area-inset-bottom)) + 2.8rem) !important;
+        width: min(340px, calc(100vw - 1.2rem)) !important;
+        max-height: 52vh;
     }
     .floating-chat__panel.is-open {
         left: 0.65rem !important;
