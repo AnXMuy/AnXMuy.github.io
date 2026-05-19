@@ -711,6 +711,7 @@ h1:before,
     margin: 0;
     padding: 0;
     line-height: 0;
+    scroll-margin-top: 86px;
 }
 
 .timeline-list {
@@ -927,10 +928,15 @@ body::before {
 
 .sidebar-bot {
     margin-top: 0;
-    position: fixed;
-    right: 1.2rem;
+    position: fixed !important;
+    left: auto !important;
+    right: 1.2rem !important;
     bottom: 1.2rem;
     z-index: 1500;
+}
+
+.page__content > .section-block:first-of-type {
+    margin-top: 0.75rem;
 }
 
 @media (max-width: 800px) {
@@ -945,7 +951,8 @@ body::before {
         border-radius: 14px;
     }
     .sidebar-bot {
-        right: 0.6rem;
+        right: 0.6rem !important;
+        left: auto !important;
         bottom: 0.6rem;
     }
     .floating-chat__panel.is-open {

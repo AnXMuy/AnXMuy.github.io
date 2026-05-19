@@ -46,51 +46,6 @@ redirect_from:
 </ul>
 </section>
 
-<span class='anchor' id='publications'></span>
-<section class="section-block page-reveal" markdown="1">
-## Publications
-
-### Remote Sensing Image Interpretation
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/describeearth.png' alt="DescribeEarth" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[DescribeEarth: Describe Anything for Remote Sensing Images](https://arxiv.org/abs/2509.25654)
-
-Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang
-
-**Open-source**: [code](https://github.com/earth-insights/DescribeEarth), [dataset](https://huggingface.co/datasets/earth-insights/DE-Dataset), [benchmark](https://huggingface.co/datasets/earth-insights/DE-Benchmark)
-
-- We introduce geo-spatial detailed localized captioning.
-- We build the first describe-anything model in remote sensing.
-- We release the related dataset and benchmark.
-
-**Media Coverage**: [遥感与深度学习](https://mp.weixin.qq.com/s/qhFIZ6QMmikZ9L7q3cKFaw), [码科智能](https://mp.weixin.qq.com/s/FjmlKo0EkEzXhAk82AdeFQ), [CV炼丹术](https://mp.weixin.qq.com/s/LfGuwxEoIwpEOZXAi6w0fg)
-</div>
-</div>
-
-- [Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images](https://arxiv.org/abs/2508.18067), Kaiyu Li, Xiangyong Cao☨, Ruixun Liu, Shihong Wang, **Zixuan Jiang**, Zhi Wang, Deyu Meng, **arXiv 2025**
-- [The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results](https://arxiv.org/abs/2604.11998), Xingyu Qiu, Yuqian Fu, Jiawei Geng, Bin Ren, ...,Kaiyu Li, Bowen Fu, **Zixuan Jiang**,  Ke Li, Hui Qiao, Xiangyong Cao, ..., **CVPRW 2026 @ NTIRE**
-- [Advances in open vocabulary perception for remote sensing images](https://www.cjig.cn/en/article/doi/10.11834/jig.260163/), Kaiyu Li, Xiangyong Cao☨, **Zixuan Jiang**, Deyu Meng, **Chinese Journal of Image and Graphics 2026**
-
-### Audio Interaction
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
-
-Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
-
-**Related Resource**: [Project page](https://interactiveasr.github.io/), [Live demo](https://i-asr.sjtuxlance.com/)
-
-- We propose $S^2ER$, a metric that leverages LLMs-as-judges to assess ASR semantic success.
-- We develop an LLM-simulated interactive correction framework to iteratively improve ASR performance.
-
-</div>
-</div>
-</section>
-
 <span class='anchor' id='honors-awards'></span>
 <section class="section-block page-reveal" markdown="1">
 ## Honors and Awards
