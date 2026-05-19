@@ -28,7 +28,7 @@ redirect_from:
     with growing interests in omni-modal agents and human-computer interaction.
   </p>
   <p class="hero-actions">
-    <a class="hero-btn" href="images/CV.pdf">View CV</a>
+    <a class="hero-btn" href="/images/CV.pdf">View CV</a>
     <span class="hero-email" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Copy Email</span>
   </p>
 </div>
