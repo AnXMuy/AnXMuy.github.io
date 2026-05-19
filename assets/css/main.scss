@@ -799,6 +799,8 @@ body::before {
 
 #main {
     background: transparent;
+    margin-top: 1.35rem !important;
+    padding-top: 0.2rem !important;
 }
 
 .page {
@@ -936,7 +938,7 @@ body::before {
 }
 
 .page__content > .section-block:first-of-type {
-    margin-top: 0.75rem;
+    margin-top: 1.1rem !important;
 }
 
 @media (max-width: 800px) {

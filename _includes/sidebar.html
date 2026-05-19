@@ -10,7 +10,7 @@
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
     {% endfor %}
   {% endif %}
-  <div class="sidebar-bot" id="floatingChat" aria-label="AndrewBot chat window">
+  <div class="sidebar-bot" id="floatingChat" aria-label="AndrewBot chat window" style="position:fixed;right:1.2rem;left:auto;bottom:1.2rem;z-index:1500;">
     <button class="floating-chat__launcher" id="chatLauncher" type="button">Ask AndrewBot</button>
     <div class="floating-chat__panel is-hidden" id="chatPanel">
       <div class="floating-chat__header">
