@@ -62,7 +62,6 @@ body {
       var(--bg-main);
     color: var(--text-main);
     font-family: "Manrope", "Segoe UI", "PingFang SC", sans-serif;
-    transition: transform 0.32s ease, opacity 0.32s ease, filter 0.32s ease;
 }
 
 h1,
@@ -607,6 +606,7 @@ h1:before,
     transform: translateX(20px);
     opacity: 0;
     filter: blur(1px);
+    transition: transform 0.32s ease, opacity 0.32s ease, filter 0.32s ease;
 }
 
 .page-enter.page-enter-active {
@@ -620,6 +620,7 @@ h1:before,
     opacity: 0;
     filter: blur(1px);
     pointer-events: none;
+    transition: transform 0.32s ease, opacity 0.32s ease, filter 0.32s ease;
 }
 
 @media (max-width: 800px) {
