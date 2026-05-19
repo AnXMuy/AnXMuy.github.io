@@ -6,11 +6,11 @@ main:
   - title: "Publications"
     url: "/publications/"
 
-  - title: "Honors and Awards"
-    url: "/honors-awards/"
-
   - title: "Competitions"
     url: "/competitions/"
+
+  - title: "Honors and Awards"
+    url: "/honors-awards/"
 
   - title: "Blog"
     url: "/blog/"
