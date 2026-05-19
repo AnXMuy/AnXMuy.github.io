@@ -84,9 +84,9 @@
       if (chatPanel.dataset.bound === '1') return;
       chatPanel.dataset.bound = '1';
 
-      function positionChatPanel() {
+      function positionChatPanel(launcherRect) {
         if (!chatLauncher || !chatPanel.classList.contains('is-open')) return;
-        const launcherRect = chatLauncher.getBoundingClientRect();
+        const rect = launcherRect || chatLauncher.getBoundingClientRect();
         const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         const isMobile = viewportWidth <= 800;
 
@@ -99,8 +99,8 @@
         }
 
         const panelWidth = Math.min(380, viewportWidth - 24);
-        const left = Math.max(12, Math.min(launcherRect.left, viewportWidth - panelWidth - 12));
-        const bottom = Math.max(12, window.innerHeight - launcherRect.bottom + 6);
+        const left = Math.max(12, Math.min(rect.left, viewportWidth - panelWidth - 12));
+        const bottom = Math.max(12, window.innerHeight - rect.bottom + 6);
         chatPanel.style.right = 'auto';
         chatPanel.style.left = left + 'px';
         chatPanel.style.bottom = bottom + 'px';
@@ -108,10 +108,11 @@
       }
 
       function openChatPanel() {
+        const launcherRect = chatLauncher ? chatLauncher.getBoundingClientRect() : null;
         chatPanel.classList.add('is-open');
         chatPanel.classList.remove('is-hidden');
+        positionChatPanel(launcherRect);
         if (chatLauncher) chatLauncher.classList.add('is-hidden');
-        positionChatPanel();
       }
 
       function minimizeChatPanel() {

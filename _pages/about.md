@@ -10,8 +10,10 @@ redirect_from:
 ---
 
 <span class='anchor' id='about-me'></span>
+<section class="section-block page-reveal" markdown="1">
+## About Me
 
-<div class="hero-intro page-reveal">
+<div class="hero-intro">
   <h1>Zixuan Jiang (Andrew)</h1>
   <p>
     I'm currently an undergraduate student with the
@@ -30,22 +32,25 @@ redirect_from:
     <span class="hero-email" id="emailText" data-email="andrewjiang@stu.xjtu.edu.cn" title="Click to copy email">Copy Email</span>
   </p>
 </div>
-
+</section>
 
 <span class='anchor' id='news'></span>
+<section class="section-block page-reveal" markdown="1">
 ## News
 
 - *2025.12*: Receive a pre-admission offer from [Shanghai Innovation Institute](https://www.sii.edu.cn/) through the 2026 Golden Autumn Camp.
 - *2025.10*: National Scholarship has been confirmed.
 - *2025.10*: **DescribeEarth** has been open-sourced at [GitHub](https://github.com/earth-insights/DescribeEarth).
 - *2025.09*: **DescribeEarth** is available on [arXiv](https://arxiv.org/abs/2509.25654).
+</section>
 
 <span class='anchor' id='publications'></span>
+<section class="section-block page-reveal" markdown="1">
 ## Publications
 
 ### Remote Sensing Image Interpretation
 
-<div class='paper-box page-reveal'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/describeearth.png' alt="DescribeEarth" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/describeearth.png' alt="DescribeEarth" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [DescribeEarth: Describe Anything for Remote Sensing Images](https://arxiv.org/abs/2509.25654)
@@ -68,7 +73,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 ### Audio Interaction
 
-<div class='paper-box page-reveal'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
@@ -82,8 +87,10 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 
 </div>
 </div>
+</section>
 
 <span class='anchor' id='honors-awards'></span>
+<section class="section-block page-reveal" markdown="1">
 ## Honors and Awards
 
 - *2025.10*: **National Scholarship**
@@ -91,8 +98,18 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 - *2024.11*: **Shuiyou** First-Class Scholarship (Top 4 in university)
 - *2024.11*: Outstanding Student, Xi'an Jiaotong University
 - *2023.11*: Third-Class Scholarship, Xi'an Jiaotong University
+</section>
+
+<span class='anchor' id='educations'></span>
+<section class="section-block page-reveal" markdown="1">
+## Educations
+
+- *2023.09 - now*: Artificial Intelligence Experimental Class, Xi'an Jiaotong University (Outstanding Talent Program)
+- *2021.09 - now*: Young Gifted Program
+</section>
 
 <span class='anchor' id='competitions'></span>
+<section class="section-block page-reveal" markdown="1">
 ## Competitions
 
 ### AI Competitions
@@ -105,15 +122,12 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 - *2023-2025*: **3x First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
 - *2024*: **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
 - *2023*: **Honorable Prize**, Mathematical Contest in Modeling (MCM), USA
-
-<span class='anchor' id='educations'></span>
-## Educations
-
-- *2023.09 - now*: Artificial Intelligence Experimental Class, Xi'an Jiaotong University (Outstanding Talent Program)
-- *2021.09 - now*: Young Gifted Program
+</section>
 
 <span class='anchor' id='internships'></span>
+<section class="section-block page-reveal" markdown="1">
 ## Internships
 
 - Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group (Mentor: Xiangyong Cao)
 - Shanghai Jiao Tong University, X-LANCE Lab (Mentor: Xie Chen)
+</section>
