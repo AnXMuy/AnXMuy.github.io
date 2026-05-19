@@ -2,6 +2,7 @@
   category: "Research Log"
   title: "Interactive ASR: What Changed After the First Release"
   summary: "A practical retrospective on data iteration, model behavior, and evaluation signals that mattered most in real interactive settings."
+  image: "/images/interactiveasr_interspeech.png"
   url: "#"
   cta: "Read Article"
 
@@ -9,6 +10,7 @@
   category: "Engineering"
   title: "How I Structure Fast Experimental Repos"
   summary: "Repository conventions, baseline scripts, and automation hooks for reducing setup overhead and preserving reproducibility."
+  image: "/images/logo.jpg"
   url: "#"
   cta: "Read Article"
 
@@ -16,6 +18,7 @@
   category: "Vision"
   title: "Open-Vocabulary Remote Sensing: Failure Modes"
   summary: "A compact taxonomy of common failure patterns and which diagnostics typically reveal root causes early."
+  image: "/images/describeearth.png"
   url: "#"
   cta: "Read Article"
 

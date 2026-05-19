@@ -1,13 +1,17 @@
 <script src="assets/js/main.min.js"></script>
 <script>
   (function () {
-    const body = document.body;
-    if (!body) return;
-    const contentPanel = document.querySelector('article.page');
-
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const chatApiBaseUrl = '{{ site.chat_api_base_url }}';
+    let isNavigating = false;
 
-    if (!prefersReducedMotion && contentPanel) {
+    function getContentPanel() {
+      return document.querySelector('article.page');
+    }
+
+    function animatePageEnter() {
+      const contentPanel = getContentPanel();
+      if (prefersReducedMotion || !contentPanel) return;
       contentPanel.classList.add('page-enter');
       requestAnimationFrame(function () {
         contentPanel.classList.add('page-enter-active');
@@ -15,61 +19,187 @@
       setTimeout(function () {
         contentPanel.classList.remove('page-enter');
         contentPanel.classList.remove('page-enter-active');
-      }, 420);
+      }, 360);
     }
 
-    const transitionLinks = document.querySelectorAll('a[data-page-transition="slide-left"]');
-    transitionLinks.forEach(function (link) {
-      link.addEventListener('click', function (event) {
-        if (
-          event.defaultPrevented ||
-          event.metaKey ||
-          event.ctrlKey ||
-          event.shiftKey ||
-          event.altKey ||
-          event.button !== 0
-        ) {
-          return;
-        }
+    function initReveal() {
+      const revealElements = document.querySelectorAll('.page-reveal');
+      if ('IntersectionObserver' in window && revealElements.length) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.14 });
+        revealElements.forEach(function (element) {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach(function (element) {
+          element.classList.add('is-visible');
+        });
+      }
+    }
 
-        const href = link.getAttribute('href');
-        if (!href || href.startsWith('#')) return;
-
-        const targetUrl = new URL(href, window.location.href);
-        if (targetUrl.origin !== window.location.origin) return;
-        if (targetUrl.href === window.location.href) return;
-
-        const samePath = targetUrl.pathname === window.location.pathname;
-        if (samePath) return;
-
-        event.preventDefault();
-        if (contentPanel) {
-          contentPanel.classList.add('page-leave-left');
-        }
-        setTimeout(function () {
-          window.location.href = targetUrl.href;
-        }, 320);
+    function initEmailCopy() {
+      const emailText = document.getElementById('emailText');
+      if (!emailText || emailText.dataset.bound === '1') return;
+      emailText.dataset.bound = '1';
+      emailText.addEventListener('click', function () {
+        const email = this.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+          const originalText = this.textContent;
+          this.textContent = 'Copied';
+          this.classList.add('copied');
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.classList.remove('copied');
+          }, 1400);
+        }).catch(() => {
+          alert('Copy failed, please copy manually: ' + email);
+        });
       });
+    }
+
+    function appendChatMessage(chatBox, content, role) {
+      const message = document.createElement('div');
+      message.className = 'chat-message ' + (role === 'user' ? 'chat-message--user' : 'chat-message--bot');
+      message.textContent = content;
+      chatBox.appendChild(message);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function initChat() {
+      const chatLauncher = document.getElementById('chatLauncher');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatMinimizeBtn = document.getElementById('chatMinimizeBtn');
+      const chatCloseBtn = document.getElementById('chatCloseBtn');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const chatBox = document.getElementById('chatBox');
+      const chatHint = document.getElementById('chatHint');
+
+      if (!chatPanel || !chatForm || !chatInput || !chatBox || !chatHint) return;
+      if (chatPanel.dataset.bound === '1') return;
+      chatPanel.dataset.bound = '1';
+
+      function openChatPanel() {
+        chatPanel.classList.add('is-open');
+        chatPanel.classList.remove('is-hidden');
+        if (chatLauncher) chatLauncher.classList.add('is-hidden');
+      }
+
+      function minimizeChatPanel() {
+        chatPanel.classList.remove('is-open');
+        chatPanel.classList.add('is-hidden');
+        if (chatLauncher) chatLauncher.classList.remove('is-hidden');
+      }
+
+      if (chatLauncher) chatLauncher.addEventListener('click', openChatPanel);
+      if (chatMinimizeBtn) chatMinimizeBtn.addEventListener('click', minimizeChatPanel);
+      if (chatCloseBtn) chatCloseBtn.addEventListener('click', minimizeChatPanel);
+
+      if (!chatApiBaseUrl) {
+        chatHint.textContent = 'Chat API is not configured yet.';
+        chatForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+        });
+        return;
+      }
+
+      chatForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const question = chatInput.value.trim();
+        if (!question) return;
+
+        appendChatMessage(chatBox, question, 'user');
+        chatInput.value = '';
+        chatHint.textContent = 'Thinking...';
+
+        try {
+          const response = await fetch(chatApiBaseUrl.replace(/\/$/, '') + '/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question: question, source: 'homepage' })
+          });
+          if (!response.ok) {
+            chatHint.textContent = 'Chat backend error.';
+            return;
+          }
+          const data = await response.json();
+          appendChatMessage(chatBox, data.answer || 'No response.', 'bot');
+          chatHint.textContent = data.citation ? ('Source: ' + data.citation) : '';
+        } catch (error) {
+          chatHint.textContent = 'Network error when calling chatbot API.';
+        }
+      });
+    }
+
+    async function softNavigate(targetUrl, shouldPushState) {
+      const contentPanel = getContentPanel();
+      if (!contentPanel || isNavigating) {
+        window.location.href = targetUrl.href;
+        return;
+      }
+      isNavigating = true;
+
+      if (!prefersReducedMotion) {
+        contentPanel.classList.add('page-leave-left');
+        await new Promise(function (resolve) { setTimeout(resolve, 220); });
+      }
+
+      try {
+        const response = await fetch(targetUrl.href, { headers: { 'X-Requested-With': 'fetch' } });
+        if (!response.ok) throw new Error('failed to load target page');
+        const html = await response.text();
+        const parser = new DOMParser();
+        const targetDoc = parser.parseFromString(html, 'text/html');
+        const newPanel = targetDoc.querySelector('article.page');
+        if (!newPanel) throw new Error('target content panel not found');
+
+        contentPanel.replaceWith(newPanel);
+        document.title = targetDoc.title || document.title;
+        if (shouldPushState) {
+          history.pushState({}, '', targetUrl.href);
+        }
+        window.scrollTo({ top: 0, behavior: 'auto' });
+
+        initEmailCopy();
+        initReveal();
+        animatePageEnter();
+      } catch (error) {
+        window.location.href = targetUrl.href;
+      } finally {
+        isNavigating = false;
+      }
+    }
+
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[data-page-transition="slide-left"]');
+      if (!link) return;
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      const targetUrl = new URL(href, window.location.href);
+      if (targetUrl.origin !== window.location.origin) return;
+
+      const samePath = targetUrl.pathname === window.location.pathname;
+      if (samePath) return;
+
+      event.preventDefault();
+      softNavigate(targetUrl, true);
     });
 
-    const revealElements = document.querySelectorAll('.page-reveal');
-    if ('IntersectionObserver' in window && revealElements.length) {
-      const revealObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.14 });
+    window.addEventListener('popstate', function () {
+      softNavigate(new URL(window.location.href), false);
+    });
 
-      revealElements.forEach(function (element) {
-        revealObserver.observe(element);
-      });
-    } else {
-      revealElements.forEach(function (element) {
-        element.classList.add('is-visible');
-      });
-    }
+    initEmailCopy();
+    initChat();
+    initReveal();
+    animatePageEnter();
   })();
 </script>
 

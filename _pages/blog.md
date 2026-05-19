@@ -19,6 +19,11 @@ lang: en
   {% for post in site.data.blog_posts %}
   <article class="blog-card page-reveal">
     <p class="blog-card__meta">{{ post.date }} · {{ post.category }}</p>
+    {% if post.image %}
+    <div class="blog-card__image-wrap">
+      <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-card__image">
+    </div>
+    {% endif %}
     <h2>{{ post.title }}</h2>
     <p>{{ post.summary }}</p>
     <a href="{{ post.url }}" class="blog-card__link">{{ post.cta }}</a>
