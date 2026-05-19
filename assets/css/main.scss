@@ -714,6 +714,15 @@ h1:before,
     scroll-margin-top: 86px;
 }
 
+/* Override legacy theme offset that hides first section */
+.page__content #about-me {
+    margin-top: 0 !important;
+}
+
+.page__content #about-me::before {
+    display: none !important;
+}
+
 .timeline-list {
     list-style: none;
     margin: 0.2rem 0 0;
@@ -928,13 +937,15 @@ body::before {
     gap: 0.8rem;
 }
 
-.sidebar-bot {
-    margin-top: 0;
+.sidebar-bot,
+#floatingChat.sidebar-bot {
+    margin-top: 0 !important;
     position: fixed !important;
     left: auto !important;
-    right: 1.2rem !important;
-    bottom: 1.2rem;
-    z-index: 1500;
+    right: max(0.9rem, env(safe-area-inset-right)) !important;
+    bottom: max(0.9rem, env(safe-area-inset-bottom)) !important;
+    z-index: 1500 !important;
+    width: auto !important;
 }
 
 .page__content > .section-block:first-of-type {
@@ -952,10 +963,11 @@ body::before {
         padding: 0.8rem 0.85rem;
         border-radius: 14px;
     }
-    .sidebar-bot {
-        right: 0.6rem !important;
+    .sidebar-bot,
+    #floatingChat.sidebar-bot {
+        right: max(0.6rem, env(safe-area-inset-right)) !important;
         left: auto !important;
-        bottom: 0.6rem;
+        bottom: max(0.6rem, env(safe-area-inset-bottom)) !important;
     }
     .floating-chat__panel.is-open {
         left: 0.65rem !important;
