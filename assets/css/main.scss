@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap");
 
 /*
  *    Minimal Mistakes Jekyll Theme
@@ -61,14 +61,14 @@ body {
       radial-gradient(circle at 6% 18%, #c8e2ff 0%, transparent 30%),
       var(--bg-main);
     color: var(--text-main);
-    font-family: "Manrope", "Segoe UI", "PingFang SC", sans-serif;
+    font-family: "Outfit", "Noto Sans SC", "Segoe UI", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Fraunces", Georgia, "Times New Roman", serif;
-    letter-spacing: 0.01em;
+    font-family: "Outfit", "Noto Sans SC", "Segoe UI", sans-serif;
+    letter-spacing: 0.015em;
 }
 
 .page {
@@ -233,8 +233,8 @@ h3 {
 
 .page__content h2 {
     margin-top: 1.8rem;
-    border-left: 4px solid var(--brand);
-    padding-left: 0.65rem;
+    border-left: none;
+    padding-left: 0;
 }
 
 .page__content h1 {
@@ -313,11 +313,7 @@ $scroll_offset: 2em;
 h1:before,
 .anchor:before {
     content: '';
-    display: block;
-    position: relative;
-    width: 0;
-    height: $scroll_offset;
-    margin-top: -$scroll_offset;
+    display: none;
 }
 
 .badge {
@@ -681,6 +677,8 @@ h1:before,
 
 .section-block > h2 {
     margin-top: 0.05rem;
+    border-left: none;
+    padding-left: 0;
 }
 
 .section-block .hero-intro {
@@ -707,10 +705,51 @@ h1:before,
 .page-reveal:nth-of-type(6) { transition-delay: 0.2s; }
 .page-reveal:nth-of-type(7) { transition-delay: 0.24s; }
 
+.anchor {
+    display: block;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.timeline-list {
+    list-style: none;
+    margin: 0.2rem 0 0;
+    padding: 0;
+}
+
+.timeline-list li {
+    display: grid;
+    grid-template-columns: 9.2rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.36rem 0;
+    border-bottom: 1px dashed #d6e5fa;
+}
+
+.timeline-list li:last-child {
+    border-bottom: none;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: #2b5f9c;
+    white-space: nowrap;
+}
+
+.timeline-content {
+    color: var(--text-main);
+}
+
 @media (max-width: 800px) {
     .section-block {
         border-radius: 14px;
         padding: 0.85rem 0.85rem;
+    }
+    .timeline-list li {
+        grid-template-columns: 7.1rem minmax(0, 1fr);
+        gap: 0.55rem;
     }
 }
 
@@ -776,11 +815,7 @@ body::before {
     display: none;
 }
 
-.page__content > .hero-intro,
-.page__content > h2,
-.page__content > h3,
-.page__content > ul,
-.page__content > p,
+.page__content > .section-block,
 .page__content > div.paper-box,
 .page__content > div.blog-hero,
 .page__content > div.blog-grid {
@@ -793,16 +828,6 @@ body::before {
     margin: 0 0 0.95rem;
 }
 
-.page__content > h2,
-.page__content > h3 {
-    padding-top: 0.85rem;
-    padding-bottom: 0.85rem;
-}
-
-.page__content > h2 {
-    border-left: 6px solid var(--brand);
-}
-
 .hero-intro {
     background: linear-gradient(145deg, #fafdff 0%, #ecf4ff 100%);
     border: 1px solid #cddffb;
@@ -812,14 +837,14 @@ body::before {
 .hero-intro h1,
 .blog-card h2,
 .page__content h2 {
-    font-family: "Fraunces", "Times New Roman", serif;
+    font-family: "Outfit", "Noto Sans SC", "Segoe UI", sans-serif;
     letter-spacing: 0.01em;
 }
 
 .page__content p,
 .page__content li,
 .blog-card p {
-    font-family: "Manrope", "Segoe UI", sans-serif;
+    font-family: "Outfit", "Noto Sans SC", "Segoe UI", sans-serif;
     line-height: 1.72;
 }
 
@@ -901,25 +926,27 @@ body::before {
 }
 
 .sidebar-bot {
-    margin-top: auto;
-    position: sticky;
-    bottom: 0.6rem;
+    margin-top: 0;
+    position: fixed;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    z-index: 1500;
 }
 
 @media (max-width: 800px) {
     .page {
         padding: 0.25rem;
     }
-    .page__content > .hero-intro,
-    .page__content > h2,
-    .page__content > h3,
-    .page__content > ul,
-    .page__content > p,
+    .page__content > .section-block,
     .page__content > div.paper-box,
     .page__content > div.blog-hero,
     .page__content > div.blog-grid {
         padding: 0.8rem 0.85rem;
         border-radius: 14px;
+    }
+    .sidebar-bot {
+        right: 0.6rem;
+        bottom: 0.6rem;
     }
     .floating-chat__panel.is-open {
         left: 0.65rem !important;

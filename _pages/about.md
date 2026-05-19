@@ -38,10 +38,12 @@ redirect_from:
 <section class="section-block page-reveal" markdown="1">
 ## News
 
-- *2025.12*: Receive a pre-admission offer from [Shanghai Innovation Institute](https://www.sii.edu.cn/) through the 2026 Golden Autumn Camp.
-- *2025.10*: National Scholarship has been confirmed.
-- *2025.10*: **DescribeEarth** has been open-sourced at [GitHub](https://github.com/earth-insights/DescribeEarth).
-- *2025.09*: **DescribeEarth** is available on [arXiv](https://arxiv.org/abs/2509.25654).
+<ul class="timeline-list">
+  <li><span class="timeline-date">2025.12</span><span class="timeline-content">Receive a pre-admission offer from <a href="https://www.sii.edu.cn/">Shanghai Innovation Institute</a> through the 2026 Golden Autumn Camp.</span></li>
+  <li><span class="timeline-date">2025.10</span><span class="timeline-content">National Scholarship has been confirmed.</span></li>
+  <li><span class="timeline-date">2025.10</span><span class="timeline-content"><strong>DescribeEarth</strong> has been open-sourced at <a href="https://github.com/earth-insights/DescribeEarth">GitHub</a>.</span></li>
+  <li><span class="timeline-date">2025.09</span><span class="timeline-content"><strong>DescribeEarth</strong> is available on <a href="https://arxiv.org/abs/2509.25654">arXiv</a>.</span></li>
+</ul>
 </section>
 
 <span class='anchor' id='publications'></span>
@@ -93,19 +95,23 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 <section class="section-block page-reveal" markdown="1">
 ## Honors and Awards
 
-- *2025.10*: **National Scholarship**
-- *2025.10*: Outstanding Student, Xi'an Jiaotong University
-- *2024.11*: **Shuiyou** First-Class Scholarship (Top 4 in university)
-- *2024.11*: Outstanding Student, Xi'an Jiaotong University
-- *2023.11*: Third-Class Scholarship, Xi'an Jiaotong University
+<ul class="timeline-list">
+  <li><span class="timeline-date">2025.10</span><span class="timeline-content"><strong>National Scholarship</strong></span></li>
+  <li><span class="timeline-date">2025.10</span><span class="timeline-content">Outstanding Student, Xi'an Jiaotong University</span></li>
+  <li><span class="timeline-date">2024.11</span><span class="timeline-content"><strong>Shuiyou</strong> First-Class Scholarship (Top 4 in university)</span></li>
+  <li><span class="timeline-date">2024.11</span><span class="timeline-content">Outstanding Student, Xi'an Jiaotong University</span></li>
+  <li><span class="timeline-date">2023.11</span><span class="timeline-content">Third-Class Scholarship, Xi'an Jiaotong University</span></li>
+</ul>
 </section>
 
 <span class='anchor' id='educations'></span>
 <section class="section-block page-reveal" markdown="1">
 ## Educations
 
-- *2023.09 - now*: Artificial Intelligence Experimental Class, Xi'an Jiaotong University (Outstanding Talent Program)
-- *2021.09 - now*: Young Gifted Program
+<ul class="timeline-list">
+  <li><span class="timeline-date">2023.09 - now</span><span class="timeline-content">Artificial Intelligence Experimental Class, Xi'an Jiaotong University (Outstanding Talent Program)</span></li>
+  <li><span class="timeline-date">2021.09 - now</span><span class="timeline-content">Young Gifted Program</span></li>
+</ul>
 </section>
 
 <span class='anchor' id='competitions'></span>
@@ -113,21 +119,27 @@ Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xip
 ## Competitions
 
 ### AI Competitions
-- *2025*: **Second Prize**, National Laser Radar Conference Point Cloud Intelligent Analysis Competition
-- *2025*: **Silver Medal**, ICPC Shaanxi Provincial Programming Contest
-- *2025*: **Excellence Award** (Finalist), AI+ College Innovation Program, AI Technology Track
-- *2024*: **Bronze Medal**, ICPC Shaanxi Provincial Programming Contest
+<ul class="timeline-list">
+  <li><span class="timeline-date">2025</span><span class="timeline-content"><strong>Second Prize</strong>, National Laser Radar Conference Point Cloud Intelligent Analysis Competition</span></li>
+  <li><span class="timeline-date">2025</span><span class="timeline-content"><strong>Silver Medal</strong>, ICPC Shaanxi Provincial Programming Contest</span></li>
+  <li><span class="timeline-date">2025</span><span class="timeline-content"><strong>Excellence Award</strong> (Finalist), AI+ College Innovation Program, AI Technology Track</span></li>
+  <li><span class="timeline-date">2024</span><span class="timeline-content"><strong>Bronze Medal</strong>, ICPC Shaanxi Provincial Programming Contest</span></li>
+</ul>
 
 ### Math Modeling
-- *2023-2025*: **3x First Prize**, National College Student Mathematical Modeling Competition (Shaanxi Division)
-- *2024*: **Meritorious Winner**, Mathematical Contest in Modeling (MCM), USA
-- *2023*: **Honorable Prize**, Mathematical Contest in Modeling (MCM), USA
+<ul class="timeline-list">
+  <li><span class="timeline-date">2023-2025</span><span class="timeline-content"><strong>3x First Prize</strong>, National College Student Mathematical Modeling Competition (Shaanxi Division)</span></li>
+  <li><span class="timeline-date">2024</span><span class="timeline-content"><strong>Meritorious Winner</strong>, Mathematical Contest in Modeling (MCM), USA</span></li>
+  <li><span class="timeline-date">2023</span><span class="timeline-content"><strong>Honorable Prize</strong>, Mathematical Contest in Modeling (MCM), USA</span></li>
+</ul>
 </section>
 
 <span class='anchor' id='internships'></span>
 <section class="section-block page-reveal" markdown="1">
 ## Internships
 
-- Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group (Mentor: Xiangyong Cao)
-- Shanghai Jiao Tong University, X-LANCE Lab (Mentor: Xie Chen)
+<ul class="timeline-list">
+  <li><span class="timeline-date">Research</span><span class="timeline-content">Xi'an Jiaotong University, Associate Professor Xiangyong Cao's Research Group (Mentor: Xiangyong Cao)</span></li>
+  <li><span class="timeline-date">Research</span><span class="timeline-content">Shanghai Jiao Tong University, X-LANCE Lab (Mentor: Xie Chen)</span></li>
+</ul>
 </section>
