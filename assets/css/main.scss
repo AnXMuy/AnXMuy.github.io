@@ -918,3 +918,123 @@ a:visited,
     background-color: #d9d9d9 !important;
     color: #111 !important;
 }
+
+/* Hard reset for visible redesign */
+html,
+body {
+    background-color: #060606 !important;
+}
+
+body,
+.page,
+.sidebar,
+.profile_box,
+.author__urls,
+.author__content,
+.author__bio,
+.page__content,
+.masthead,
+.greedy-nav,
+.greedy-nav .hidden-links,
+.hero-intro,
+.paper-box,
+.blog-hero,
+.blog-card,
+.floating-chat__panel,
+.chat-box {
+    color: #f2f2f2 !important;
+    border-color: #303030 !important;
+}
+
+.profile_box,
+.author__urls {
+    background: linear-gradient(165deg, #0d0d0d, #111111 70%) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+.author__avatar img,
+.author__avatar {
+    border: 1px solid #353535 !important;
+    box-shadow: 0 0 0 3px #111, 0 0 16px rgba(255, 255, 255, 0.08) !important;
+}
+
+.masthead {
+    background: linear-gradient(120deg, #030303, #0d0d0d) !important;
+}
+
+.greedy-nav button {
+    border-color: #5c5c5c !important;
+    color: #f2f2f2 !important;
+}
+
+.greedy-nav .navicon,
+.greedy-nav .navicon:before,
+.greedy-nav .navicon:after {
+    background: #f2f2f2 !important;
+}
+
+.page {
+    background:
+      linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 28%),
+      linear-gradient(175deg, #0b0b0b, #111111 55%, #0d0d0d) !important;
+    border-radius: 2px !important;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.hero-intro,
+.blog-hero {
+    border-radius: 2px !important;
+    background:
+      linear-gradient(165deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 35%),
+      linear-gradient(150deg, #0f0f0f, #151515 68%) !important;
+}
+
+.paper-box,
+.blog-card {
+    border-radius: 2px !important;
+    background:
+      linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 38%),
+      linear-gradient(155deg, #0f0f0f, #141414) !important;
+}
+
+.blog-card:hover,
+.paper-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-btn,
+.hero-btn:visited {
+    background: #efefef !important;
+    color: #111 !important;
+    border: 1px solid #fff !important;
+    border-radius: 2px !important;
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12) !important;
+}
+
+.page__content h2 {
+    border-left: 2px solid #efefef !important;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.hero-intro h1,
+.blog-card h2 {
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+.floating-chat__launcher {
+    border-radius: 2px !important;
+    background: #efefef !important;
+    color: #111 !important;
+    border: 1px solid #fff !important;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0), 0 10px 20px rgba(0, 0, 0, 0.35) !important;
+    animation: launcher-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes launcher-pulse {
+    0%, 100% { box-shadow: 0 0 0 rgba(255, 255, 255, 0), 0 10px 20px rgba(0, 0, 0, 0.35); }
+    50% { box-shadow: 0 0 18px rgba(255, 255, 255, 0.24), 0 10px 20px rgba(0, 0, 0, 0.45); }
+}
