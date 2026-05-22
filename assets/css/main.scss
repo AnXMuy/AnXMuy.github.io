@@ -942,6 +942,12 @@ body::before {
     gap: 0.8rem;
 }
 
+@include breakpoint($large) {
+    .sidebar.sticky {
+        margin-top: 1.1rem;
+    }
+}
+
 .sidebar-bot,
 #floatingChat.sidebar-bot {
     margin-top: 0 !important;
@@ -961,7 +967,10 @@ body::before {
     width: min(360px, calc(100vw - 1.4rem)) !important;
 }
 
-.page__content > .section-block:first-of-type {
+.page__content > .section-block:first-of-type,
+.page__content > .paper-box:first-child,
+.page__content > .blog-hero:first-child,
+.page__content > .blog-grid:first-child {
     margin-top: 1.1rem !important;
 }
 
