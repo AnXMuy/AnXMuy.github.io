@@ -1,0 +1,54 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main">
+      {% include sidebar.html %}
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+            <div class="blog-hero page-reveal">
+              <p class="blog-kicker">{{ page.category | default: "Blog" }}</p>
+              <h1>{{ page.title }}</h1>
+              {% if page.date %}
+              <p class="blog-post__meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+              {% endif %}
+              {% if page.summary %}
+              <p>{{ page.summary }}</p>
+              {% endif %}
+              <p class="blog-post__back"><a href="/blog/">Back to Blog</a></p>
+            </div>
+
+            {% if page.image %}
+            <section class="section-block page-reveal">
+              <img src="{{ page.image }}" alt="{{ page.title }}">
+            </section>
+            {% endif %}
+
+            <section class="section-block page-reveal" markdown="1">
+{{ content }}
+            </section>
+          </section>
+        </div>
+      </article>
+    </div>
+    {% include andrewbot.html %}
+
+    {% include scripts.html %}
+
+  </body>
+</html>
