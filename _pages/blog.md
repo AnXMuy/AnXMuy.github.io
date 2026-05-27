@@ -2,7 +2,7 @@
 permalink: /blog/
 title: "Blog"
 excerpt: "Thoughts, notes, and builds."
-author_profile: false
+author_profile: true
 lang: en
 ---
 
