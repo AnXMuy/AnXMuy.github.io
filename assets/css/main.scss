@@ -1223,6 +1223,22 @@ a {
     margin-top: 0.12rem;
 }
 
+.minimal-post-download {
+    display: block;
+    margin-top: 0.18rem;
+}
+
+.minimal-post-download a {
+    color: var(--minimal-link);
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.minimal-post-download a:hover {
+    text-decoration: underline;
+}
+
 .minimal-note-card details {
     margin-top: 0.48rem;
 }
@@ -1253,6 +1269,33 @@ a {
 
 .blog-post__back {
     margin: 0.7rem 0 0;
+}
+
+.blog-post__download {
+    margin: 0.55rem 0 0.2rem;
+}
+
+.blog-download-cta,
+.blog-download-cta:visited {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid #d7e6fb;
+    background: rgba(247, 250, 255, 0.9);
+    color: var(--minimal-link);
+    padding: 0.36rem 0.88rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.16s ease;
+}
+
+.blog-download-cta:hover {
+    background: #edf5ff;
+    border-color: #bfd8f7;
+    text-decoration: none;
+    transform: translateY(-1px);
 }
 
 .minimal-blog-content p,

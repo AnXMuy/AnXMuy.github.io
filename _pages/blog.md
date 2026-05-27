@@ -27,6 +27,9 @@ lang: en
         <li>
           <a href="{{ post.url | relative_url }}" data-page-transition="slide-left">{{ post.title }}</a>
           <span class="minimal-post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+          {% if post.download_file %}
+          <span class="minimal-post-download"><a href="{{ post.download_file | relative_url }}" target="_blank" rel="noopener noreferrer" download>{{ post.download_label | default: "Download PDF" }}</a></span>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -39,6 +42,9 @@ lang: en
           <li>
             <a href="{{ post.url | relative_url }}" data-page-transition="slide-left">{{ post.title }}</a>
             <span class="minimal-post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+            {% if post.download_file %}
+            <span class="minimal-post-download"><a href="{{ post.download_file | relative_url }}" target="_blank" rel="noopener noreferrer" download>{{ post.download_label | default: "Download PDF" }}</a></span>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>

@@ -30,6 +30,13 @@ layout: compress
               {% if page.summary %}
               <p class="section-note">{{ page.summary }}</p>
               {% endif %}
+              {% if page.download_file %}
+              <p class="blog-post__download">
+                <a class="blog-download-cta" href="{{ page.download_file | relative_url }}" download>
+                  {{ page.download_label | default: "Download PDF" }}
+                </a>
+              </p>
+              {% endif %}
               <p class="blog-post__back"><a href="/blog/" data-page-transition="slide-left">Back to Blog</a></p>
             </div>
 
