@@ -21,25 +21,25 @@ layout: compress
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
           <section class="page__content" itemprop="text">
-            <div class="blog-hero page-reveal">
-              <p class="blog-kicker">{{ page.category | default: "Blog" }}</p>
+            <div class="minimal-card minimal-blog-post-head page-reveal">
+              <p class="minimal-kicker">{{ page.category | default: "Blog" }}</p>
               <h1>{{ page.title }}</h1>
               {% if page.date %}
-              <p class="blog-post__meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+              <p class="blog-post__meta">{{ page.date | date: "%Y-%m-%d" }}</p>
               {% endif %}
               {% if page.summary %}
-              <p>{{ page.summary }}</p>
+              <p class="section-note">{{ page.summary }}</p>
               {% endif %}
-              <p class="blog-post__back"><a href="/blog/">Back to Blog</a></p>
+              <p class="blog-post__back"><a href="/blog/" data-page-transition="slide-left">Back to Blog</a></p>
             </div>
 
             {% if page.image %}
-            <section class="section-block page-reveal">
+            <section class="minimal-card page-reveal">
               <img src="{{ page.image }}" alt="{{ page.title }}">
             </section>
             {% endif %}
 
-            <section class="section-block page-reveal" markdown="1">
+            <section class="minimal-card minimal-blog-content page-reveal" markdown="1">
 {{ content }}
             </section>
           </section>

@@ -133,7 +133,7 @@ defaults:
       type: blog_posts
     values:
       layout: blog-post
-      author_profile: true
+      author_profile: false
       lang: en
 
 
