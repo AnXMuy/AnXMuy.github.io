@@ -1,13 +1,13 @@
 ---
 permalink: /honors-awards/
-title: "Honors and Awards"
+title: "Honors & Awards"
 excerpt: ""
 author_profile: true
 lang: en
 ---
 
 <section class="section-block page-reveal" markdown="1">
-## Honors and Awards
+## Honors & Awards
 
 <ul class="timeline-list">
   <li><span class="timeline-date">2025.10</span><span class="timeline-content"><strong>National Scholarship</strong></span></li>

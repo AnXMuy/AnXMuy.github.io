@@ -22,7 +22,7 @@ layout: compress
         <div class="page__inner-wrap">
           <section class="page__content" itemprop="text">
             <div class="minimal-card minimal-blog-post-head page-reveal">
-              <p class="minimal-kicker">{{ page.category | default: "Blog" }}</p>
+              <p class="minimal-kicker">{{ page.category | default: "Posts &amp; Notes" }}</p>
               <h1>{{ page.title }}</h1>
               {% if page.date %}
               <p class="blog-post__meta">{{ page.date | date: "%Y-%m-%d" }}</p>
@@ -37,7 +37,7 @@ layout: compress
                 </a>
               </p>
               {% endif %}
-              <p class="blog-post__back"><a href="/blog/" data-page-transition="slide-left">Back to Blog</a></p>
+              <p class="blog-post__back"><a href="/blog/" data-page-transition="slide-left">Back to Posts &amp; Notes</a></p>
             </div>
 
             {% if page.image %}

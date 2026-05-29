@@ -1,6 +1,6 @@
 ---
 permalink: /blog/
-title: "Blog"
+title: "Post & Notes"
 excerpt: "Thoughts, notes, and builds."
 author_profile: true
 lang: en
@@ -8,15 +8,21 @@ lang: en
 
 <section class="minimal-card page-reveal">
   <h1>Posts &amp; Notes</h1>
-  <p class="section-note">
-    Blog entries are grouped by topic. Each entry opens to an independent Markdown article under
-    <code>_blog_posts/</code>.
-  </p>
 
   {% assign blog_posts = site.blog_posts | sort: "date" | reverse %}
   {% assign grouped_posts = blog_posts | group_by: "category" %}
 
   <div class="minimal-note-grid">
+    <article class="minimal-note-card page-reveal">
+      <h2>Project</h2>
+      <ul class="minimal-post-list">
+        <li>
+          <a href="https://github.com/AnXMuy/RoboticNavigationXJTU26" target="_blank" rel="noopener noreferrer">Robotic Navigation</a>
+          <span class="minimal-post-meta">GitHub Repository</span>
+        </li>
+      </ul>
+    </article>
+
     {% for group in grouped_posts %}
     <article class="minimal-note-card page-reveal">
       <h2>{{ group.name | default: "General Notes" }}</h2>
