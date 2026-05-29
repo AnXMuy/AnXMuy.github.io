@@ -40,7 +40,7 @@ redirect_from:
 
 <ul class="timeline-list">
   <li><span class="timeline-date">2023.09 - now</span><span class="timeline-content">Artificial Intelligence Experimental Class, Xi'an Jiaotong University (Outstanding Talent Program)</span></li>
-  <li><span class="timeline-date">2021.09 - now</span><span class="timeline-content">Young Gifted Program</span></li>
+  <li><span class="timeline-date">2021.09 - 2023.07</span><span class="timeline-content">Young Gifted Program</span></li>
 </ul>
 </section>
 

@@ -36,17 +36,23 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao☨, Jiayu Wang, Yuchen Xiao, Deyu 
 
 ### Audio Interaction
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='/images/interactiveasr_interspeech.png' alt="Interactive ASR" width="50%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='/images/interactiveasr_teaser.png' alt="Interactive ASR" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition](https://arxiv.org/abs/2604.09121)
+[Towards Human-Like Interactive Speech Recognition With Agentic Correction and Semantic Evaluation](https://arxiv.org/abs/2605.29430)
 
-Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
+**Zixuan Jiang\***, Yanqiao Zhu\*, Peng Wang\*, Qinyuan Chen, Xinjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨
 
 **Related Resource**: [Project page](https://interactiveasr.github.io/), [Live demo](https://i-asr.sjtuxlance.com/)
 
-- We propose $S^2ER$, a metric that leverages LLMs-as-judges to assess ASR semantic success.
-- We develop an LLM-simulated interactive correction framework to iteratively improve ASR performance.
+- We propose Interactive ASR, extending one-pass ASR into an interactive system with user feedback and semantic correction.
+- We propose Agentic ASR, a agent-based framework enabling interactive speech recognition.
+- We develop  semantic consistency metric $S^2ER$ and a simulation framework ISS for evaluating Interactive ASR.
 </div>
 </div>
+
+<ul class="timeline-list">
+  <li><span class="timeline-date">arXiv 2025</span><span class="timeline-content"><a href="https://arxiv.org/abs/2604.09121">Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition</a>, Peng Wang\*, Yanqiao Zhu\*, **Zixuan Jiang\***, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen☨</span></li>
+  
+</ul>
 </section>
