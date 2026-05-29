@@ -54,7 +54,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu 
 </div>
 
 <ul class="timeline-list">
-  <li><span class="timeline-date">arXiv 2026</span><span class="timeline-content"><a href="https://arxiv.org/abs/2604.09121">Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition</a><br/>Peng Wang\*, Yanqiao Zhu\*, <strong>Zixuan Jiang\*</strong>, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†</span></li>
+  <li><span class="timeline-date">arXiv 2026</span><span class="timeline-content"><a href="https://arxiv.org/abs/2604.09121">Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition</a><br/>Peng Wang*, Yanqiao Zhu*, <strong>Zixuan Jiang*</strong>, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†</span></li>
   
 </ul>
 </section>
