@@ -1,6 +1,6 @@
 # AndrewBot Bilingual QA Pack
 
-Version: 2026-05-09
+Version: 2026-06-08
 
 ## Chinese QA
 
@@ -11,6 +11,7 @@ A: Andrew 的研究方向是多模态智能，覆盖视觉、语音与自然语�
 A: 代表性工作包括：
 - DescribeEarth（arXiv 2025）
 - Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images（arXiv 2025）
+- MMAE: A Massive Multitask Audio Editing Benchmark（arXiv 2026）
 - Interactive ASR（arXiv 2026）
 - Advances in open vocabulary perception for remote sensing images（Journal of Image and Graphics 2026）
 
@@ -29,7 +30,7 @@ A: 近期包括 2025 年国家奖学金确认，以及 DescribeEarth 论文与�
 A: Andrew works on multimodal intelligence across vision, speech, and natural language, with additional interest in omni-modal agents and human-computer interaction.
 
 ### Q: What are Andrew's representative publications?
-A: Core publications include DescribeEarth (arXiv 2025), Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images (arXiv 2025), Interactive ASR (arXiv 2026), and a 2026 journal paper on open-vocabulary perception for remote sensing.
+A: Core publications include DescribeEarth (arXiv 2025), Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images (arXiv 2025), MMAE (arXiv 2026), Interactive ASR (arXiv 2026), and a 2026 journal paper on open-vocabulary perception for remote sensing.
 
 ### Q: Where does Andrew study?
 A: Andrew is an undergraduate at Xi'an Jiaotong University, College of Artificial Intelligence, and is associated with the Young Gifted Program.

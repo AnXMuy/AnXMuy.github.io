@@ -36,7 +36,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu 
   <li><span class="timeline-date">arXiv 2025</span><span class="timeline-content"><a href="https://arxiv.org/abs/2508.18067">Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images</a><br/>Kaiyu Li, Xiangyong Cao†, Ruixun Liu, Shihong Wang, <strong>Zixuan Jiang</strong>, Zhi Wang, Deyu Meng.</span></li>
 </ul>
 
-### Audio Interaction
+### Audio Intelligence
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='/images/interactiveasr_teaser.png' alt="Interactive ASR" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -54,6 +54,7 @@ Kaiyu Li\*, **Zixuan Jiang\***, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu 
 </div>
 
 <ul class="timeline-list">
+  <li><span class="timeline-date">arXiv 2026</span><span class="timeline-content"><a href="https://arxiv.org/abs/2606.07229">MMAE: A Massive Multitask Audio Editing Benchmark</a><br/>Ziyang Ma, Ruiqi Yan, Ruiyang Xu, Jie Fang, ..., Yanru Huo, <strong>Zixuan Jiang</strong>, Xiquan Li, Yalin Li, ..., Xie Chen.<br/><a href="https://github.com/ddlBoJack/MMAE">Code</a> | <a href="https://huggingface.co/datasets/BoJack/MMAE">Dataset</a></span></li>
   <li><span class="timeline-date">arXiv 2026</span><span class="timeline-content"><a href="https://arxiv.org/abs/2604.09121">Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition</a><br/>Peng Wang*, Yanqiao Zhu*, <strong>Zixuan Jiang*</strong>, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†</span></li>
   
 </ul>

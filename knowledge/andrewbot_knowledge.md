@@ -1,6 +1,6 @@
 # AndrewBot Knowledge Base (Refined)
 
-Version: 2026-05-09
+Version: 2026-06-08
 Language coverage: English + Chinese
 Primary owner: Zixuan Jiang (Andrew)
 
@@ -59,6 +59,11 @@ Primary owner: Zixuan Jiang (Andrew)
 - Link: https://arxiv.org/abs/2604.09121
 - Positioning: interactive ASR; LLM-as-judge based semantic success evaluation
 
+5. MMAE: A Massive Multitask Audio Editing Benchmark (arXiv 2026)
+- Link: https://arxiv.org/abs/2606.07229
+- Positioning: benchmark for instruction-based audio editing across sound, speech, music, and mixed modalities
+- Resources: code + dataset released
+
 ## 6) Honors and Competitions
 
 ### Honors
@@ -83,7 +88,7 @@ Primary owner: Zixuan Jiang (Andrew)
 A: 多模态智能（视觉/语音/自然语言），并关注全模态智能体与人机交互。
 
 ### Q: What are Andrew's representative papers?
-A: DescribeEarth (arXiv 2025), Annotation-Free OV Segmentation for RS (arXiv 2025), Interactive ASR (arXiv 2026), and an open-vocabulary remote sensing review (JIG 2026).
+A: DescribeEarth (arXiv 2025), Annotation-Free OV Segmentation for RS (arXiv 2025), MMAE (arXiv 2026), Interactive ASR (arXiv 2026), and an open-vocabulary remote sensing review (JIG 2026).
 
 ### Q: Andrew 在哪里学习和实习？
 A: 西安交通大学人工智能学院；曾在西交曹翔勇老师课题组与上交 X-LANCE 实验室开展研究。
