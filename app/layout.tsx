@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
+import { MotionAtmosphere } from "@/components/motion-atmosphere";
 import "./globals.css";
 
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
@@ -13,11 +14,11 @@ export const metadata: Metadata = {
     default: "Zixuan Jiang | Academic Homepage",
     template: "%s | Zixuan Jiang",
   },
-  description: "Zixuan Jiang's academic homepage: multimodal intelligence across vision, speech, and language.",
+  description: "Zixuan Jiang's academic homepage: multimodal intelligence and audio interaction.",
   authors: [{ name: "Zixuan Jiang" }],
   openGraph: {
     title: "Zixuan Jiang | Academic Homepage",
-    description: "Research in multimodal intelligence, speech interaction, and computer vision.",
+    description: "Research in multimodal intelligence and audio interaction.",
     url: "https://anxmuy.github.io",
     siteName: "Zixuan Jiang",
     images: [{ url: "/images/prof_pic.png", width: 864, height: 864 }],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body id="top" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+        <MotionAtmosphere />
         <SiteHeader />
         {children}
       </body>

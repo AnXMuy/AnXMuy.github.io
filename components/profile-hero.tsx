@@ -21,11 +21,11 @@ export function ProfileHero() {
       </Reveal>
 
       <Reveal className="identity-block" delay={0.08}>
-        <p className="hero-kicker">Multimodal Intelligence · AI Research</p>
+        <p className="hero-kicker">AI Researcher · Multimodal Intelligence</p>
         <h1 id="profile-name">
           Zixuan Jiang <span>(Andrew)</span>
         </h1>
-        <p className="hero-summary">{site.description}</p>
+        <p className="hero-summary">Interested in multimodal intelligence, audio interaction</p>
       </Reveal>
 
       <Reveal className="identity-links" delay={0.16}>

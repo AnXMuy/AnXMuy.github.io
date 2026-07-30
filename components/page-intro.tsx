@@ -11,7 +11,7 @@ type PageIntroProps = {
 export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
   return (
     <Reveal className="page-intro">
-      <Link href="/" className="back-link"><ArrowLeft aria-hidden="true" />About Me</Link>
+      <Link href="/" className="back-link"><ArrowLeft aria-hidden="true" /><span>Back to About Me</span></Link>
       <p>{eyebrow}</p>
       <h1>{title}</h1>
       <span>{description}</span>

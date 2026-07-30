@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FileText, Github } from "lucide-react";
 import { site } from "@/data/site";
 
@@ -7,9 +8,10 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-inner">
         <Link className="brand-link" href="/" aria-label="Zixuan Jiang, back to About Me">
-          <span className="brand-mark" aria-hidden="true">ZJ</span>
+          <span className="brand-mark" aria-hidden="true">
+            <Image src="/images/header-logo-red.png" alt="" width={42} height={42} priority />
+          </span>
           <span className="brand-name">Zixuan Jiang</span>
-          <span className="brand-section">/ About Me</span>
         </Link>
 
         <nav className="utility-nav" aria-label="Profile links">

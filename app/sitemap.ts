@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://anxmuy.github.io";
-  return ["", "/publications/", "/competitions/", "/honors-awards/", "/notes/", "/notes/tcs-review/"].map((path) => ({
+  return ["", "/publications/", "/competitions/", "/honors-awards/", "/blog/", "/blog/tcs-review/"].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? "monthly" : "yearly",
