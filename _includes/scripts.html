@@ -2,7 +2,6 @@
 <script>
   (function () {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const chatApiBaseUrl = '{{ site.chat_api_base_url }}';
     let isNavigating = false;
 
     function getContentPanel() {
@@ -59,80 +58,6 @@
         }).catch(() => {
           alert('Copy failed, please copy manually: ' + email);
         });
-      });
-    }
-
-    function appendChatMessage(chatBox, content, role) {
-      const message = document.createElement('div');
-      message.className = 'chat-message ' + (role === 'user' ? 'chat-message--user' : 'chat-message--bot');
-      message.textContent = content;
-      chatBox.appendChild(message);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function initChat() {
-      const chatLauncher = document.getElementById('chatLauncher');
-      const chatPanel = document.getElementById('chatPanel');
-      const chatMinimizeBtn = document.getElementById('chatMinimizeBtn');
-      const chatCloseBtn = document.getElementById('chatCloseBtn');
-      const chatForm = document.getElementById('chatForm');
-      const chatInput = document.getElementById('chatInput');
-      const chatBox = document.getElementById('chatBox');
-      const chatHint = document.getElementById('chatHint');
-
-      if (!chatPanel || !chatForm || !chatInput || !chatBox || !chatHint) return;
-      if (chatPanel.dataset.bound === '1') return;
-      chatPanel.dataset.bound = '1';
-
-      function openChatPanel() {
-        chatPanel.classList.add('is-open');
-        chatPanel.classList.remove('is-hidden');
-        if (chatLauncher) chatLauncher.classList.add('is-hidden');
-      }
-
-      function minimizeChatPanel() {
-        chatPanel.classList.remove('is-open');
-        chatPanel.classList.add('is-hidden');
-        if (chatLauncher) chatLauncher.classList.remove('is-hidden');
-      }
-
-      if (chatLauncher) chatLauncher.addEventListener('click', openChatPanel);
-      if (chatMinimizeBtn) chatMinimizeBtn.addEventListener('click', minimizeChatPanel);
-      if (chatCloseBtn) chatCloseBtn.addEventListener('click', minimizeChatPanel);
-
-      if (!chatApiBaseUrl) {
-        chatHint.textContent = 'Chat API is not configured yet.';
-        chatForm.addEventListener('submit', function (event) {
-          event.preventDefault();
-        });
-        return;
-      }
-
-      chatForm.addEventListener('submit', async function (event) {
-        event.preventDefault();
-        const question = chatInput.value.trim();
-        if (!question) return;
-
-        appendChatMessage(chatBox, question, 'user');
-        chatInput.value = '';
-        chatHint.textContent = 'Thinking...';
-
-        try {
-          const response = await fetch(chatApiBaseUrl.replace(/\/$/, '') + '/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question: question, source: 'homepage' })
-          });
-          if (!response.ok) {
-            chatHint.textContent = 'Chat backend error.';
-            return;
-          }
-          const data = await response.json();
-          appendChatMessage(chatBox, data.answer || 'No response.', 'bot');
-          chatHint.textContent = data.citation ? ('Source: ' + data.citation) : '';
-        } catch (error) {
-          chatHint.textContent = 'Network error when calling chatbot API.';
-        }
       });
     }
 
@@ -197,7 +122,6 @@
     });
 
     initEmailCopy();
-    initChat();
     initReveal();
     animatePageEnter();
   })();
