@@ -1022,10 +1022,57 @@ img {
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
+.resource-entry {
+  display: inline-flex;
+  align-items: center;
+  min-height: 29px;
+  border: 1px solid rgba(229, 58, 69, 0.32);
+  border-radius: 3px;
+  background: rgba(183, 25, 39, 0.08);
+  overflow: hidden;
+}
+
+.resource-entry > a {
+  min-height: 27px;
+  border: 0;
+  background: transparent;
+}
+
+.resource-entry:has(.github-stars):hover {
+  border-color: var(--red-bright);
+  background: var(--red-deep);
+}
+
 .resource-links a:hover {
   border-color: var(--red-bright);
   background: var(--red-deep);
   color: #fff;
+}
+
+.resource-entry > a:hover {
+  border-color: transparent;
+  background: transparent;
+}
+
+.github-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 38px;
+  padding-left: 7px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--warm);
+  font-variant-numeric: tabular-nums;
+}
+
+.github-stars svg {
+  width: 11px !important;
+  height: 11px !important;
+  fill: currentColor;
+}
+
+.github-stars > span {
+  line-height: 1;
 }
 
 .resource-links svg {

@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/images/favicon.ico",
-    apple: "/images/apple-touch-icon.png",
+    icon: [
+      { url: "/images/favicon-16x16.png?v=3", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon-32x32.png?v=3", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=3", sizes: "64x64", type: "image/x-icon" },
+    ],
+    shortcut: "/favicon.ico?v=3",
+    apple: "/images/apple-touch-icon.png?v=3",
   },
+  manifest: "/images/site.webmanifest",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

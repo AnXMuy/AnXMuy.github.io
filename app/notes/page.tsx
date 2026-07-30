@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Download, FileText, Github } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal } from "@/components/reveal";
+import { GitHubStars } from "@/components/github-stars";
 
 export const metadata: Metadata = { title: "Blog" };
 
@@ -34,7 +35,10 @@ export default function NotesPage() {
                 <h2><a href="https://github.com/AnXMuy/RoboticNavigationXJTU26" target="_blank" rel="noreferrer">Robotic Navigation</a></h2>
                 <span>A practical robotics navigation project and its implementation notes.</span>
                 <div className="note-links">
-                  <a href="https://github.com/AnXMuy/RoboticNavigationXJTU26" target="_blank" rel="noreferrer">View repository <ArrowUpRight aria-hidden="true" /></a>
+                  <a href="https://github.com/AnXMuy/RoboticNavigationXJTU26" target="_blank" rel="noreferrer">
+                    View repository <ArrowUpRight aria-hidden="true" />
+                    <GitHubStars repositoryUrl="https://github.com/AnXMuy/RoboticNavigationXJTU26" />
+                  </a>
                 </div>
               </div>
             </article>

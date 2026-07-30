@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { GitHubStars } from "@/components/github-stars";
 import type {
   FeaturedPublication,
   PublicationNode,
@@ -25,9 +26,12 @@ function ResourceLinks({ resources }: { resources: { label: string; href: string
   return (
     <div className="resource-links">
       {resources.map((resource) => (
-        <a href={resource.href} target="_blank" rel="noreferrer" key={resource.href}>
-          {resource.label}<ArrowUpRight aria-hidden="true" />
-        </a>
+        <span className="resource-entry" key={resource.href}>
+          <a href={resource.href} target="_blank" rel="noreferrer">
+            {resource.label}<ArrowUpRight aria-hidden="true" />
+          </a>
+          {resource.href.startsWith("https://github.com/") ? <GitHubStars repositoryUrl={resource.href} /> : null}
+        </span>
       ))}
     </div>
   );
