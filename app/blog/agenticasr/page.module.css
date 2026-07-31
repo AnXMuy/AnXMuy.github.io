@@ -495,6 +495,18 @@
   padding-top: 5px;
 }
 
+.resultsBand .resultSplit > .figure {
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultsBand .resultSplit > .figure img {
+  height: 350px;
+  object-fit: contain;
+  object-position: center;
+}
+
 .resultsBand .resultNotes p,
 .ablationBand .resultNotes p {
   color: #b5c0c4;
@@ -866,6 +878,8 @@
   .benchmarkGrid,
   .ablationRow,
   .ablationRowReverse { grid-template-columns: minmax(0, 1fr); }
+  .resultsBand .resultSplit > .figure { max-height: none; }
+  .resultsBand .resultSplit > .figure img { height: auto; }
 }
 
 @media (max-width: 680px) {
