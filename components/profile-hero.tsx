@@ -54,7 +54,7 @@ export function ProfileHero() {
           <article className="profile-news-item">
             <time dateTime="2026-07-28">2026.07.28</time>
             <p>
-              The <strong>VibeXASR</strong> project, in collaboration with PhD seniors Jun Guo, Tao Liu, and Chonghao Cai, won the Grand Prize at the 思必驰 OPC Innovation &amp; Entrepreneurship Competition. <a href="https://vibexasr.speech.wiki/" target="_blank" rel="noreferrer">Project <ArrowUpRight aria-hidden="true" /></a>
+              The <strong>VibeXASR</strong> project, in collaboration with Jun Guo, Tao Liu, and Chonghao Cai, won the Grand Prize at the Speech OPC Innovation &amp; Entrepreneurship Competition. <a href="https://vibexasr.speech.wiki/" target="_blank" rel="noreferrer">Project <ArrowUpRight aria-hidden="true" /></a>
             </p>
           </article>
           <article className="profile-news-item">
