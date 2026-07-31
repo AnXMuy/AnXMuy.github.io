@@ -147,7 +147,7 @@ export default function AgenticASRPage() {
 
       <section className={`${styles.band} ${styles.abstractBand}`} id="abstract">
         <div className={styles.innerNarrow}>
-          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>01 / ABSTRACT</span><div><h2>Abstract</h2><p>From the paper, arXiv:2607.28175v1.</p></div></div>
+          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>01 / ABSTRACT</span><div><h2>Abstract</h2></div></div>
           <p className={styles.abstractText}>{abstract}</p>
         </div>
       </section>

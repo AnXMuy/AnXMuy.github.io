@@ -795,7 +795,7 @@
   margin: 0;
   color: #344047;
   font-family: var(--font-body), sans-serif;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -914,7 +914,7 @@
   .metricGrid > div:last-child { border-bottom: 0; }
   .metricGrid strong { font-size: 31px; }
   .tablePair { grid-template-columns: 1fr; gap: 0; }
-  .abstractText { font-size: 17px; line-height: 1.72; }
+  .abstractText { font-size: 16px; line-height: 1.72; }
   .citationBox pre { padding: 17px 15px 66px; font-size: 10px; }
   .citation-copy { right: 9px; bottom: 9px; }
 }

@@ -1037,6 +1037,23 @@ img {
   object-fit: contain;
 }
 
+.featured-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.featured-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.featured-visual .featured-stack img {
+  aspect-ratio: auto;
+}
+
 .venue-chip {
   position: absolute;
   z-index: 2;

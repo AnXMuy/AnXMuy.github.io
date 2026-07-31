@@ -42,13 +42,28 @@ function FeaturedPaper({ paper }: { paper: FeaturedPublication }) {
     <article className="featured-paper">
       <div className="featured-visual">
         <span className="venue-chip">{paper.venue} {paper.year}</span>
-        <Image
-          src={paper.image}
-          alt={paper.imageAlt}
-          width={1400}
-          height={900}
-          sizes="(max-width: 900px) 100vw, 45vw"
-        />
+        {paper.imageStack?.length ? (
+          <div className="featured-stack">
+            {paper.imageStack.map((image) => (
+              <Image
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                sizes="(max-width: 900px) 100vw, 45vw"
+              />
+            ))}
+          </div>
+        ) : (
+          <Image
+            src={paper.image}
+            alt={paper.imageAlt}
+            width={1400}
+            height={900}
+            sizes="(max-width: 900px) 100vw, 45vw"
+          />
+        )}
       </div>
       <div className="featured-copy">
         <p className="paper-type">Featured work</p>

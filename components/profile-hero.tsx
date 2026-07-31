@@ -52,6 +52,12 @@ export function ProfileHero() {
             </p>
           </article>
           <article className="profile-news-item">
+            <time dateTime="2026-07-29">2026.07.29</time>
+            <p>
+              <strong>OVEarth-Bench</strong> was released on arXiv with a project page for open-vocabulary Earth observation evaluation. <a href="https://arxiv.org/abs/2607.27278" target="_blank" rel="noreferrer">Paper <ArrowUpRight aria-hidden="true" /></a> <a href="https://earth-insights.github.io/OVEarth-bench" target="_blank" rel="noreferrer">Project <ArrowUpRight aria-hidden="true" /></a>
+            </p>
+          </article>
+          <article className="profile-news-item">
             <time dateTime="2026-07-28">2026.07.28</time>
             <p>
               The <strong>VibeXASR</strong> project, in collaboration with Jun Guo, Tao Liu, and Chonghao Cai, won the Grand Prize at the Speech OPC Innovation &amp; Entrepreneurship Competition. <a href="https://vibexasr.speech.wiki/" target="_blank" rel="noreferrer">Project <ArrowUpRight aria-hidden="true" /></a>

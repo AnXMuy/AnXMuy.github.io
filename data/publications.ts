@@ -13,6 +13,7 @@ export type FeaturedPublication = {
   authors: string;
   image: string;
   imageAlt: string;
+  imageStack?: { src: string; width: number; height: number; alt: string }[];
   resources: PublicationResource[];
   highlights: string[];
   media?: PublicationResource[];
@@ -99,6 +100,19 @@ export const publications: PublicationNode[] = [
       },
       {
         kind: "standard",
+        id: "ovearth-bench",
+        venue: "arXiv",
+        year: "2026",
+        title: "OVEarth-Bench: Evaluating Category Breadth and Query Diversity for Open-Vocabulary Earth Observation",
+        href: "https://arxiv.org/abs/2607.27278",
+        authors: "Kaiyu Li, Zepeng Xin, Zixuan Jiang, Jing Fu, Lanxuan Xue, Lingyu Zhang, Xiangyong Cao",
+        resources: [
+          { label: "Paper", href: "https://arxiv.org/abs/2607.27278" },
+          { label: "Project", href: "https://earth-insights.github.io/OVEarth-bench" },
+        ],
+      },
+      {
+        kind: "standard",
         id: "open-vocabulary-review",
         venue: "CJIG",
         year: "2026",
@@ -126,6 +140,33 @@ export const publications: PublicationNode[] = [
     description:
       "Interactive speech systems and evaluation methods that move recognition beyond a single pass.",
     items: [
+      {
+        kind: "featured",
+        id: "agenticasr",
+        venue: "arXiv",
+        year: "2026",
+        title: "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach",
+        href: "https://arxiv.org/abs/2607.28175",
+        authors:
+          "Zixuan Jiang*, Binghao Qiang*, Jiaying Chi*, Yanqiao Zhu, Kai Yu, Xie Chen†",
+        image: "/agenticasr/teaser.png",
+        imageAlt: "AgenticASR teaser and method overview",
+        imageStack: [
+          { src: "/agenticasr/teaser.png", width: 1396, height: 420, alt: "AgenticASR task overview" },
+          { src: "/agenticasr/method.png", width: 3456, height: 1296, alt: "AgenticASR method overview" },
+        ],
+        resources: [
+          { label: "Paper", href: "https://arxiv.org/abs/2607.28175" },
+          { label: "Project Page", href: "https://anxmuy.github.io/blog/agenticasr/" },
+          { label: "Code", href: "https://github.com/AnXMuy/AgenticASR" },
+          { label: "AASR-Bench", href: "https://huggingface.co/datasets/Andrew0425/AASR-Bench" },
+        ],
+        highlights: [
+          "Defines Agentic Speech Recognition as final-intent-preserving audio-to-clean-text recognition.",
+          "Introduces a decoupled ASR–Refiner system for bilingual online and offline refinement.",
+          "Releases AASR-Bench with 6,637 atomic rubrics and leads the evaluated ASR families.",
+        ],
+      },
       {
         kind: "featured",
         id: "human-like-interactive-asr",
