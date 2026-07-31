@@ -613,6 +613,65 @@
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
 }
 
+.ablationRows {
+  display: grid;
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.ablationRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 34px;
+  align-items: center;
+  padding-top: 26px;
+  border-top: 1px solid var(--dark-line);
+}
+
+.ablationRowReverse {
+  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.05fr);
+}
+
+.ablationRow > .tableShell {
+  min-width: 0;
+  margin-top: 0;
+}
+
+.ablationCopy {
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.ablationCopy > span {
+  color: var(--accent);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+
+.ablationCopy h3 {
+  margin: 12px 0 9px;
+  color: #f2f5f5;
+  font-family: var(--font-display), sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.ablationCopy p {
+  margin: 0;
+  color: #aeb9bd;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.ablationCopy p + p {
+  margin-top: 15px;
+}
+
+.ablationCopy b {
+  color: #f2d6d0;
+}
+
 .ablationGrid {
   margin-top: 36px;
   border-color: var(--dark-line);
@@ -804,7 +863,9 @@
   .sectionHeading { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; }
   .resultSplit,
   .ablationFeature,
-  .benchmarkGrid { grid-template-columns: minmax(0, 1fr); }
+  .benchmarkGrid,
+  .ablationRow,
+  .ablationRowReverse { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 680px) {

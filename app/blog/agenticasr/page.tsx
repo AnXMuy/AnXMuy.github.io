@@ -145,10 +145,17 @@ export default function AgenticASRPage() {
         </div>
       </section>
 
+      <section className={`${styles.band} ${styles.abstractBand}`} id="abstract">
+        <div className={styles.innerNarrow}>
+          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>01 / ABSTRACT</span><div><h2>Abstract</h2><p>From the paper, arXiv:2607.28175v1.</p></div></div>
+          <p className={styles.abstractText}>{abstract}</p>
+        </div>
+      </section>
+
       <section className={`${styles.band} ${styles.overviewBand}`} id="overview">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>01 / TASK</span>
+            <span className={styles.sectionNumber}>02 / TASK</span>
             <div><h2>From verbatim speech to usable text.</h2><p>Speech is full of abandoned starts, fillers, repetitions, and corrections. AgenticSR keeps the final intent while making the output ready for reading and downstream use.</p></div>
           </div>
           <figure className={styles.figure}>
@@ -166,7 +173,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.demoBand}`} id="demo">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>02 / DEMO</span>
+            <span className={styles.sectionNumber}>03 / DEMO</span>
             <div><h2>One system, two languages.</h2><p>Both demonstrations show the same core behavior: spoken-form input becomes readable text while the transcript remains open to evidence-supported revision.</p></div>
           </div>
           <div className={styles.videoGrid}>
@@ -191,7 +198,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.methodBand}`} id="method">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>03 / METHOD</span>
+            <span className={styles.sectionNumber}>04 / METHOD</span>
             <div><h2>An ASR frontend, a bounded active context, and one clean replacement.</h2><p>The Refiner is deliberately separated from acoustic recognition, which lets the same text-to-text correction model work across different ASR backbones.</p></div>
           </div>
           <figure className={styles.figure}>
@@ -209,7 +216,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.resultsBand}`} id="results">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>04 / RESULTS</span>
+            <span className={styles.sectionNumber}>05 / RESULTS</span>
             <div><h2>AgenticASR leads the clean-transcription score.</h2><p>On AASR-Bench, AgenticASR wins the Overall score within the Qwen3-ASR families and improves every Whisper configuration over its API baseline.</p></div>
           </div>
           <div className={styles.metricGrid}>
@@ -241,48 +248,46 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.ablationBand}`} id="ablations">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>05 / ABLATIONS</span>
+            <span className={styles.sectionNumber}>06 / ABLATIONS</span>
             <div><h2>Quality, evidence, and latency move together.</h2><p>The ablations make the design trade-offs explicit: larger Refiners improve contextual rewriting, while a three-chunk online window recovers most of the useful right context.</p></div>
           </div>
           <div className={styles.ablationFeature}>
             <figure className={styles.figure}><Image src="/agenticasr/window-ablation.png" alt="Effect of active window size on online revision" width={996} height={488} /><figcaption>Window size K=3 keeps enough local context to revise a destination across VAD boundaries.</figcaption></figure>
             <div className={styles.resultNotes}><h3>Online window</h3><p>Moving from K=1 to K=3 raises Rephrase from <b>36.17</b> to <b>70.47</b> and Explanation from <b>19.43</b> to <b>74.00</b>, while latency grows by only 0.87 s. K=3 closes the gap to offline inference to 2.36 Rephrase points and 1.20 Explanation points.</p><p>This is the mechanism that lets AgenticASR correct a previously emitted destination when a later chunk contains the self-repair.</p></div>
           </div>
-          <div className={styles.ablationGrid}>
-            <article><h3>Human agreement</h3><p>Double-blind experts and the Gemma-4-31B-IT judge agree strongly across 100 sampled utterances.</p><div className={styles.miniStats}><b>0.8222</b><span>Spearman · Qwen3-ASR-0.6B</span><b>0.8313</b><span>Quadratic κ · Qwen3-ASR-0.6B</span></div></article>
-            <article><h3>Refiner capacity</h3><p>With Qwen3-ASR-1.7B fixed, scaling the Refiner from 0.5B to 4B raises Overall by 4.66 points; the largest gains are in Format and Rephrase.</p><div className={styles.miniStats}><b>78.76 → 83.42</b><span>Overall · 0.5B → 4B</span><b>9.21 → 10.77s</b><span>Latency · 0.5B → 4B</span></div></article>
+          <div className={styles.ablationRows}>
+            <div className={styles.ablationRow}>
+              <div className={styles.tableShell}><table><caption>Table 4 · Human agreement</caption><thead><tr><th>Measure</th><th>0.6B</th><th>1.7B</th></tr></thead><tbody><tr><td>Spearman ρ</td><td>0.8222</td><td>0.8064</td></tr><tr><td>Quadratic-weighted κ</td><td>0.8313</td><td>0.7918</td></tr></tbody></table></div>
+              <div className={styles.ablationCopy}><span>ABLATION A</span><h3>Human agreement</h3><p>Double-blind experts and the Gemma-4-31B-IT judge agree strongly across 100 sampled utterances.</p><p>The mean Spearman correlation is <b>0.8222</b> for Qwen3-ASR-0.6B and <b>0.8064</b> for Qwen3-ASR-1.7B; quadratic-weighted agreement is <b>0.8313</b> and <b>0.7918</b>.</p></div>
+            </div>
+            <div className={`${styles.ablationRow} ${styles.ablationRowReverse}`}>
+              <div className={styles.ablationCopy}><span>ABLATION B</span><h3>Refiner capacity</h3><p>With Qwen3-ASR-1.7B fixed, scaling the Refiner from 0.5B to 4B raises Overall by <b>4.66</b> points; the largest gains are in Format and Rephrase.</p><p>Overall rises from <b>78.76</b> to <b>83.42</b>, while latency increases from <b>9.21</b> to <b>10.77 s</b>. Larger Refiners suit latency-tolerant offline use.</p></div>
+              <div className={styles.tableShell}><table><caption>Table 5 · Refiner capacity</caption><thead><tr><th>Refiner</th><th>Overall</th><th>Cont.</th><th>Fmt.</th><th>Filt.</th><th>Reph.</th><th>Lat. (s)</th></tr></thead><tbody>{refinerRows.map((row) => <tr key={row[0]}>{row.map((cell, index) => <td key={`${row[0]}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div>
+            </div>
+            <div className={styles.ablationRow}>
+              <div className={styles.tableShell}><table><caption>Table 6 · Offline and online AgenticASR with Qwen3-ASR-1.7B</caption><thead><tr><th>Setting</th><th>Rephrase ↑</th><th>Latency (s) ↓</th><th>Explanation ↑</th></tr></thead><tbody>{windowRows.map((row) => <tr key={row[0]} className={row[0] === "Window = 3" ? styles.highlightRow : undefined}>{row.map((cell, index) => <td key={`${row[0]}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div>
+              <div className={styles.ablationCopy}><span>ABLATION C</span><h3>Online window</h3><p>Moving from K=1 to K=3 raises Rephrase from <b>36.17</b> to <b>70.47</b> and Explanation from <b>19.43</b> to <b>74.00</b>, while latency grows by only 0.87 s.</p><p>At K=3, the gaps to offline shrink to 2.36 Rephrase points and 1.20 Explanation points, recovering nearly all useful right context for online revision.</p></div>
+            </div>
           </div>
-          <div className={styles.tablePair}>
-            <div className={styles.tableShell}><table><caption>Table 4 · Human agreement</caption><thead><tr><th>Measure</th><th>0.6B</th><th>1.7B</th></tr></thead><tbody><tr><td>Spearman ρ</td><td>0.8222</td><td>0.8064</td></tr><tr><td>Quadratic-weighted κ</td><td>0.8313</td><td>0.7918</td></tr></tbody></table></div>
-            <div className={styles.tableShell}><table><caption>Table 5 · Refiner capacity</caption><thead><tr><th>Refiner</th><th>Overall</th><th>Cont.</th><th>Fmt.</th><th>Filt.</th><th>Reph.</th><th>Lat. (s)</th></tr></thead><tbody>{refinerRows.map((row) => <tr key={row[0]}>{row.map((cell, index) => <td key={`${row[0]}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div>
-          </div>
-          <div className={styles.tableShell}><table><caption>Table 6 · Offline and online AgenticASR with Qwen3-ASR-1.7B</caption><thead><tr><th>Setting</th><th>Rephrase ↑</th><th>Latency (s) ↓</th><th>Explanation ↑</th></tr></thead><tbody>{windowRows.map((row) => <tr key={row[0]} className={row[0] === "Window = 3" ? styles.highlightRow : undefined}>{row.map((cell, index) => <td key={`${row[0]}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div>
         </div>
       </section>
 
       <section className={`${styles.band} ${styles.benchmarkBand}`} id="benchmark">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>06 / BENCHMARK</span>
+            <span className={styles.sectionNumber}>07 / BENCHMARK</span>
             <div><h2>A rubric for what “clean” actually means.</h2><p>AASR-Bench is bilingual and atomic: every sample is scored on the specific transformation requirements it contains, rather than a single undifferentiated text metric.</p></div>
           </div>
           <div className={styles.benchmarkGrid}>
-            <div className={styles.benchmarkCopy}><div className={styles.bigNumber}>917 <small>samples</small></div><div className={styles.bigNumber}>7.24 <small>rubrics / sample on average</small></div><p>Each sample has at least one Content question. Format, Filter, and Rephrase rubrics are added when those phenomena are present. The benchmark covers ten usage scenes plus a pass-through control.</p><a className={styles.textLink} href="https://huggingface.co/datasets/Andrew0425/AASR-Bench" target="_blank" rel="noreferrer">Explore AASR-Bench <ArrowUpRight aria-hidden="true" /></a></div>
+            <div className={styles.benchmarkCopy}><div className={styles.bigNumber}>917 <small>samples</small></div><div className={styles.bigNumber}>6,637 <small>total atomic rubrics</small></div><p>Each sample has at least one Content question. Format, Filter, and Rephrase rubrics are added when those phenomena are present. The benchmark covers ten usage scenes plus a pass-through control.</p><a className={styles.textLink} href="https://huggingface.co/datasets/Andrew0425/AASR-Bench" target="_blank" rel="noreferrer">Explore AASR-Bench <ArrowUpRight aria-hidden="true" /></a></div>
             <div className={styles.tableShell}><table><caption>Table 1 · Distribution of atomic rubrics</caption><thead><tr><th>Category</th><th>Questions</th><th>Share (%)</th><th>Coverage</th></tr></thead><tbody>{rubricRows.map((row) => <tr key={row[0]}>{row.map((cell, index) => <td key={`${row[0]}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div>
           </div>
         </div>
       </section>
 
-      <section className={`${styles.band} ${styles.abstractBand}`} id="abstract">
-        <div className={styles.innerNarrow}>
-          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>07 / ABSTRACT</span><div><h2>Abstract</h2><p>From the paper, arXiv:2607.28175v1.</p></div></div>
-          <p className={styles.abstractText}>{abstract}</p>
-        </div>
-      </section>
-
       <section className={`${styles.band} ${styles.citationBand}`} id="citation">
         <div className={styles.innerNarrow}>
-          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>08 / CITE</span><div><h2>Use AgenticASR in your work.</h2><p>If this project is useful, please cite the paper.</p></div></div>
+          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>08 / CITE</span><div><h2>Cite AgenticASR.</h2><p>If this project is useful, please cite the paper.</p></div></div>
           <div className={styles.citationBox}><pre>{citation}</pre><CitationCopy citation={citation} /></div>
           <div className={styles.footerLinks}><a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer"><ScrollText aria-hidden="true" /> arXiv abstract <ArrowUpRight aria-hidden="true" /></a><a href="https://github.com/AnXMuy/AgenticASR" target="_blank" rel="noreferrer"><Github aria-hidden="true" /> Repository <ArrowUpRight aria-hidden="true" /></a></div>
           <p className={styles.templateNote}>Page structure inspired by the Academic Project Page Template and Nerfies; visual language adapted for AgenticASR.</p>
