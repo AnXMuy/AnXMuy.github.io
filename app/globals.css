@@ -428,6 +428,90 @@ img {
   color: var(--steel);
 }
 
+.profile-news {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 840px);
+  margin-top: 32px;
+  text-align: left;
+}
+
+.profile-news-heading {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.profile-news-heading span {
+  color: var(--red-bright);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.profile-news-heading div {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(229, 58, 69, 0.54), transparent);
+}
+
+.profile-news-list {
+  height: 148px;
+  border-top: 1px solid var(--line);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--red) transparent;
+  scrollbar-width: thin;
+}
+
+.profile-news-item {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-news-item time {
+  padding-top: 2px;
+  color: var(--steel);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.profile-news-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.profile-news-item strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.profile-news-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 6px;
+  color: var(--warm);
+  white-space: nowrap;
+}
+
+.profile-news-item a:hover {
+  color: var(--red-bright);
+}
+
+.profile-news-item a svg {
+  width: 10px;
+  height: 10px;
+}
+
 .route-dock {
   position: relative;
   z-index: 2;
@@ -1401,6 +1485,25 @@ img {
   .identity-links {
     max-width: 330px;
     gap: 10px 16px;
+  }
+
+  .profile-news {
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .profile-news-list {
+    height: 224px;
+  }
+
+  .profile-news-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 11px 0;
+  }
+
+  .profile-news-item time {
+    padding-top: 0;
   }
 
   .route-dock {

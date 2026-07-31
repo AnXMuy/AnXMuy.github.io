@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Download, FileText, Github } from "lucide-react";
+import { ArrowUpRight, AudioLines, Download, FileText, Github } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { Reveal } from "@/components/reveal";
 import { GitHubStars } from "@/components/github-stars";
@@ -13,6 +13,20 @@ export default function NotesPage() {
       <div className="content-container">
         <PageIntro eyebrow="Working notes" title="Blog" description="Technical writing, open resources, and projects built along the way." />
         <div className="notes-list">
+          <Reveal>
+            <article className="note-row">
+              <div className="note-icon"><AudioLines aria-hidden="true" /></div>
+              <div>
+                <p>Project · arXiv 2026</p>
+                <h2><Link href="/blog/agenticasr/">AgenticASR</Link></h2>
+                <span>Agentic speech recognition that refines bilingual ASR hypotheses into clean, intent-preserving text.</span>
+                <div className="note-links">
+                  <Link href="/blog/agenticasr/">Open project page <ArrowUpRight aria-hidden="true" /></Link>
+                  <a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer">Read paper <ArrowUpRight aria-hidden="true" /></a>
+                </div>
+              </div>
+            </article>
+          </Reveal>
           <Reveal>
             <article className="note-row">
               <div className="note-icon"><FileText aria-hidden="true" /></div>
