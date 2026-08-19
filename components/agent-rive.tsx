@@ -54,24 +54,16 @@ export function AgentRive() {
           {!hasRiveAsset ? (
             <div className="agent-rive-fallback">
               <span className="agent-core" />
-              <span className="agent-orbit-dot agent-orbit-dot-a" />
-              <span className="agent-orbit-dot agent-orbit-dot-b" />
-              <span className="agent-orbit-dot agent-orbit-dot-c" />
-              <span className="agent-orbit-dot agent-orbit-dot-d" />
-              <span className="agent-orbit-dot agent-orbit-dot-e" />
-              <span className="agent-orbit-dot agent-orbit-dot-f" />
+              <span className="agent-orbit-tag agent-orbit-tag-a">multimodal</span>
+              <span className="agent-orbit-tag agent-orbit-tag-b">audio</span>
+              <span className="agent-orbit-tag agent-orbit-tag-c">vision</span>
+              <span className="agent-orbit-tag agent-orbit-tag-d">agent</span>
+              <span className="agent-orbit-tag agent-orbit-tag-e">deep learning</span>
+              <span className="agent-orbit-tag agent-orbit-tag-f">LLM</span>
               <span className="agent-wave agent-wave-a" />
               <span className="agent-wave agent-wave-b" />
             </div>
           ) : null}
-        </div>
-        <div className="agent-rive-tags">
-          <span>multimodal</span>
-          <span>audio</span>
-          <span>vision</span>
-          <span>agent</span>
-          <span>deep learning</span>
-          <span>LLM</span>
         </div>
       </div>
       <div className="agent-rive-links">

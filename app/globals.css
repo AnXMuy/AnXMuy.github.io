@@ -451,7 +451,7 @@ img {
 
 .agent-rive-canvas {
   position: relative;
-  min-height: 146px;
+  min-height: 166px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   background: radial-gradient(circle at 50% 46%, rgba(229, 58, 69, 0.18), rgba(8, 7, 8, 0.3) 52%, rgba(8, 7, 8, 0.78));
@@ -471,7 +471,7 @@ img {
 }
 
 .agent-core,
-.agent-orbit-dot,
+.agent-orbit-tag,
 .agent-wave {
   position: absolute;
   display: block;
@@ -487,34 +487,43 @@ img {
   animation: agent-core-pulse 2.8s ease-in-out infinite;
 }
 
-.agent-orbit-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--warm);
-  box-shadow: 0 0 16px rgba(233, 200, 185, 0.56);
+.agent-orbit-tag {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border: 1px solid rgba(233, 200, 185, 0.34);
+  background: rgba(8, 7, 8, 0.42);
+  color: var(--warm);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 0 16px rgba(233, 200, 185, 0.18);
 }
 
-.agent-orbit-dot-a {
+.agent-orbit-tag-a {
   animation: agent-orbit-a 5s ease-in-out infinite;
 }
 
-.agent-orbit-dot-b {
+.agent-orbit-tag-b {
   animation: agent-orbit-b 4.8s ease-in-out infinite;
 }
 
-.agent-orbit-dot-c {
+.agent-orbit-tag-c {
   animation: agent-orbit-c 5.3s ease-in-out infinite;
 }
 
-.agent-orbit-dot-d {
+.agent-orbit-tag-d {
   animation: agent-orbit-d 5.1s ease-in-out infinite;
 }
 
-.agent-orbit-dot-e {
+.agent-orbit-tag-e {
   animation: agent-orbit-e 5.5s ease-in-out infinite;
 }
 
-.agent-orbit-dot-f {
+.agent-orbit-tag-f {
   animation: agent-orbit-f 4.6s ease-in-out infinite;
 }
 
@@ -527,31 +536,6 @@ img {
 
 .agent-wave-b {
   animation-delay: -1.55s;
-}
-
-.agent-rive-tags {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 10px;
-}
-
-.agent-rive-tags span {
-  display: inline-flex;
-  min-height: 24px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 8px;
-  border: 1px solid rgba(229, 58, 69, 0.22);
-  border-radius: 999px;
-  background: rgba(229, 58, 69, 0.08);
-  color: var(--warm);
-  font-family: var(--font-mono), monospace;
-  font-size: 9px;
-  line-height: 1;
 }
 
 .agent-rive-links {
@@ -606,33 +590,33 @@ img {
 }
 
 @keyframes agent-orbit-a {
-  0%, 100% { transform: translate(-98px, -44px); opacity: 0.58; }
-  50% { transform: translate(-78px, -30px); opacity: 1; }
+  0%, 100% { transform: translate(-112px, -56px); opacity: 0.68; }
+  50% { transform: translate(-94px, -40px); opacity: 1; }
 }
 
 @keyframes agent-orbit-b {
-  0%, 100% { transform: translate(0, -64px); opacity: 0.52; }
-  50% { transform: translate(18px, -50px); opacity: 1; }
+  0%, 100% { transform: translate(-34px, -70px); opacity: 0.62; }
+  50% { transform: translate(-12px, -54px); opacity: 1; }
 }
 
 @keyframes agent-orbit-c {
-  0%, 100% { transform: translate(98px, -38px); opacity: 0.58; }
-  50% { transform: translate(74px, -24px); opacity: 1; }
+  0%, 100% { transform: translate(78px, -54px); opacity: 0.66; }
+  50% { transform: translate(56px, -38px); opacity: 1; }
 }
 
 @keyframes agent-orbit-d {
-  0%, 100% { transform: translate(96px, 42px); opacity: 0.54; }
-  50% { transform: translate(74px, 28px); opacity: 1; }
+  0%, 100% { transform: translate(86px, 44px); opacity: 0.64; }
+  50% { transform: translate(64px, 28px); opacity: 1; }
 }
 
 @keyframes agent-orbit-e {
-  0%, 100% { transform: translate(0, 62px); opacity: 0.52; }
-  50% { transform: translate(-18px, 48px); opacity: 1; }
+  0%, 100% { transform: translate(-48px, 66px); opacity: 0.62; }
+  50% { transform: translate(-70px, 48px); opacity: 1; }
 }
 
 @keyframes agent-orbit-f {
-  0%, 100% { transform: translate(-98px, 42px); opacity: 0.58; }
-  50% { transform: translate(-74px, 26px); opacity: 1; }
+  0%, 100% { transform: translate(-108px, 34px); opacity: 0.66; }
+  50% { transform: translate(-86px, 20px); opacity: 1; }
 }
 
 @keyframes agent-wave {
@@ -1732,7 +1716,13 @@ img {
   }
 
   .agent-rive-canvas {
-    min-height: 116px;
+    min-height: 148px;
+  }
+
+  .agent-orbit-tag {
+    min-height: 22px;
+    padding-inline: 7px;
+    font-size: 8px;
   }
 
   .agent-rive-links {
