@@ -36,7 +36,7 @@ export function GitHubStars({ repositoryUrl }: { repositoryUrl: string }) {
       if (cached) {
         const parsed = JSON.parse(cached) as { count: number; expiresAt: number };
         if (parsed.expiresAt > Date.now()) {
-          setCount(parsed.count);
+          window.setTimeout(() => setCount(parsed.count), 0);
           return () => controller.abort();
         }
       }
