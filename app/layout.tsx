@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
-import { AgentCursor } from "@/components/agent-cursor";
 import { SiteHeader } from "@/components/site-header";
 import { MotionAtmosphere } from "@/components/motion-atmosphere";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -45,7 +44,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body id="top" className={`${display.variable} ${body.variable} ${mono.variable}`}>
         <SmoothScroll>
           <MotionAtmosphere />
-          <AgentCursor />
           <SiteHeader />
           {children}
         </SmoothScroll>
