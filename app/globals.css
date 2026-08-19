@@ -506,22 +506,14 @@ img {
   font-weight: 430;
 }
 
-.hero-summary {
-  max-width: 590px;
-  margin: 0 auto;
-  color: var(--text-soft);
-  font-size: 18px;
-}
-
 .agent-rive {
   position: relative;
   z-index: 1;
   display: grid;
-  width: min(100%, 720px);
+  width: min(100%, 460px);
   margin-top: 24px;
-  padding: 12px 14px;
-  grid-template-columns: minmax(210px, 0.8fr) minmax(0, 1.2fr);
-  gap: 16px;
+  padding: 12px;
+  gap: 10px;
   align-items: stretch;
   border: 1px solid rgba(229, 58, 69, 0.22);
   border-radius: 8px;
@@ -543,15 +535,13 @@ img {
   pointer-events: none;
 }
 
-.agent-rive-visual,
-.agent-rive-copy {
+.agent-rive-visual {
   position: relative;
   z-index: 1;
 }
 
 .agent-rive-canvas {
   position: relative;
-  height: 100%;
   min-height: 146px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
@@ -652,76 +642,50 @@ img {
   font-weight: 500;
 }
 
-.agent-rive-copy {
-  display: flex;
-  min-width: 0;
-  padding: 4px 0;
-  flex-direction: column;
-  justify-content: center;
+.agent-rive-links {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
 }
 
-.agent-rive-copy > p {
-  margin: 0;
-  color: var(--red-bright);
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.agent-rive-copy h2 {
-  margin: 6px 0 10px;
-  color: var(--text);
-  font-family: var(--font-display), sans-serif;
-  font-size: 24px;
-  line-height: 1.1;
-  font-weight: 620;
-}
-
-.agent-rive-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.agent-rive-tags span {
+.agent-rive-links span,
+.agent-rive-links a {
   display: inline-flex;
-  min-height: 26px;
+  min-width: 0;
+  min-height: 34px;
   align-items: center;
-  padding: 0 9px;
-  border: 1px solid rgba(229, 58, 69, 0.24);
-  border-radius: 999px;
-  background: rgba(229, 58, 69, 0.08);
-  color: var(--warm);
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
-}
-
-.agent-rive-copy dl {
-  display: grid;
-  gap: 8px;
-  margin: 14px 0 0;
-}
-
-.agent-rive-copy dl > div {
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: 12px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.agent-rive-copy dt {
-  color: var(--steel);
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
-}
-
-.agent-rive-copy dd {
-  margin: 0;
+  gap: 7px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(8, 7, 8, 0.34);
   color: var(--text-soft);
-  font-size: 12px;
-  line-height: 1.45;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.agent-rive-links a:hover {
+  border-color: rgba(229, 58, 69, 0.58);
+  background: rgba(229, 58, 69, 0.12);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.agent-rive-links svg {
+  flex: 0 0 auto;
+  width: 13px;
+  height: 13px;
+  color: var(--red-bright);
+}
+
+.agent-rive-links .external-mark {
+  width: 9px;
+  height: 9px;
+  margin-left: auto;
+  color: var(--steel);
 }
 
 @keyframes agent-core-pulse {
@@ -752,47 +716,6 @@ img {
 @keyframes agent-wave {
   from { transform: scale(0.42); opacity: 0.8; }
   to { transform: scale(1.76); opacity: 0; }
-}
-
-.identity-links {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px 20px;
-  margin-top: 24px;
-  color: var(--muted);
-  font-family: var(--font-mono), monospace;
-  font-size: 12px;
-}
-
-.identity-links span,
-.identity-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.identity-links a {
-  transition: color 180ms ease;
-}
-
-.identity-links a:hover {
-  color: var(--text);
-}
-
-.identity-links svg {
-  width: 14px;
-  height: 14px;
-  color: var(--red-bright);
-}
-
-.identity-links .external-mark {
-  width: 9px;
-  height: 9px;
-  color: var(--steel);
 }
 
 .profile-news {
@@ -1862,10 +1785,6 @@ img {
     font-size: 22px;
   }
 
-  .hero-summary {
-    font-size: 15px;
-  }
-
   .agent-rive {
     width: 100%;
     margin-top: 20px;
@@ -1884,18 +1803,8 @@ img {
     text-align: left;
   }
 
-  .agent-rive-copy h2 {
-    font-size: 20px;
-  }
-
-  .agent-rive-copy dl > div {
+  .agent-rive-links {
     grid-template-columns: 1fr;
-    gap: 2px;
-  }
-
-  .identity-links {
-    max-width: 330px;
-    gap: 10px 16px;
   }
 
   .profile-news {

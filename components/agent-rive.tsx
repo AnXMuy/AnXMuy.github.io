@@ -1,8 +1,10 @@
 "use client";
 
 import { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas";
+import { ExternalLink, GraduationCap, Mail, MapPin, Network } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
+import { site } from "@/data/site";
 
 const riveSrc = "/rive/agent-interface.riv";
 
@@ -62,37 +64,19 @@ export function AgentRive() {
           ) : null}
         </div>
         <div className="agent-rive-meta">
-          <span>Interaction Stack</span>
-          <strong>Speech · Vision · Language</strong>
+          <span>Multi-Modal Intelligence</span>
+          <strong>Audio · Deep Learning · Agent</strong>
         </div>
       </div>
-      <div className="agent-rive-copy">
-        <p>Research Signal</p>
-        <h2>Interested in multimodal intelligence, audio interaction, agents, and deep learning.</h2>
-        <div className="agent-rive-tags">
-          <span>Multi-Modal Intelligence</span>
-          <span>Audio Interaction</span>
-          <span>Agent</span>
-          <span>Deep Learning</span>
-        </div>
-        <dl>
-          <div>
-            <dt>Multi-Modal</dt>
-            <dd>Connecting vision, speech, and language into systems that understand context instead of isolated inputs.</dd>
-          </div>
-          <div>
-            <dt>Audio</dt>
-            <dd>Designing speech interfaces that can clean, revise, and preserve the speaker&apos;s final intent.</dd>
-          </div>
-          <div>
-            <dt>Agent</dt>
-            <dd>Studying how interactive AI systems plan, act, and respond to human feedback in real workflows.</dd>
-          </div>
-          <div>
-            <dt>Deep Learning</dt>
-            <dd>Using representation learning and model adaptation as the engine behind robust perception and interaction.</dd>
-          </div>
-        </dl>
+      <div className="agent-rive-links">
+        <span><MapPin aria-hidden="true" />{site.location}</span>
+        <a href={`mailto:${site.email}`}><Mail aria-hidden="true" />Email</a>
+        <a href={site.links.scholar} target="_blank" rel="noreferrer">
+          <GraduationCap aria-hidden="true" />Scholar<ExternalLink className="external-mark" aria-hidden="true" />
+        </a>
+        <a href={site.links.orcid} target="_blank" rel="noreferrer">
+          <Network aria-hidden="true" />ORCID<ExternalLink className="external-mark" aria-hidden="true" />
+        </a>
       </div>
     </motion.aside>
   );

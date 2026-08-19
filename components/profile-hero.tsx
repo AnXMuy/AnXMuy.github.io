@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, ExternalLink, GraduationCap, Mail, MapPin, Network } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { AgentRive } from "@/components/agent-rive";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/data/site";
@@ -26,21 +26,9 @@ export function ProfileHero() {
         <h1 id="profile-name">
           Zixuan Jiang <span>(Andrew)</span>
         </h1>
-        <p className="hero-summary">Building responsive intelligence across perception, speech, and agentic interaction.</p>
       </Reveal>
 
       <AgentRive />
-
-      <Reveal className="identity-links" delay={0.16}>
-        <span><MapPin aria-hidden="true" />{site.location}</span>
-        <a href={`mailto:${site.email}`}><Mail aria-hidden="true" />Email</a>
-        <a href={site.links.scholar} target="_blank" rel="noreferrer">
-          <GraduationCap aria-hidden="true" />Scholar<ExternalLink className="external-mark" aria-hidden="true" />
-        </a>
-        <a href={site.links.orcid} target="_blank" rel="noreferrer">
-          <Network aria-hidden="true" />ORCID<ExternalLink className="external-mark" aria-hidden="true" />
-        </a>
-      </Reveal>
 
       <Reveal className="profile-news" delay={0.22}>
         <div className="profile-news-heading">
