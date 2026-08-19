@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { MotionAtmosphere } from "@/components/motion-atmosphere";
+import { SmoothScroll } from "@/components/smooth-scroll";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
@@ -40,9 +42,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body id="top" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-        <MotionAtmosphere />
-        <SiteHeader />
-        {children}
+        <SmoothScroll>
+          <MotionAtmosphere />
+          <SiteHeader />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

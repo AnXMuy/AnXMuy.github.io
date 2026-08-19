@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight, ExternalLink, GraduationCap, Mail, MapPin, Network } from "lucide-react";
+import { AgentRive } from "@/components/agent-rive";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/data/site";
 
@@ -27,6 +28,8 @@ export function ProfileHero() {
         </h1>
         <p className="hero-summary">Interested in multimodal intelligence, audio interaction</p>
       </Reveal>
+
+      <AgentRive />
 
       <Reveal className="identity-links" delay={0.16}>
         <span><MapPin aria-hidden="true" />{site.location}</span>
