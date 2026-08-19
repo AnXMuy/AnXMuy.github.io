@@ -26,7 +26,7 @@ export function ProfileHero() {
         <h1 id="profile-name">
           Zixuan Jiang <span>(Andrew)</span>
         </h1>
-        <p className="hero-summary">Interested in multimodal intelligence, audio interaction</p>
+        <p className="hero-summary">Building responsive intelligence across perception, speech, and agentic interaction.</p>
       </Reveal>
 
       <AgentRive />
