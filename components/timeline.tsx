@@ -2,6 +2,7 @@ type TimelineItem = {
   date: string;
   title: string;
   detail?: string;
+  meta?: string;
 };
 
 export function Timeline({ items }: { items: TimelineItem[] }) {
@@ -14,6 +15,7 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
           <div>
             <strong>{item.title}</strong>
             {item.detail ? <p>{item.detail}</p> : null}
+            {item.meta ? <span className="timeline-meta">{item.meta}</span> : null}
           </div>
         </li>
       ))}

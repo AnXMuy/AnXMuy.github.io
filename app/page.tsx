@@ -20,14 +20,16 @@ const education = [
 
 const internships = [
   {
-    date: "Research",
-    title: "Xiangyong Cao's Research Group",
-    detail: "Xi'an Jiaotong University · Mentor: Associate Professor Xiangyong Cao",
+    date: "2024.09 — Present",
+    title: "Xi'an Jiaotong University",
+    detail: "Xiangyong Cao's Research Group",
+    meta: "Mentor: Xiangyong Cao",
   },
   {
-    date: "Research",
-    title: "X-LANCE Lab",
-    detail: "Shanghai Jiao Tong University · Mentor: Xie Chen",
+    date: "2025.12 — Present",
+    title: "Shanghai Innovation Institute · Shanghai Jiao Tong University",
+    detail: "X-LANCE Lab",
+    meta: "Mentor: Xie Chen",
   },
 ];
 

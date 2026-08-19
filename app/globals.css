@@ -972,6 +972,22 @@ img {
   font-size: 14px;
 }
 
+.timeline-meta {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 24px;
+  align-items: center;
+  margin-top: 9px;
+  padding: 0 9px;
+  border: 1px solid rgba(229, 58, 69, 0.28);
+  border-radius: 4px;
+  background: rgba(229, 58, 69, 0.09);
+  color: var(--warm);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  font-weight: 500;
+}
+
 .footer-visual {
   position: relative;
   z-index: 1;
