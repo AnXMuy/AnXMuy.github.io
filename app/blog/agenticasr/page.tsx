@@ -136,6 +136,13 @@ export default function AgenticASRPage() {
             <a className={styles.action} href="https://vibexasr.speech.wiki/" target="_blank" rel="noreferrer">
               <MonitorDown aria-hidden="true" /> App <ArrowUpRight aria-hidden="true" />
             </a>
+            <div className={styles.actionAudio}>
+              <span><AudioLines aria-hidden="true" /> Audio</span>
+              <audio controls preload="metadata">
+                <source src="/agenticasr/paper-deep-dive.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           </div>
           <div className={styles.featureRail} aria-label="AgenticASR capabilities">
             <div><AudioLines aria-hidden="true" /><span><b>Bilingual</b><small>English + Chinese</small></span></div>
@@ -152,36 +159,10 @@ export default function AgenticASRPage() {
         </div>
       </section>
 
-      <section className={`${styles.band} ${styles.audioBand}`} id="audio">
-        <div className={styles.innerNarrow}>
-          <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>02 / AUDIO</span>
-            <div>
-              <h2>Listen to the paper deep dive.</h2>
-              <p>Start the audio, then keep this page open while you read through the task, method, demos, results, and ablations.</p>
-            </div>
-          </div>
-          <div className={styles.audioPanel}>
-            <div className={styles.audioIntro}>
-              <span className={styles.audioIcon}><AudioLines aria-hidden="true" /></span>
-              <div>
-                <p className={styles.audioEyebrow}>ARXIV AUDIO READING</p>
-                <h3>AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach</h3>
-              </div>
-            </div>
-            <audio controls preload="metadata" className={styles.audioPlayer}>
-              <source src="/agenticasr/paper-deep-dive.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            <p className={styles.audioHint}>Tip: browser audio controls keep playing while you scroll, so the figures and tables can act as reading anchors.</p>
-          </div>
-        </div>
-      </section>
-
       <section className={`${styles.band} ${styles.overviewBand}`} id="overview">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>03 / TASK</span>
+            <span className={styles.sectionNumber}>02 / TASK</span>
             <div><h2>From verbatim speech to usable text.</h2><p>Speech is full of abandoned starts, fillers, repetitions, and corrections. AgenticSR keeps the final intent while making the output ready for reading and downstream use.</p></div>
           </div>
           <figure className={styles.figure}>
@@ -199,7 +180,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.demoBand}`} id="demo">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>04 / DEMO</span>
+            <span className={styles.sectionNumber}>03 / DEMO</span>
             <div><h2>One system, two languages.</h2><p>Both demonstrations show the same core behavior: spoken-form input becomes readable text while the transcript remains open to evidence-supported revision.</p></div>
           </div>
           <div className={styles.videoGrid}>
@@ -224,7 +205,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.methodBand}`} id="method">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>05 / METHOD</span>
+            <span className={styles.sectionNumber}>04 / METHOD</span>
             <div><h2>An ASR frontend, a bounded active context, and one clean replacement.</h2><p>The Refiner is deliberately separated from acoustic recognition, which lets the same text-to-text correction model work across different ASR backbones.</p></div>
           </div>
           <figure className={styles.figure}>
@@ -242,7 +223,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.resultsBand}`} id="results">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>06 / RESULTS</span>
+            <span className={styles.sectionNumber}>05 / RESULTS</span>
             <div><h2>AgenticASR leads the clean-transcription score.</h2><p>On AASR-Bench, AgenticASR wins the Overall score within the Qwen3-ASR families and improves every Whisper configuration over its API baseline.</p></div>
           </div>
           <div className={styles.metricGrid}>
@@ -274,7 +255,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.ablationBand}`} id="ablations">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>07 / ABLATIONS</span>
+            <span className={styles.sectionNumber}>06 / ABLATIONS</span>
             <div><h2>Quality, evidence, and latency move together.</h2><p>The ablations make the design trade-offs explicit: larger Refiners improve contextual rewriting, while a three-chunk online window recovers most of the useful right context.</p></div>
           </div>
           <div className={styles.ablationFeature}>
@@ -301,7 +282,7 @@ export default function AgenticASRPage() {
       <section className={`${styles.band} ${styles.benchmarkBand}`} id="benchmark">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <span className={styles.sectionNumber}>08 / BENCHMARK</span>
+            <span className={styles.sectionNumber}>07 / BENCHMARK</span>
             <div><h2>A rubric for what “clean” actually means.</h2><p>AASR-Bench is bilingual and atomic: every sample is scored on the specific transformation requirements it contains, rather than a single undifferentiated text metric.</p></div>
           </div>
           <div className={styles.benchmarkGrid}>
@@ -313,7 +294,7 @@ export default function AgenticASRPage() {
 
       <section className={`${styles.band} ${styles.citationBand}`} id="citation">
         <div className={styles.innerNarrow}>
-          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>09 / CITE</span><div><h2>Cite AgenticASR.</h2><p>If this project is useful, please cite the paper.</p></div></div>
+          <div className={styles.sectionHeading}><span className={styles.sectionNumber}>08 / CITE</span><div><h2>Cite AgenticASR.</h2><p>If this project is useful, please cite the paper.</p></div></div>
           <div className={styles.citationBox}><pre>{citation}</pre><CitationCopy citation={citation} /></div>
           <div className={styles.footerLinks}><a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer"><ScrollText aria-hidden="true" /> arXiv abstract <ArrowUpRight aria-hidden="true" /></a><a href="https://github.com/AnXMuy/AgenticASR" target="_blank" rel="noreferrer"><Github aria-hidden="true" /> Repository <ArrowUpRight aria-hidden="true" /></a></div>
           <p className={styles.templateNote}>Page structure inspired by the Academic Project Page Template and Nerfies; visual language adapted for AgenticASR.</p>
