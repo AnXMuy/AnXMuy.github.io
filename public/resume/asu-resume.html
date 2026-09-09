@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zixuan Jiang - Resume</title>
+  <style>
+    @page { size: A4; margin: 9mm 11mm; }
+    :root { --blue: #2458b8; --text: #151515; --muted: #5f6878; --band: #f3f4f6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); background: #eef0f3; font: 10.2pt/1.34 "Times New Roman", "Microsoft YaHei", Arial, sans-serif; }
+    .toolbar { position: sticky; top: 8px; z-index: 2; display: flex; gap: 8px; align-items: center; width: max-content; max-width: calc(100vw - 24px); margin: 8px auto; padding: 8px 10px; border: 1px solid #d3d7df; border-radius: 8px; background: white; box-shadow: 0 4px 14px rgba(15, 23, 42, .12); font: 13px/1 Arial, sans-serif; }
+    .toolbar button, .toolbar select { height: 30px; border: 1px solid #cbd5e1; border-radius: 5px; background: #fff; color: #1f2937; font: inherit; }
+    .toolbar button { padding: 0 10px; cursor: pointer; font-weight: 700; }
+    .toolbar .primary { border-color: var(--blue); background: var(--blue); color: #fff; }
+    .sheet { width: 210mm; min-height: 297mm; margin: 0 auto 12mm; padding: 0; background: #fff; box-shadow: 0 2px 18px rgba(31, 41, 55, .18); }
+    .resume { padding: 9mm 11mm; }
+    [contenteditable="true"]:focus { outline: 2px solid #b7caf3; outline-offset: 2px; }
+    h1 { margin: 0 0 3px; font: 700 23pt/1.08 Arial, "Microsoft YaHei", sans-serif; }
+    a { color: var(--blue); text-decoration: none; }
+    .header-grid { display: grid; grid-template-columns: minmax(0, 1fr) 29mm; gap: 8mm; align-items: start; }
+    .photo-slot { width: 29mm; height: 36mm; display: grid; place-items: center; border: 1px dashed #a8adb7; color: #8b919c; font: 9pt/1.2 Arial, sans-serif; text-align: center; }
+    .meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 7px; margin: 2px 0; font-size: 10.8pt; }
+    .meta-icon { width: 14px; height: 14px; object-fit: contain; }
+    .headline { margin: 4px 0 0; color: #1d448f; font-weight: 700; }
+    .section { margin-top: 7px; break-inside: avoid; }
+    .section-title { margin: 0 0 4px; padding-bottom: 2px; border-bottom: 2px solid var(--blue); color: var(--blue); font: 700 15.5pt/1.05 Arial, "Microsoft YaHei", sans-serif; }
+    .company { display: flex; align-items: center; gap: 8px; min-height: 27px; margin: 5px 0 3px; padding: 4px 7px; border-radius: 6px; background: var(--band); break-inside: avoid; }
+    .company-logo { width: 22px; height: 22px; object-fit: contain; }
+    .company-name { flex: 1; min-width: 0; font-weight: 700; }
+    .company-name span { color: #303846; font-weight: 500; }
+    .company-meta { color: #202020; font-size: 9.3pt; white-space: nowrap; }
+    .meta-note { margin: 0 0 2px 7px; color: var(--muted); font-size: 9.2pt; }
+    .project { margin: 3px 0 5px; break-inside: avoid; }
+    .project-title { margin: 3px 0 2px; color: #244b9b; font-size: 11.2pt; line-height: 1.18; font-weight: 700; }
+    ul { margin: 1px 0 3px 17px; padding: 0; }
+    li { margin: 1px 0; break-inside: avoid; }
+    .compact-list { columns: 2; column-gap: 20px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 3px; }
+    .skill { color: #1f2937; white-space: nowrap; }
+    .muted { color: var(--muted); }
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet { width: auto; min-height: 0; margin: 0; box-shadow: none; }
+      .resume { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button type="button" onclick="document.execCommand('undo')">Undo</button>
+    <button type="button" onclick="document.execCommand('redo')">Redo</button>
+    <button type="button" onclick="document.execCommand('bold')">Bold</button>
+    <select onchange="document.execCommand('fontSize', false, this.value)">
+      <option value="2">Small</option>
+      <option value="3" selected>Normal</option>
+      <option value="4">Large</option>
+    </select>
+    <button class="primary" type="button" onclick="window.print()">Print / Export PDF</button>
+  </div>
+  <main class="sheet">
+    <article class="resume" contenteditable="true">
+      <header class="header-grid">
+        <div>
+          <h1>Zixuan Jiang <span class="muted">(Andrew)</span></h1>
+          <div class="meta-row"><img class="meta-icon" src="icons/envelope.svg" alt="">andrewjiang@stu.xjtu.edu.cn<span>|</span>Xi'an, China<span>|</span>Xi'an Jiaotong University</div>
+          <div class="meta-row"><img class="meta-icon" src="logos/github.svg" alt="">GitHub: github.com/AnXMuy<span>|</span>Google Scholar: scholar.google.com/citations?user=hu8iqsMAAAAJ<span>|</span>ORCID: orcid.org/0009-0008-2706-553X</div>
+          <p class="headline">Research in multimodal large language models and human-computer interaction; targeting PhD applications and AI research roles.</p>
+        </div>
+        <div class="photo-slot">Photo<br>optional</div>
+      </header>
+
+      <section class="section">
+  <h2 class="section-title">Education</h2>
+  <div class="company">
+  <div class="company-name">Artificial Intelligence Experimental Class<span> - Outstanding Talent Program, Xi'an Jiaotong University</span></div>
+  <div class="company-meta">2023.09 - Present</div>
+</div>
+<div class="company">
+  <div class="company-name">Young Gifted Program<span> - Xi'an Jiaotong University</span></div>
+  <div class="company-meta">2021.09 - 2023.06</div>
+</div>
+</section>
+
+      <section class="section">
+  <h2 class="section-title">Research Experience</h2>
+  <div class="company">
+  <div class="company-name">Xi'an Jiaotong University<span> - School of Computer Science</span></div>
+  <div class="company-meta">2024.09 - Present</div>
+</div><p class="meta-note">Mentor: Xiangyong Cao</p>
+<div class="company">
+  <div class="company-name">Shanghai Innovation Institute · Shanghai Jiao Tong University<span> - X-LANCE Lab</span></div>
+  <div class="company-meta">2025.12 - Present</div>
+</div><p class="meta-note">Mentor: Xie Chen</p>
+</section>
+
+      <section class="section">
+  <h2 class="section-title">Selected Publications &amp; Projects</h2>
+  <article class="project">
+        <div class="project-title">DescribeEarth: Describe Anything for Remote Sensing Images <span class="muted">| arXiv 2025 | Remote Sensing Image Interpretation</span></div>
+        <ul><li><strong>Role evidence:</strong> co-author record in the public author list; venue/status: arXiv 2025.</li>
+<li><strong>Contribution signal:</strong> Introduces geo-spatial detailed localized captioning.</li>
+<li><strong>Contribution signal:</strong> Builds the first describe-anything model for remote sensing.</li>
+<li><strong>Contribution signal:</strong> Releases the associated dataset and evaluation benchmark.</li>
+<li><strong>Public evidence:</strong> Paper: arxiv.org/abs/2509.25654; Code: github.com/earth-insights/DescribeEarth; Dataset: huggingface.co/datasets/earth-insights/DE-Dataset; Benchmark: huggingface.co/datasets/earth-insights/DE-Benchmark.</li></ul>
+      </article>
+<article class="project">
+        <div class="project-title">AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach <span class="muted">| arXiv 2026 | Audio Intelligence</span></div>
+        <ul><li><strong>Role evidence:</strong> first-author or leading-author record in the public author list; venue/status: arXiv 2026.</li>
+<li><strong>Contribution signal:</strong> Defines Agentic Speech Recognition as final-intent-preserving audio-to-clean-text recognition.</li>
+<li><strong>Contribution signal:</strong> Introduces a decoupled ASR–Refiner system for bilingual online and offline refinement.</li>
+<li><strong>Contribution signal:</strong> Releases AASR-Bench with 6,637 atomic rubrics and leads the evaluated ASR families.</li>
+<li><strong>Public evidence:</strong> Paper: arxiv.org/abs/2607.28175; Project Page: anxmuy.github.io/blog/agenticasr; Code: github.com/AnXMuy/AgenticASR; AASR-Bench: huggingface.co/datasets/Andrew0425/AASR-Bench.</li></ul>
+      </article>
+<article class="project">
+        <div class="project-title">Towards Human-Like Interactive Speech Recognition With Agentic Correction and Semantic Evaluation <span class="muted">| arXiv 2026 | Audio Intelligence</span></div>
+        <ul><li><strong>Role evidence:</strong> first-author or leading-author record in the public author list; venue/status: arXiv 2026.</li>
+<li><strong>Contribution signal:</strong> Extends one-pass ASR into an interactive system with user feedback and semantic correction.</li>
+<li><strong>Contribution signal:</strong> Introduces an agent-based framework for interactive speech recognition.</li>
+<li><strong>Contribution signal:</strong> Develops the S²ER metric and ISS simulation framework for semantic evaluation.</li>
+<li><strong>Public evidence:</strong> Paper: arxiv.org/abs/2605.29430; Project Page: interactiveasr.github.io; Live Demo: i-asr.sjtuxlance.com.</li></ul>
+      </article>
+</section>
+
+      <section class="section">
+  <h2 class="section-title">Additional Publications</h2>
+  <ul class="compact-list"><li>The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results <span class="muted">(CVPRW 2026)</span></li>
+<li>OVEarth-Bench: Evaluating Category Breadth and Query Diversity for Open-Vocabulary Earth Observation <span class="muted">(arXiv 2026)</span></li>
+<li>Advances in Open-Vocabulary Perception for Remote-Sensing Images <span class="muted">(CJIG 2026)</span></li>
+<li>Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images <span class="muted">(arXiv 2025)</span></li>
+<li>MMAE: A Massive Multitask Audio Editing Benchmark <span class="muted">(arXiv 2026)</span></li>
+<li>Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition <span class="muted">(arXiv 2026)</span></li></ul>
+</section>
+
+      <section class="section">
+  <h2 class="section-title">Honors &amp; Competitions</h2>
+  <ul class="compact-list"><li>National Scholarship <span class="muted">(2025.10)</span></li>
+<li>Outstanding Student - Xi'an Jiaotong University <span class="muted">(2025.10)</span></li>
+<li>Shuiyou First-Class Scholarship - Top 4 in the university <span class="muted">(2024.11)</span></li>
+<li>Outstanding Student - Xi'an Jiaotong University <span class="muted">(2024.11)</span></li>
+<li>Third-Class Scholarship - Xi'an Jiaotong University <span class="muted">(2023.11)</span></li>
+<li>Second Prize - National Laser Radar Conference Point Cloud Intelligent Analysis Competition <span class="muted">(2025)</span></li>
+<li>Silver Medal - ICPC Shaanxi Provincial Programming Contest <span class="muted">(2025)</span></li>
+<li>Third Prize - China Mobile AI+ University Innovation Program, AI Track <span class="muted">(2024)</span></li>
+<li>Bronze Medal - ICPC Shaanxi Provincial Programming Contest <span class="muted">(2024)</span></li>
+<li>3x First Prize - National College Student Mathematical Modeling Competition, Shaanxi Division <span class="muted">(2023 - 2025)</span></li>
+<li>Meritorious Winner - Mathematical Contest in Modeling, USA <span class="muted">(2024)</span></li>
+<li>Honorable Prize - Mathematical Contest in Modeling, USA <span class="muted">(2023)</span></li></ul>
+</section>
+
+      <section class="section">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills"><span class="skill">Multimodal learning</span><span class="muted">/</span><span class="skill">Agentic speech recognition</span><span class="muted">/</span><span class="skill">Remote sensing image interpretation</span><span class="muted">/</span><span class="skill">Open-vocabulary perception</span><span class="muted">/</span><span class="skill">Benchmark and dataset construction</span><span class="muted">/</span><span class="skill">LLM-assisted evaluation</span><span class="muted">/</span><span class="skill">Python</span><span class="muted">/</span><span class="skill">PyTorch</span><span class="muted">/</span><span class="skill">Research prototyping</span></div>
+</section>
+    </article>
+  </main>
+  <script>
+    const key = "zixuan-asu-resume-html";
+    const article = document.querySelector(".resume");
+    const saved = localStorage.getItem(key);
+    if (saved) article.innerHTML = saved;
+    article.addEventListener("input", () => localStorage.setItem(key, article.innerHTML));
+  </script>
+</body>
+</html>

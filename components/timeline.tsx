@@ -1,3 +1,4 @@
+import { T } from "@/components/language-provider";
 type TimelineItem = {
   date: string;
   title: string;
@@ -5,17 +6,17 @@ type TimelineItem = {
   meta?: string;
 };
 
-export function Timeline({ items }: { items: TimelineItem[] }) {
+export function Timeline({ items }: { items: readonly TimelineItem[] }) {
   return (
     <ol className="timeline">
       {items.map((item) => (
-        <li key={`${item.date}-${item.title}`}>
+        <li key={`$<T>{item.date}</T>-$<T>{item.title}</T>`}>
           <span className="timeline-dot" aria-hidden="true" />
-          <time>{item.date}</time>
+          <time><T>{item.date}</T></time>
           <div>
-            <strong>{item.title}</strong>
-            {item.detail ? <p>{item.detail}</p> : null}
-            {item.meta ? <span className="timeline-meta">{item.meta}</span> : null}
+            <strong><T>{item.title}</T></strong>
+            {item.detail ? <p><T>{item.detail}</T></p> : null}
+            {item.meta ? <span className="timeline-meta"><T>{item.meta}</T></span> : null}
           </div>
         </li>
       ))}

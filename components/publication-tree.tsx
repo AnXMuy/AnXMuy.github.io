@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { T } from "@/components/language-provider";
+import { ZoomableImage as Image } from "@/components/zoomable-image";
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { GitHubStars } from "@/components/github-stars";
@@ -28,7 +29,7 @@ function ResourceLinks({ resources }: { resources: { label: string; href: string
       {resources.map((resource) => (
         <span className="resource-entry" key={resource.href}>
           <a href={resource.href} target="_blank" rel="noreferrer">
-            {resource.label}<ArrowUpRight aria-hidden="true" />
+            <T>{resource.label}</T><ArrowUpRight aria-hidden="true" />
           </a>
           {resource.href.startsWith("https://github.com/") ? <GitHubStars repositoryUrl={resource.href} /> : null}
         </span>
@@ -66,16 +67,16 @@ function FeaturedPaper({ paper }: { paper: FeaturedPublication }) {
         )}
       </div>
       <div className="featured-copy">
-        <p className="paper-type">Featured work</p>
+        <p className="paper-type"><T>{"Featured work"}</T></p>
         <h3><a href={paper.href} target="_blank" rel="noreferrer">{paper.title}</a></h3>
         <p className="paper-authors">{formatAuthors(paper.authors)}</p>
         <ResourceLinks resources={paper.resources} />
         <ul className="paper-highlights">
-          {paper.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+          {paper.highlights.map((highlight) => <li key={highlight}><T>{highlight}</T></li>)}
         </ul>
         {paper.media?.length ? (
           <div className="media-row">
-            <span>Media</span>
+            <span><T>{"Media"}</T></span>
             {paper.media.map((item) => (
               <a href={item.href} target="_blank" rel="noreferrer" key={item.href}>{item.label}</a>
             ))}
@@ -111,11 +112,11 @@ function Series({ series, depth }: { series: PublicationSeries; depth: number })
     <section className="publication-series" data-depth={depth} aria-labelledby={`${series.id}-title`}>
       <header className="series-header">
         <div>
-          <p>{series.eyebrow}</p>
-          <h2 id={`${series.id}-title`}>{series.title}</h2>
-          <span>{series.description}</span>
+          <p><T>{series.eyebrow}</T></p>
+          <h2 id={`${series.id}-title`}><T>{series.title}</T></h2>
+          <span><T>{series.description}</T></span>
         </div>
-        <div className="series-count"><Layers3 aria-hidden="true" /><strong>{paperCount}</strong><span>papers</span></div>
+        <div className="series-count"><Layers3 aria-hidden="true" /><strong>{paperCount}</strong><span><T>{"papers"}</T></span></div>
       </header>
       <div className="series-items">
         {series.items.map((item) => <PublicationNodeView node={item} depth={depth + 1} key={item.id} />)}

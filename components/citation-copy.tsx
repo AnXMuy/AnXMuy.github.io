@@ -1,5 +1,6 @@
 "use client";
 
+import { T } from "@/components/language-provider";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
@@ -38,7 +39,7 @@ export function CitationCopy({ citation }: { citation: string }) {
   return (
     <button type="button" className="citation-copy" onClick={copyCitation}>
       {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
-      <span>{copied ? "Copied" : "Copy BibTeX"}</span>
+      <span><T>{copied ? "Copied" : "Copy BibTeX"}</T></span>
     </button>
   );
 }

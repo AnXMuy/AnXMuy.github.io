@@ -34,6 +34,11 @@ The static site is exported to `out/`.
 - Publications and research series: `data/publications.ts`
 - Page content: `app/**/page.tsx`
 - Static images and PDFs: `public/`
+- Shared Chinese UI translations: `data/translations.ts`
+- Blog catalog, bilingual summaries, and categories: `data/blog.ts`
+- Light ocean theme refinements: `app/ocean.css`
+
+See `docs/content-guide.md` for bilingual editing, publishing a blog entry, and asset provenance.
 
 Publication data uses a recursive union. A `series` can contain `featured`, `standard`, or nested `series` entries, so related work can be grouped without flattening its presentation.
 

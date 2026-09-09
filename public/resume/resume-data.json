@@ -1,0 +1,347 @@
+{
+  "site": {
+    "name": "Zixuan Jiang",
+    "preferredName": "Andrew",
+    "initials": "ZJ",
+    "description": "Research in multimodal large language models and human-computer interaction",
+    "email": "andrewjiang@stu.xjtu.edu.cn",
+    "location": "Xi'an, China",
+    "institution": "Xi'an Jiaotong University",
+    "avatar": "/images/prof_pic.png",
+    "cv": "/images/CV.pdf",
+    "links": {
+      "github": "https://github.com/AnXMuy",
+      "scholar": "https://scholar.google.com/citations?user=hu8iqsMAAAAJ",
+      "researchGate": "https://www.researchgate.net/profile/Zixuan-Jiang-8?ev=hdr_xprf",
+      "orcid": "https://orcid.org/0009-0008-2706-553X"
+    }
+  },
+  "resume": {
+    "education": [
+      {
+        "date": "2023.09 - Present",
+        "title": "Artificial Intelligence Experimental Class",
+        "detail": "Outstanding Talent Program, Xi'an Jiaotong University"
+      },
+      {
+        "date": "2021.09 - 2023.06",
+        "title": "Young Gifted Program",
+        "detail": "Xi'an Jiaotong University"
+      }
+    ],
+    "internships": [
+      {
+        "date": "2024.09 - Present",
+        "title": "Xi'an Jiaotong University",
+        "detail": "School of Computer Science",
+        "meta": "Mentor: Xiangyong Cao"
+      },
+      {
+        "date": "2025.12 - Present",
+        "title": "Shanghai Innovation Institute · Shanghai Jiao Tong University",
+        "detail": "X-LANCE Lab",
+        "meta": "Mentor: Xie Chen"
+      }
+    ],
+    "honors": [
+      {
+        "date": "2025.10",
+        "title": "National Scholarship"
+      },
+      {
+        "date": "2025.10",
+        "title": "Outstanding Student",
+        "detail": "Xi'an Jiaotong University"
+      },
+      {
+        "date": "2024.11",
+        "title": "Shuiyou First-Class Scholarship",
+        "detail": "Top 4 in the university"
+      },
+      {
+        "date": "2024.11",
+        "title": "Outstanding Student",
+        "detail": "Xi'an Jiaotong University"
+      },
+      {
+        "date": "2023.11",
+        "title": "Third-Class Scholarship",
+        "detail": "Xi'an Jiaotong University"
+      }
+    ],
+    "competitionGroups": [
+      {
+        "title": "AI & Programming",
+        "items": [
+          {
+            "date": "2025",
+            "title": "Second Prize",
+            "detail": "National Laser Radar Conference Point Cloud Intelligent Analysis Competition"
+          },
+          {
+            "date": "2025",
+            "title": "Silver Medal",
+            "detail": "ICPC Shaanxi Provincial Programming Contest"
+          },
+          {
+            "date": "2024",
+            "title": "Third Prize",
+            "detail": "China Mobile AI+ University Innovation Program, AI Track"
+          },
+          {
+            "date": "2024",
+            "title": "Bronze Medal",
+            "detail": "ICPC Shaanxi Provincial Programming Contest"
+          }
+        ]
+      },
+      {
+        "title": "Mathematical Modeling",
+        "items": [
+          {
+            "date": "2023 - 2025",
+            "title": "3x First Prize",
+            "detail": "National College Student Mathematical Modeling Competition, Shaanxi Division"
+          },
+          {
+            "date": "2024",
+            "title": "Meritorious Winner",
+            "detail": "Mathematical Contest in Modeling, USA"
+          },
+          {
+            "date": "2023",
+            "title": "Honorable Prize",
+            "detail": "Mathematical Contest in Modeling, USA"
+          }
+        ]
+      }
+    ],
+    "resumeTargets": [
+      "PhD application in multimodal large language models and human-computer interaction",
+      "AI research internship / research engineer roles involving multimodal agents, evaluation, and dataset construction"
+    ],
+    "skills": [
+      "Multimodal learning",
+      "Agentic speech recognition",
+      "Remote sensing image interpretation",
+      "Open-vocabulary perception",
+      "Benchmark and dataset construction",
+      "LLM-assisted evaluation",
+      "Python",
+      "PyTorch",
+      "Research prototyping"
+    ]
+  },
+  "publications": [
+    {
+      "kind": "featured",
+      "id": "describe-earth",
+      "venue": "arXiv",
+      "year": "2025",
+      "title": "DescribeEarth: Describe Anything for Remote Sensing Images",
+      "href": "https://arxiv.org/abs/2509.25654",
+      "authors": "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
+      "image": "/images/describeearth.png",
+      "imageAlt": "DescribeEarth method and sample results",
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/abs/2509.25654"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/earth-insights/DescribeEarth"
+        },
+        {
+          "label": "Dataset",
+          "href": "https://huggingface.co/datasets/earth-insights/DE-Dataset"
+        },
+        {
+          "label": "Benchmark",
+          "href": "https://huggingface.co/datasets/earth-insights/DE-Benchmark"
+        }
+      ],
+      "highlights": [
+        "Introduces geo-spatial detailed localized captioning.",
+        "Builds the first describe-anything model for remote sensing.",
+        "Releases the associated dataset and evaluation benchmark."
+      ],
+      "media": [
+        {
+          "label": "遥感与深度学习",
+          "href": "https://mp.weixin.qq.com/s/qhFIZ6QMmikZ9L7q3cKFaw"
+        },
+        {
+          "label": "码科智能",
+          "href": "https://mp.weixin.qq.com/s/FjmlKo0EkEzXhAk82AdeFQ"
+        },
+        {
+          "label": "CV炼丹术",
+          "href": "https://mp.weixin.qq.com/s/LfGuwxEoIwpEOZXAi6w0fg"
+        }
+      ],
+      "series": "Remote Sensing Image Interpretation"
+    },
+    {
+      "kind": "standard",
+      "id": "ntire-2026",
+      "venue": "CVPRW",
+      "year": "2026",
+      "title": "The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results",
+      "href": "https://arxiv.org/abs/2604.11998",
+      "authors": "Xingyu Qiu, Yuqian Fu, Jiawei Geng, Bin Ren, ..., Kaiyu Li, Bowen Fu, Zixuan Jiang, Ke Li, Hui Qiao, Xiangyong Cao, ...",
+      "series": "Remote Sensing Image Interpretation"
+    },
+    {
+      "kind": "standard",
+      "id": "ovearth-bench",
+      "venue": "arXiv",
+      "year": "2026",
+      "title": "OVEarth-Bench: Evaluating Category Breadth and Query Diversity for Open-Vocabulary Earth Observation",
+      "href": "https://arxiv.org/abs/2607.27278",
+      "authors": "Kaiyu Li, Zepeng Xin, Zixuan Jiang, Jing Fu, Lanxuan Xue, Lingyu Zhang, Xiangyong Cao",
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/abs/2607.27278"
+        },
+        {
+          "label": "Project",
+          "href": "https://earth-insights.github.io/OVEarth-bench"
+        }
+      ],
+      "series": "Remote Sensing Image Interpretation"
+    },
+    {
+      "kind": "standard",
+      "id": "open-vocabulary-review",
+      "venue": "CJIG",
+      "year": "2026",
+      "title": "Advances in Open-Vocabulary Perception for Remote-Sensing Images",
+      "href": "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/",
+      "authors": "Kaiyu Li, Xiangyong Cao†, Zixuan Jiang, Deyu Meng",
+      "series": "Remote Sensing Image Interpretation"
+    },
+    {
+      "kind": "standard",
+      "id": "annotation-free-ovs",
+      "venue": "arXiv",
+      "year": "2025",
+      "title": "Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images",
+      "href": "https://arxiv.org/abs/2508.18067",
+      "authors": "Kaiyu Li, Xiangyong Cao†, Ruixun Liu, Shihong Wang, Zixuan Jiang, Zhi Wang, Deyu Meng",
+      "series": "Remote Sensing Image Interpretation"
+    },
+    {
+      "kind": "featured",
+      "id": "agenticasr",
+      "venue": "arXiv",
+      "year": "2026",
+      "title": "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach",
+      "href": "https://arxiv.org/abs/2607.28175",
+      "authors": "Zixuan Jiang*, Binghao Qiang*, Jiaying Chi*, Yanqiao Zhu, Kai Yu, Xie Chen†",
+      "image": "/agenticasr/teaser.png",
+      "imageAlt": "AgenticASR teaser and method overview",
+      "imageStack": [
+        {
+          "src": "/agenticasr/teaser.png",
+          "width": 1396,
+          "height": 420,
+          "alt": "AgenticASR task overview"
+        },
+        {
+          "src": "/agenticasr/method.png",
+          "width": 3456,
+          "height": 1296,
+          "alt": "AgenticASR method overview"
+        }
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/abs/2607.28175"
+        },
+        {
+          "label": "Project Page",
+          "href": "https://anxmuy.github.io/blog/agenticasr/"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/AnXMuy/AgenticASR"
+        },
+        {
+          "label": "AASR-Bench",
+          "href": "https://huggingface.co/datasets/Andrew0425/AASR-Bench"
+        }
+      ],
+      "highlights": [
+        "Defines Agentic Speech Recognition as final-intent-preserving audio-to-clean-text recognition.",
+        "Introduces a decoupled ASR–Refiner system for bilingual online and offline refinement.",
+        "Releases AASR-Bench with 6,637 atomic rubrics and leads the evaluated ASR families."
+      ],
+      "series": "Audio Intelligence"
+    },
+    {
+      "kind": "featured",
+      "id": "human-like-interactive-asr",
+      "venue": "arXiv",
+      "year": "2026",
+      "title": "Towards Human-Like Interactive Speech Recognition With Agentic Correction and Semantic Evaluation",
+      "href": "https://arxiv.org/abs/2605.29430",
+      "authors": "Zixuan Jiang*, Yanqiao Zhu*, Peng Wang*, Qinyuan Chen, Xinjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†",
+      "image": "/images/interactiveasr_teaser.png",
+      "imageAlt": "Interactive ASR system overview",
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/abs/2605.29430"
+        },
+        {
+          "label": "Project Page",
+          "href": "https://interactiveasr.github.io/"
+        },
+        {
+          "label": "Live Demo",
+          "href": "https://i-asr.sjtuxlance.com/"
+        }
+      ],
+      "highlights": [
+        "Extends one-pass ASR into an interactive system with user feedback and semantic correction.",
+        "Introduces an agent-based framework for interactive speech recognition.",
+        "Develops the S²ER metric and ISS simulation framework for semantic evaluation."
+      ],
+      "series": "Audio Intelligence"
+    },
+    {
+      "kind": "standard",
+      "id": "mmae",
+      "venue": "arXiv",
+      "year": "2026",
+      "title": "MMAE: A Massive Multitask Audio Editing Benchmark",
+      "href": "https://arxiv.org/abs/2606.07229",
+      "authors": "Ziyang Ma, Ruiqi Yan, Ruiyang Xu, Jie Fang, ..., Yanru Huo, Zixuan Jiang, Xiquan Li, Yalin Li, ..., Xie Chen",
+      "resources": [
+        {
+          "label": "Code",
+          "href": "https://github.com/ddlBoJack/MMAE"
+        },
+        {
+          "label": "Dataset",
+          "href": "https://huggingface.co/datasets/BoJack/MMAE"
+        }
+      ],
+      "series": "Audio Intelligence"
+    },
+    {
+      "kind": "standard",
+      "id": "interactive-asr",
+      "venue": "arXiv",
+      "year": "2026",
+      "title": "Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition",
+      "href": "https://arxiv.org/abs/2604.09121",
+      "authors": "Peng Wang*, Yanqiao Zhu*, Zixuan Jiang*, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†",
+      "series": "Audio Intelligence"
+    }
+  ],
+  "generatedAt": "2026-09-09T10:13:25.794Z"
+}

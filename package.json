@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "resume": "node scripts/build-resume.mjs",
+    "resume:pdf": "npm run resume && node scripts/export-resume-pdf.mjs public/resume/asu-resume.html --out public/images/CV.pdf"
   },
   "dependencies": {
     "@rive-app/react-canvas": "^4.32.0",

@@ -1,3 +1,4 @@
+import { T } from "@/components/language-provider";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Reveal } from "@/components/reveal";
@@ -11,10 +12,10 @@ type PageIntroProps = {
 export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
   return (
     <Reveal className="page-intro">
-      <Link href="/" className="back-link"><ArrowLeft aria-hidden="true" /><span>Back to About Me</span></Link>
-      <p>{eyebrow}</p>
-      <h1>{title}</h1>
-      <span>{description}</span>
+      <Link href="/" className="back-link"><ArrowLeft aria-hidden="true" /><span><T>{"Back to About Me"}</T></span></Link>
+      <p><T>{eyebrow}</T></p>
+      <h1><T>{title}</T></h1>
+      <span><T>{description}</T></span>
     </Reveal>
   );
 }

@@ -1,3 +1,4 @@
+import { T } from "@/components/language-provider";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/reveal";
 
@@ -14,7 +15,7 @@ export function ContentSection({ index, title, children, id }: ContentSectionPro
       <section id={id}>
         <header className="section-heading">
           <span>{index}</span>
-          <h2>{title}</h2>
+          <h2><T>{title}</T></h2>
           <div aria-hidden="true" />
         </header>
         <div className="section-body">{children}</div>

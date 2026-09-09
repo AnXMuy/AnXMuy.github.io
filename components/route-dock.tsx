@@ -1,3 +1,4 @@
+import { T } from "@/components/language-provider";
 import Link from "next/link";
 import { ArrowUpRight, Award, BookOpen, NotebookPen, Trophy } from "lucide-react";
 import { Reveal } from "@/components/reveal";
@@ -20,8 +21,8 @@ export function RouteDock() {
             <span className="route-index">{route.index}</span>
             <Icon aria-hidden="true" />
             <span className="route-copy">
-              <strong>{route.label}</strong>
-              <small>{route.description}</small>
+              <strong><T>{route.label}</T></strong>
+              <small><T>{route.description}</T></small>
             </span>
             <ArrowUpRight className="route-arrow" aria-hidden="true" />
           </Link>

@@ -1,37 +1,10 @@
+import { Localized, T } from "@/components/language-provider";
 import { ArrowUpRight } from "lucide-react";
 import { ContentSection } from "@/components/content-section";
-import { FooterVisual } from "@/components/footer-visual";
 import { ProfileHero } from "@/components/profile-hero";
 import { RouteDock } from "@/components/route-dock";
 import { Timeline } from "@/components/timeline";
-
-const education = [
-  {
-    date: "2023.09 — Present",
-    title: "Artificial Intelligence Experimental Class",
-    detail: "Outstanding Talent Program, Xi'an Jiaotong University",
-  },
-  {
-    date: "2021.09 — 2023.07",
-    title: "Young Gifted Program",
-    detail: "Xi'an Jiaotong University",
-  },
-];
-
-const internships = [
-  {
-    date: "2024.09 — Present",
-    title: "Xi'an Jiaotong University",
-    detail: "Xiangyong Cao's Research Group",
-    meta: "Mentor: Xiangyong Cao",
-  },
-  {
-    date: "2025.12 — Present",
-    title: "Shanghai Innovation Institute · Shanghai Jiao Tong University",
-    detail: "X-LANCE Lab",
-    meta: "Mentor: Xie Chen",
-  },
-];
+import { education, internships } from "@/data/resume";
 
 export default function Home() {
   return (
@@ -45,6 +18,7 @@ export default function Home() {
             <ContentSection index="01" title="About Me" id="about">
               <div className="about-copy">
                 <p>
+                  <Localized en={<>
                   I&apos;m currently an undergraduate student with the{" "}
                   <a href="http://www.aiar.xjtu.edu.cn/" target="_blank" rel="noreferrer">
                     College of Artificial Intelligence<ArrowUpRight aria-hidden="true" />
@@ -52,10 +26,15 @@ export default function Home() {
                   <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">
                     Xi&apos;an Jiaotong University<ArrowUpRight aria-hidden="true" />
                   </a>, and a member of the Young Gifted Program since 2021.
+                  </>} zh={<>
+                    我目前本科就读于
+                    <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">西安交通大学<ArrowUpRight aria-hidden="true" /></a>
+                    <a href="http://www.aiar.xjtu.edu.cn/" target="_blank" rel="noreferrer">人工智能学院<ArrowUpRight aria-hidden="true" /></a>
+                    ，于 2021 年进入西安交通大学少年班。
+                  </>} />
                 </p>
                 <p>
-                  My research focuses on multimodal intelligence across vision, speech, and language,
-                  with growing interests in omni-modal agents and human-computer interaction.
+                  <T>{"My research focuses on multimodal large language models and human-computer interaction."}</T>
                 </p>
               </div>
             </ContentSection>
@@ -70,7 +49,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <FooterVisual />
     </>
   );
 }

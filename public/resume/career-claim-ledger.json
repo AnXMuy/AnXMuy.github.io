@@ -1,0 +1,530 @@
+{
+  "owner": "Zixuan Jiang",
+  "generated_from": [
+    "data/site.ts",
+    "data/resume.ts",
+    "data/publications.ts"
+  ],
+  "generated_at": "2026-09-09T10:13:25.795Z",
+  "claims": [
+    {
+      "id": "claim-publication-describe-earth",
+      "source_fact": "DescribeEarth: Describe Anything for Remote Sensing Images; arXiv 2025; authors: Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
+      "candidate_wording": "DescribeEarth: Describe Anything for Remote Sensing Images (arXiv 2025)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2509.25654",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [
+        "Introduces geo-spatial detailed localized captioning.",
+        "Builds the first describe-anything model for remote sensing.",
+        "Releases the associated dataset and evaluation benchmark."
+      ],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-ntire-2026",
+      "source_fact": "The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results; CVPRW 2026; authors: Xingyu Qiu, Yuqian Fu, Jiawei Geng, Bin Ren, ..., Kaiyu Li, Bowen Fu, Zixuan Jiang, Ke Li, Hui Qiao, Xiangyong Cao, ...",
+      "candidate_wording": "The Second Challenge on Cross-Domain Few-Shot Object Detection at NTIRE 2026: Methods and Results (CVPRW 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2604.11998",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-ovearth-bench",
+      "source_fact": "OVEarth-Bench: Evaluating Category Breadth and Query Diversity for Open-Vocabulary Earth Observation; arXiv 2026; authors: Kaiyu Li, Zepeng Xin, Zixuan Jiang, Jing Fu, Lanxuan Xue, Lingyu Zhang, Xiangyong Cao",
+      "candidate_wording": "OVEarth-Bench: Evaluating Category Breadth and Query Diversity for Open-Vocabulary Earth Observation (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2607.27278",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-open-vocabulary-review",
+      "source_fact": "Advances in Open-Vocabulary Perception for Remote-Sensing Images; CJIG 2026; authors: Kaiyu Li, Xiangyong Cao†, Zixuan Jiang, Deyu Meng",
+      "candidate_wording": "Advances in Open-Vocabulary Perception for Remote-Sensing Images (CJIG 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-annotation-free-ovs",
+      "source_fact": "Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images; arXiv 2025; authors: Kaiyu Li, Xiangyong Cao†, Ruixun Liu, Shihong Wang, Zixuan Jiang, Zhi Wang, Deyu Meng",
+      "candidate_wording": "Annotation-Free Open-Vocabulary Segmentation for Remote-Sensing Images (arXiv 2025)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2508.18067",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-agenticasr",
+      "source_fact": "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach; arXiv 2026; authors: Zixuan Jiang*, Binghao Qiang*, Jiaying Chi*, Yanqiao Zhu, Kai Yu, Xie Chen†",
+      "candidate_wording": "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2607.28175",
+          "public": true
+        }
+      ],
+      "responsibility_level": "主导方案或交付",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [
+        "Defines Agentic Speech Recognition as final-intent-preserving audio-to-clean-text recognition.",
+        "Introduces a decoupled ASR–Refiner system for bilingual online and offline refinement.",
+        "Releases AASR-Bench with 6,637 atomic rubrics and leads the evaluated ASR families."
+      ],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-human-like-interactive-asr",
+      "source_fact": "Towards Human-Like Interactive Speech Recognition With Agentic Correction and Semantic Evaluation; arXiv 2026; authors: Zixuan Jiang*, Yanqiao Zhu*, Peng Wang*, Qinyuan Chen, Xinjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†",
+      "candidate_wording": "Towards Human-Like Interactive Speech Recognition With Agentic Correction and Semantic Evaluation (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2605.29430",
+          "public": true
+        }
+      ],
+      "responsibility_level": "主导方案或交付",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [
+        "Extends one-pass ASR into an interactive system with user feedback and semantic correction.",
+        "Introduces an agent-based framework for interactive speech recognition.",
+        "Develops the S²ER metric and ISS simulation framework for semantic evaluation."
+      ],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-mmae",
+      "source_fact": "MMAE: A Massive Multitask Audio Editing Benchmark; arXiv 2026; authors: Ziyang Ma, Ruiqi Yan, Ruiyang Xu, Jie Fang, ..., Yanru Huo, Zixuan Jiang, Xiquan Li, Yalin Li, ..., Xie Chen",
+      "candidate_wording": "MMAE: A Massive Multitask Audio Editing Benchmark (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2606.07229",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-publication-interactive-asr",
+      "source_fact": "Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition; arXiv 2026; authors: Peng Wang*, Yanqiao Zhu*, Zixuan Jiang*, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†",
+      "candidate_wording": "Interactive ASR: Towards Human-Like Interaction and Semantic Coherence Evaluation for Agentic Speech Recognition (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2604.09121",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-10",
+      "source_fact": "National Scholarship, 2025.10",
+      "candidate_wording": "National Scholarship",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-11",
+      "source_fact": "Outstanding Student, Xi'an Jiaotong University, 2025.10",
+      "candidate_wording": "Outstanding Student - Xi'an Jiaotong University",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-12",
+      "source_fact": "Shuiyou First-Class Scholarship, Top 4 in the university, 2024.11",
+      "candidate_wording": "Shuiyou First-Class Scholarship - Top 4 in the university",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-13",
+      "source_fact": "Outstanding Student, Xi'an Jiaotong University, 2024.11",
+      "candidate_wording": "Outstanding Student - Xi'an Jiaotong University",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-14",
+      "source_fact": "Third-Class Scholarship, Xi'an Jiaotong University, 2023.11",
+      "candidate_wording": "Third-Class Scholarship - Xi'an Jiaotong University",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-15",
+      "source_fact": "Second Prize, National Laser Radar Conference Point Cloud Intelligent Analysis Competition, 2025",
+      "candidate_wording": "Second Prize - National Laser Radar Conference Point Cloud Intelligent Analysis Competition",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-16",
+      "source_fact": "Silver Medal, ICPC Shaanxi Provincial Programming Contest, 2025",
+      "candidate_wording": "Silver Medal - ICPC Shaanxi Provincial Programming Contest",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-17",
+      "source_fact": "Third Prize, China Mobile AI+ University Innovation Program, AI Track, 2024",
+      "candidate_wording": "Third Prize - China Mobile AI+ University Innovation Program, AI Track",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-18",
+      "source_fact": "Bronze Medal, ICPC Shaanxi Provincial Programming Contest, 2024",
+      "candidate_wording": "Bronze Medal - ICPC Shaanxi Provincial Programming Contest",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-19",
+      "source_fact": "3x First Prize, National College Student Mathematical Modeling Competition, Shaanxi Division, 2023 - 2025",
+      "candidate_wording": "3x First Prize - National College Student Mathematical Modeling Competition, Shaanxi Division",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-20",
+      "source_fact": "Meritorious Winner, Mathematical Contest in Modeling, USA, 2024",
+      "candidate_wording": "Meritorious Winner - Mathematical Contest in Modeling, USA",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-21",
+      "source_fact": "Honorable Prize, Mathematical Contest in Modeling, USA, 2023",
+      "candidate_wording": "Honorable Prize - Mathematical Contest in Modeling, USA",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/resume.ts",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [],
+      "boundary": "Award or competition record as listed on the homepage.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    }
+  ]
+}
