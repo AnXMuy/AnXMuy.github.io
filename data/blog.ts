@@ -29,6 +29,19 @@ export const blogPosts: BlogPost[] = [
     paper: "https://arxiv.org/abs/2607.28175",
   },
   {
+    slug: "auk-release",
+    href: "https://auk-project.github.io/",
+    title: { en: "AuK 🍌 — Audio Banana goes open source", zh: "AuK 🍌 — Audio Banana 开源了" },
+    summary: {
+      en: "AuK is open source. Explore the project and try speech generation and editing.",
+      zh: "参与的 AuK 开源了，来体验语音生成与编辑。",
+    },
+    category: "notes",
+    date: "2026-09-09",
+    tags: ["AuK", "Audio Generation", "Audio Editing", "Open Source"],
+    external: true,
+  },
+  {
     slug: "tcs-review",
     href: "/blog/tcs-review/",
     title: { en: "TCS — Review & Cheatlist", zh: "TCS — 理论计算机科学复习与速查" },

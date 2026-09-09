@@ -116,7 +116,7 @@ function Series({ series, depth }: { series: PublicationSeries; depth: number })
           <h2 id={`${series.id}-title`}><T>{series.title}</T></h2>
           <span><T>{series.description}</T></span>
         </div>
-        <div className="series-count"><Layers3 aria-hidden="true" /><strong>{paperCount}</strong><span><T>{"papers"}</T></span></div>
+        <div className="series-count"><Layers3 aria-hidden="true" /><strong>{paperCount}</strong><span><T>{paperCount === 1 ? "paper" : "papers"}</T></span></div>
       </header>
       <div className="series-items">
         {series.items.map((item) => <PublicationNodeView node={item} depth={depth + 1} key={item.id} />)}

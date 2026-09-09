@@ -28,8 +28,8 @@
 ## 发布一篇 Blog
 
 1. 在 `app/blog/<slug>/page.tsx` 创建真实文章，并导出 `metadata`。使用 `PageIntro` 与 `T` 提供双语内容；`app/notes/tcs-review/page.tsx` 可作为简单资料文章的参考。
-2. 在 `data/blog.ts` 添加 `BlogPost`：唯一 `slug`、实际 `href`、双语 `title` / `summary`、分类、标签。已有三条内容均来自旧 Blog。
-3. 分类按固定顺序展示：`research` 论文分享、`projects` Project、`documents` 文档资料、`notes` 随手记。不要为填满页面添加虚构文章；零篇分类会展示明确空状态。AgenticASR 归论文分享，机器人导航归 Project，TCS 复习资料归文档资料；分类调整不改变文章 URL。
+2. 在 `data/blog.ts` 添加 `BlogPost`：唯一 `slug`、实际 `href`、双语 `title` / `summary`、分类、标签。原有三条内容保持不变，新增的 AuK 开源记录链接到官方项目主页，不复制或迁移外部页面。
+3. 分类按固定顺序展示：`research` 论文分享、`projects` Project、`documents` 文档资料、`notes` 随手记。不要为填满页面添加虚构文章；零篇分类会展示明确空状态。AgenticASR 归论文分享，机器人导航归 Project，TCS 复习资料归文档资料，AuK 开源记录归随手记；分类调整不改变文章 URL。非 GitHub 外链显示「访问项目主页」，不显示仓库星标。
 4. `date` 只写确认的发布日期。外部项目没有已确认日期时留空；不要使用当前日期伪装发布时间。外链设 `external: true`；PDF 放在 `public/files/`，可用 `download` 暴露下载入口。
 5. 首页精选默认使用目录第一条。其他条目按目录顺序显示。分类计数、双语搜索和内部文章 sitemap 自动读取该目录。
 6. 运行 `npm run lint` 和 `npm run build`，确认 `out/blog/<slug>/index.html` 生成，再按已有 GitHub Pages 流程发布。

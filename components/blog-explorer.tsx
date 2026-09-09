@@ -22,6 +22,10 @@ function PostLink({ post, children, className }: { post: BlogPost; children: Rea
     : <Link href={post.href} className={className}>{children}</Link>;
 }
 
+function isRepositoryPost(post: BlogPost) {
+  return post.external && post.href.startsWith("https://github.com/");
+}
+
 export function BlogExplorer() {
   const { language } = useLanguage();
   const [category, setCategory] = useState<BlogCategory | "all">("all");
@@ -75,11 +79,11 @@ export function BlogExplorer() {
         {listed.map((post) => <article className="blog-card" key={post.slug}>
           <div className={`blog-card-art ${post.category}`} aria-hidden="true"><BookOpen size={36} strokeWidth={1} /><span>{post.category === "documents" ? "DOCUMENTS / RESOURCES" : post.category === "research" ? "PAPERS / RESEARCH" : post.category === "projects" ? "BUILD / EXPLORE" : "IDEAS / NOTES"}</span></div>
           <div className="blog-card-body">
-            <p className="blog-eyebrow">{categories.find((item) => item.id === post.category)?.[language]} <span> / {post.date || "GitHub"}</span></p>
+            <p className="blog-eyebrow">{categories.find((item) => item.id === post.category)?.[language]} <span> / {post.date || (isRepositoryPost(post) ? "GitHub" : text("External page", "外部页面"))}</span></p>
             <h2><PostLink post={post}>{post.title[language]}<ArrowUpRight size={19} aria-hidden="true" /></PostLink></h2>
             <p>{post.summary[language]}</p>
             <div className="blog-tags">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            <div className="blog-card-bottom"><PostLink post={post}>{text(post.external ? "View repository" : "Read note", post.external ? "查看仓库" : "阅读全文")}<ArrowRight size={16} /></PostLink>{post.download && <a href={post.download} download><Download size={15} />PDF</a>}{post.external && <GitHubStars repositoryUrl={post.href} />}</div>
+            <div className="blog-card-bottom"><PostLink post={post}>{isRepositoryPost(post) ? text("View repository", "查看仓库") : post.external ? text("Visit project page", "访问项目主页") : text("Read note", "阅读全文")}<ArrowRight size={16} /></PostLink>{post.download && <a href={post.download} download><Download size={15} />PDF</a>}{isRepositoryPost(post) && <GitHubStars repositoryUrl={post.href} />}</div>
           </div>
         </article>)}
       </div>

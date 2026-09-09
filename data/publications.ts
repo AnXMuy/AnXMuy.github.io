@@ -217,4 +217,39 @@ export const publications: PublicationNode[] = [
       },
     ],
   },
+  {
+    kind: "series",
+    id: "audio-generation-editing",
+    title: "Audio Generation & Editing",
+    eyebrow: "Research Series 03",
+    description:
+      "Unified models for audio generation and editing.",
+    items: [
+      {
+        kind: "featured",
+        id: "auk",
+        venue: "arXiv",
+        year: "2026",
+        title: "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing",
+        href: "https://arxiv.org/abs/2609.08936",
+        authors:
+          "Ziyang Ma, Zhikang Niu, Wenming Tu, Tianrui Wang, Ruiqi Yan, Junxi Liu, Yanru Huo, Nickk Huang, Yang Liu, Qicong Xie, Zeyu Xie, Hui Wang, Haitao Li, Zixuan Jiang, Yalin Li, Jie Fang, Yifan Duan, Zeyue Tian, Guangzheng Li, Haina Zhu, Shuyi Wang, Jinwen Wang, Mingyu Cui, Tian Tan, Auden, Sen Liang, Steve Yves, Shan Yang, Liefeng Bo, Zilong Zheng, Kai Yu, Eng-Siong Chng, Xie Chen",
+        image: "/images/auk-overview.jpg",
+        imageAlt: "AuK overview: speech generation, acoustic and paralinguistic editing, content editing, enhancement and separation",
+        imageStack: [
+          { src: "/images/auk-overview.jpg", width: 1474, height: 1406, alt: "AuK overview: speech generation, acoustic and paralinguistic editing, content editing, enhancement and separation" },
+        ],
+        resources: [
+          { label: "Paper", href: "https://arxiv.org/abs/2609.08936" },
+          { label: "Code", href: "https://github.com/Tencent-Hunyuan/AuK" },
+          { label: "Project Page", href: "https://auk-project.github.io/" },
+        ],
+        highlights: [
+          "Unifies speech generation and editing with natural-language instructions and reference audio.",
+          "AuK-Flash: 4-step inference, approximately 4.5× faster under matched conditions.",
+          "AuK-VAE: jointly trained on speech, music, and sound.",
+        ],
+      },
+    ],
+  },
 ];

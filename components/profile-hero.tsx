@@ -38,6 +38,16 @@ export function ProfileHero() {
         </div>
         <div className="profile-news-list">
           <article className="profile-news-item">
+            <time dateTime="2026-09-09">2026.09.09</time>
+            <p>
+              <strong>AuK 🍌</strong> <T>{"is now open source: unified speech generation and editing, with AuK-Flash and AuK-VAE."}</T>{" "}
+              <a href="https://arxiv.org/abs/2609.08936" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
+              <a href="https://github.com/Tencent-Hunyuan/AuK" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
+              <a href="https://auk-project.github.io/" target="_blank" rel="noreferrer"><T>{"Project Page"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
+              <a href="https://huggingface.co/papers/2609.08936" target="_blank" rel="noreferrer"><T>{"HF Daily Paper"}</T> <ArrowUpRight aria-hidden="true" /></a>
+            </p>
+          </article>
+          <article className="profile-news-item">
             <time dateTime="2026-07-30">2026.07.30</time>
             <p>
               <strong>AgenticASR</strong> <T>{"is now on arXiv, with the code and AASR-Bench released."}</T> <a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://github.com/AnXMuy/AgenticASR" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/Andrew0425/AASR-Bench" target="_blank" rel="noreferrer">AASR-Bench <ArrowUpRight aria-hidden="true" /></a>

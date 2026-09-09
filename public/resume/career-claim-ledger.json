@@ -5,7 +5,7 @@
     "data/resume.ts",
     "data/publications.ts"
   ],
-  "generated_at": "2026-09-09T10:13:25.795Z",
+  "generated_at": "2026-09-09T10:40:00.283Z",
   "claims": [
     {
       "id": "claim-publication-describe-earth",
@@ -263,7 +263,38 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-10",
+      "id": "claim-publication-auk",
+      "source_fact": "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing; arXiv 2026; authors: Ziyang Ma, Zhikang Niu, Wenming Tu, Tianrui Wang, Ruiqi Yan, Junxi Liu, Yanru Huo, Nickk Huang, Yang Liu, Qicong Xie, Zeyu Xie, Hui Wang, Haitao Li, Zixuan Jiang, Yalin Li, Jie Fang, Yifan Duan, Zeyue Tian, Guangzheng Li, Haina Zhu, Shuyi Wang, Jinwen Wang, Mingyu Cui, Tian Tan, Auden, Sen Liang, Steve Yves, Shan Yang, Liefeng Bo, Zilong Zheng, Kai Yu, Eng-Siong Chng, Xie Chen",
+      "candidate_wording": "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing (arXiv 2026)",
+      "sources": [
+        {
+          "type": "homepage",
+          "location": "data/publications.ts",
+          "public": true
+        },
+        {
+          "type": "url",
+          "location": "https://arxiv.org/abs/2609.08936",
+          "public": true
+        }
+      ],
+      "responsibility_level": "参与",
+      "verification_status": "已确认",
+      "allowed_uses": [
+        "phd-application",
+        "ai-research-job"
+      ],
+      "interview_details": [
+        "Unifies speech generation and editing with natural-language instructions and reference audio.",
+        "AuK-Flash: 4-step inference, approximately 4.5× faster under matched conditions.",
+        "AuK-VAE: jointly trained on speech, music, and sound."
+      ],
+      "boundary": "Use the public author list and project resources as the evidence boundary; do not convert whole-project metrics into individual-only outcomes.",
+      "risk_notes": [],
+      "last_verified": "2026-08-26"
+    },
+    {
+      "id": "claim-award-11",
       "source_fact": "National Scholarship, 2025.10",
       "candidate_wording": "National Scholarship",
       "sources": [
@@ -285,7 +316,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-11",
+      "id": "claim-award-12",
       "source_fact": "Outstanding Student, Xi'an Jiaotong University, 2025.10",
       "candidate_wording": "Outstanding Student - Xi'an Jiaotong University",
       "sources": [
@@ -307,7 +338,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-12",
+      "id": "claim-award-13",
       "source_fact": "Shuiyou First-Class Scholarship, Top 4 in the university, 2024.11",
       "candidate_wording": "Shuiyou First-Class Scholarship - Top 4 in the university",
       "sources": [
@@ -329,7 +360,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-13",
+      "id": "claim-award-14",
       "source_fact": "Outstanding Student, Xi'an Jiaotong University, 2024.11",
       "candidate_wording": "Outstanding Student - Xi'an Jiaotong University",
       "sources": [
@@ -351,7 +382,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-14",
+      "id": "claim-award-15",
       "source_fact": "Third-Class Scholarship, Xi'an Jiaotong University, 2023.11",
       "candidate_wording": "Third-Class Scholarship - Xi'an Jiaotong University",
       "sources": [
@@ -373,7 +404,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-15",
+      "id": "claim-award-16",
       "source_fact": "Second Prize, National Laser Radar Conference Point Cloud Intelligent Analysis Competition, 2025",
       "candidate_wording": "Second Prize - National Laser Radar Conference Point Cloud Intelligent Analysis Competition",
       "sources": [
@@ -395,7 +426,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-16",
+      "id": "claim-award-17",
       "source_fact": "Silver Medal, ICPC Shaanxi Provincial Programming Contest, 2025",
       "candidate_wording": "Silver Medal - ICPC Shaanxi Provincial Programming Contest",
       "sources": [
@@ -417,7 +448,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-17",
+      "id": "claim-award-18",
       "source_fact": "Third Prize, China Mobile AI+ University Innovation Program, AI Track, 2024",
       "candidate_wording": "Third Prize - China Mobile AI+ University Innovation Program, AI Track",
       "sources": [
@@ -439,7 +470,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-18",
+      "id": "claim-award-19",
       "source_fact": "Bronze Medal, ICPC Shaanxi Provincial Programming Contest, 2024",
       "candidate_wording": "Bronze Medal - ICPC Shaanxi Provincial Programming Contest",
       "sources": [
@@ -461,7 +492,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-19",
+      "id": "claim-award-20",
       "source_fact": "3x First Prize, National College Student Mathematical Modeling Competition, Shaanxi Division, 2023 - 2025",
       "candidate_wording": "3x First Prize - National College Student Mathematical Modeling Competition, Shaanxi Division",
       "sources": [
@@ -483,7 +514,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-20",
+      "id": "claim-award-21",
       "source_fact": "Meritorious Winner, Mathematical Contest in Modeling, USA, 2024",
       "candidate_wording": "Meritorious Winner - Mathematical Contest in Modeling, USA",
       "sources": [
@@ -505,7 +536,7 @@
       "last_verified": "2026-08-26"
     },
     {
-      "id": "claim-award-21",
+      "id": "claim-award-22",
       "source_fact": "Honorable Prize, Mathematical Contest in Modeling, USA, 2023",
       "candidate_wording": "Honorable Prize - Mathematical Contest in Modeling, USA",
       "sources": [
