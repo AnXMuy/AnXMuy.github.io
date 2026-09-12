@@ -34,13 +34,14 @@
         "date": "2024.09 - Present",
         "title": "Xi'an Jiaotong University",
         "detail": "School of Computer Science",
-        "meta": "Mentor: Xiangyong Cao"
+        "meta": "Mentor: Xiangyong Cao · Associate Professor · PhD Supervisor"
       },
       {
         "date": "2025.12 - Present",
         "title": "Shanghai Innovation Institute · Shanghai Jiao Tong University",
         "detail": "X-LANCE Lab",
-        "meta": "Mentor: Xie Chen"
+        "meta": "Mentor: Xie Chen · Associate Professor · PhD Supervisor",
+        "metaHref": "https://chenxie95.github.io/zh"
       }
     ],
     "honors": [
@@ -136,8 +137,10 @@
     {
       "kind": "featured",
       "id": "describe-earth",
-      "venue": "arXiv",
-      "year": "2025",
+      "venue": "ISPRS P&RS",
+      "venueHref": "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
+      "year": "2026",
+      "showVenueYear": false,
       "title": "DescribeEarth: Describe Anything for Remote Sensing Images",
       "href": "https://arxiv.org/abs/2509.25654",
       "authors": "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
@@ -220,6 +223,16 @@
       "title": "Advances in Open-Vocabulary Perception for Remote-Sensing Images",
       "href": "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/",
       "authors": "Kaiyu Li, Xiangyong Cao†, Zixuan Jiang, Deyu Meng",
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/"
+        },
+        {
+          "label": "Repository",
+          "href": "https://github.com/earth-insights/Advanced-Earth-Observation"
+        }
+      ],
       "series": "Remote Sensing Image Interpretation"
     },
     {
@@ -382,5 +395,5 @@
       "series": "Audio Generation & Editing"
     }
   ],
-  "generatedAt": "2026-09-09T10:40:00.283Z"
+  "generatedAt": "2026-09-12T12:18:10.824Z"
 }

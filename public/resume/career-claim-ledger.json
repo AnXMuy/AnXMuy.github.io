@@ -5,12 +5,12 @@
     "data/resume.ts",
     "data/publications.ts"
   ],
-  "generated_at": "2026-09-09T10:40:00.283Z",
+  "generated_at": "2026-09-12T12:18:10.825Z",
   "claims": [
     {
       "id": "claim-publication-describe-earth",
-      "source_fact": "DescribeEarth: Describe Anything for Remote Sensing Images; arXiv 2025; authors: Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
-      "candidate_wording": "DescribeEarth: Describe Anything for Remote Sensing Images (arXiv 2025)",
+      "source_fact": "DescribeEarth: Describe Anything for Remote Sensing Images; ISPRS P&RS 2026; authors: Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
+      "candidate_wording": "DescribeEarth: Describe Anything for Remote Sensing Images (ISPRS P&RS 2026)",
       "sources": [
         {
           "type": "homepage",

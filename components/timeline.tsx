@@ -4,6 +4,7 @@ type TimelineItem = {
   title: string;
   detail?: string;
   meta?: string;
+  metaHref?: string;
 };
 
 export function Timeline({ items }: { items: readonly TimelineItem[] }) {
@@ -16,7 +17,7 @@ export function Timeline({ items }: { items: readonly TimelineItem[] }) {
           <div>
             <strong><T>{item.title}</T></strong>
             {item.detail ? <p><T>{item.detail}</T></p> : null}
-            {item.meta ? <span className="timeline-meta"><T>{item.meta}</T></span> : null}
+            {item.meta ? item.metaHref ? <a className="timeline-meta" href={item.metaHref} target="_blank" rel="noreferrer"><T>{item.meta}</T></a> : <span className="timeline-meta"><T>{item.meta}</T></span> : null}
           </div>
         </li>
       ))}

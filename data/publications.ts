@@ -8,6 +8,8 @@ export type FeaturedPublication = {
   id: string;
   venue: string;
   year: string;
+  showVenueYear?: boolean;
+  venueHref?: string;
   title: string;
   href: string;
   authors: string;
@@ -56,8 +58,10 @@ export const publications: PublicationNode[] = [
       {
         kind: "featured",
         id: "describe-earth",
-        venue: "arXiv",
-        year: "2025",
+        venue: "ISPRS P&RS",
+        venueHref: "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
+        year: "2026",
+        showVenueYear: false,
         title: "DescribeEarth: Describe Anything for Remote Sensing Images",
         href: "https://arxiv.org/abs/2509.25654",
         authors:
@@ -119,6 +123,10 @@ export const publications: PublicationNode[] = [
         title: "Advances in Open-Vocabulary Perception for Remote-Sensing Images",
         href: "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/",
         authors: "Kaiyu Li, Xiangyong Cao†, Zixuan Jiang, Deyu Meng",
+        resources: [
+          { label: "Paper", href: "https://www.cjig.cn/en/article/doi/10.11834/jig.260163/" },
+          { label: "Repository", href: "https://github.com/earth-insights/Advanced-Earth-Observation" },
+        ],
       },
       {
         kind: "standard",
@@ -135,7 +143,7 @@ export const publications: PublicationNode[] = [
   {
     kind: "series",
     id: "audio-intelligence",
-    title: "Audio Intelligence",
+    title: "Agentic Speech Recognition",
     eyebrow: "Research Series 02",
     description:
       "Interactive speech systems and evaluation methods that move recognition beyond a single pass.",
@@ -192,20 +200,6 @@ export const publications: PublicationNode[] = [
       },
       {
         kind: "standard",
-        id: "mmae",
-        venue: "arXiv",
-        year: "2026",
-        title: "MMAE: A Massive Multitask Audio Editing Benchmark",
-        href: "https://arxiv.org/abs/2606.07229",
-        authors:
-          "Ziyang Ma, Ruiqi Yan, Ruiyang Xu, Jie Fang, ..., Yanru Huo, Zixuan Jiang, Xiquan Li, Yalin Li, ..., Xie Chen",
-        resources: [
-          { label: "Code", href: "https://github.com/ddlBoJack/MMAE" },
-          { label: "Dataset", href: "https://huggingface.co/datasets/BoJack/MMAE" },
-        ],
-      },
-      {
-        kind: "standard",
         id: "interactive-asr",
         venue: "arXiv",
         year: "2026",
@@ -248,6 +242,20 @@ export const publications: PublicationNode[] = [
           "Unifies speech generation and editing with natural-language instructions and reference audio.",
           "AuK-Flash: 4-step inference, approximately 4.5× faster under matched conditions.",
           "AuK-VAE: jointly trained on speech, music, and sound.",
+        ],
+      },
+      {
+        kind: "standard",
+        id: "mmae",
+        venue: "arXiv",
+        year: "2026",
+        title: "MMAE: A Massive Multitask Audio Editing Benchmark",
+        href: "https://arxiv.org/abs/2606.07229",
+        authors:
+          "Ziyang Ma, Ruiqi Yan, Ruiyang Xu, Jie Fang, ..., Yanru Huo, Zixuan Jiang, Xiquan Li, Yalin Li, ..., Xie Chen",
+        resources: [
+          { label: "Code", href: "https://github.com/ddlBoJack/MMAE" },
+          { label: "Dataset", href: "https://huggingface.co/datasets/BoJack/MMAE" },
         ],
       },
     ],

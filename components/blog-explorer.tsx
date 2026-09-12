@@ -45,7 +45,7 @@ export function BlogExplorer() {
   }, []);
   const text = (en: string, zh: string) => language === "zh" ? zh : en;
   const filtered = blogPosts.filter((post) => (category === "all" || post.category === category) &&
-    `${post.title.en} ${post.title.zh} ${post.summary.en} ${post.summary.zh} ${post.tags.join(" ")}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
+    `${post.title.en} ${post.title.zh} ${post.summary.en} ${post.summary.zh} ${post.tags.flatMap((tag) => [tag.en, tag.zh]).join(" ")}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
   const featured = blogPosts[0];
   const showFeatured = category === "all" && !query.trim();
   const listed = showFeatured ? filtered.filter((post) => post.slug !== featured.slug) : filtered;
@@ -70,7 +70,7 @@ export function BlogExplorer() {
           <time dateTime={featured.date}>{featured.date}</time>
           <h2><PostLink post={featured}>{featured.title[language]}</PostLink></h2>
           <p>{featured.summary[language]}</p>
-          <div className="blog-tags">{featured.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+          <div className="blog-tags">{featured.tags.map((tag) => <span key={tag.en}>{tag[language]}</span>)}</div>
           <div className="blog-featured-links"><PostLink className="blog-read" post={featured}>{text("Explore the project", "阅读项目介绍")}<ArrowRight size={17} /></PostLink><a href={featured.paper} target="_blank" rel="noreferrer">{text("Read paper", "阅读论文")}<ArrowUpRight size={15} /></a></div>
         </div>
         <PostLink post={featured} className="blog-featured-art"><span aria-hidden="true">01 / RESEARCH NOTES</span><Image src={featured.image!} alt="AgenticASR task overview" width={1396} height={420} sizes="(max-width: 760px) 90vw, 45vw" /><span className="blog-art-caption">AUDIO → INTENT → CLEAN TEXT</span></PostLink>
@@ -82,7 +82,7 @@ export function BlogExplorer() {
             <p className="blog-eyebrow">{categories.find((item) => item.id === post.category)?.[language]} <span> / {post.date || (isRepositoryPost(post) ? "GitHub" : text("External page", "外部页面"))}</span></p>
             <h2><PostLink post={post}>{post.title[language]}<ArrowUpRight size={19} aria-hidden="true" /></PostLink></h2>
             <p>{post.summary[language]}</p>
-            <div className="blog-tags">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            <div className="blog-tags">{post.tags.map((tag) => <span key={tag.en}>{tag[language]}</span>)}</div>
             <div className="blog-card-bottom"><PostLink post={post}>{isRepositoryPost(post) ? text("View repository", "查看仓库") : post.external ? text("Visit project page", "访问项目主页") : text("Read note", "阅读全文")}<ArrowRight size={16} /></PostLink>{post.download && <a href={post.download} download><Download size={15} />PDF</a>}{isRepositoryPost(post) && <GitHubStars repositoryUrl={post.href} />}</div>
           </div>
         </article>)}

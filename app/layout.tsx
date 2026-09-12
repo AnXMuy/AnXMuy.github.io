@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inter, Noto_Sans_SC, Manrope } from "next/font/google";
+import { IBM_Plex_Mono, DM_Sans, Lora, Noto_Sans_SC } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { LanguageProvider } from "@/components/language-provider";
 import { FooterVisual } from "@/components/footer-visual";
@@ -7,10 +7,12 @@ import { ExperienceProvider } from "@/components/experience-provider";
 import "./globals.css";
 import "./ocean.css";
 import "./experience.css";
+import "./editorial.css";
+import "./series-motion.css";
 
-const display = Manrope({ subsets: ["latin"], variable: "--font-editorial", display: "swap" });
 const chinese = Noto_Sans_SC({ weight: ["400", "500", "600"], preload: false, variable: "--font-cjk", display: "swap" });
-const body = Inter({ subsets: ["latin"], variable: "--font-body" });
+const body = DM_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const display = Lora({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body id="top" className={`${display.variable} ${chinese.variable} ${body.variable} ${mono.variable}`}>
+      <body id="top" className={`${chinese.variable} ${body.variable} ${display.variable} ${mono.variable}`}>
         <LanguageProvider>
           <ExperienceProvider>
             <a className="skip-link" href="#main-content">Skip to content / 跳至正文</a>

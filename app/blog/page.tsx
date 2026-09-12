@@ -8,7 +8,7 @@ export default function BlogPage() {
   return (
     <main className="subpage-main blog-main">
       <div className="wide-container">
-        <PageIntro eyebrow="Andrew’s field notes" title="Ideas, along the way." description="A place for paper notes, things I build, and the journey of learning. Take your time; there is no finish line here." />
+        <PageIntro eyebrow="Andrew’s field notes" title="Blog" description="A place for paper notes, things I build, and the journey of learning. Take your time; there is no finish line here." />
         <BlogExplorer />
       </div>
     </main>

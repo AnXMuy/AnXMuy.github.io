@@ -16,13 +16,14 @@ export const internships = [
     date: "2024.09 - Present",
     title: "Xi'an Jiaotong University",
     detail: "School of Computer Science",
-    meta: "Mentor: Xiangyong Cao",
+    meta: "Mentor: Xiangyong Cao · Associate Professor · PhD Supervisor",
   },
   {
     date: "2025.12 - Present",
     title: "Shanghai Innovation Institute · Shanghai Jiao Tong University",
     detail: "X-LANCE Lab",
-    meta: "Mentor: Xie Chen",
+    meta: "Mentor: Xie Chen · Associate Professor · PhD Supervisor",
+    metaHref: "https://chenxie95.github.io/zh",
   },
 ] as const;
 

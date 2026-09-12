@@ -7,37 +7,37 @@ html { scrollbar-gutter: stable; }
 .reading-ring { position: absolute; inset: 0; width: 40px; height: 40px; transform: rotate(-90deg); }
 .reading-ring circle { fill: none; stroke: #e6eef3; stroke-width: 1; }
 .reading-ring circle + circle { stroke: #729db5; stroke-width: 1.5; stroke-linecap: round; }
-.reading-percent { margin: 1px 0 3px; color: var(--muted); font: 9px var(--font-mono), monospace; }
+.reading-percent { margin: 1px 0 3px; color: var(--muted); font: 12px var(--font-mono), monospace; }
 .motion-toggle { border-top: 1px solid var(--line) !important; border-radius: 0 0 20px 20px !important; height: 34px !important; }
-.sea-note { max-width: 360px; margin-top: 22px; }
-.sea-note button { display: inline-flex; align-items: center; gap: 7px; border: 0; border-bottom: 1px solid #cbdde7; padding: 3px 0 6px; background: none; color: var(--accent); font-size: 11px; }
+.sea-note { max-width: 430px; margin-top: 22px; }
+.sea-note button { display: inline-flex; align-items: center; gap: 7px; border: 0; border-bottom: 1px solid #cbdde7; padding: 3px 0 6px; background: none; color: var(--accent); font-size: 14px; min-height: 42px; }
 .sea-note button svg { transition: transform 350ms ease; }
 .sea-note button:hover svg { transform: rotate(-12deg); }
 .sea-note-message { min-height: 46px; padding-top: 10px; }
-.sea-note-message p { color: var(--muted); font-size: 12px; line-height: 1.9; margin: 0; }
+.sea-note-message p { color: var(--muted); font-size: 16px; line-height: 1.75; margin: 0; }
 .zoomable-figure { position: relative; min-width: 0; }
-.figure-expand { position: absolute; right: 7px; bottom: 7px; display: grid; place-items: center; width: 32px; height: 32px; padding: 0; color: #456f84; background: #ffffffed; border: 1px solid #cfdee7; border-radius: 6px; box-shadow: 0 2px 9px #345b7109; transition: transform 180ms, background 180ms; }
+.figure-expand { position: absolute; right: 7px; bottom: 7px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; color: #456f84; background: #ffffffed; border: 1px solid #cfdee7; border-radius: 9px; box-shadow: 0 2px 9px #345b7109; transition: transform 180ms, background 180ms; }
 .figure-expand:hover { transform: scale(1.06); background: #ecf5fa; }
 .figure-dialog { position: fixed; inset: 0; width: min(1200px, calc(100vw - 48px)); max-width: none; max-height: 92svh; margin: auto; padding: 0; border: 1px solid #d2e2eb; border-radius: 12px; background: #fbfdfe; overflow: hidden; box-shadow: 0 25px 100px #29475825; }
 .figure-dialog::backdrop { background: #233c4a66; backdrop-filter: blur(5px); }
 .figure-dialog-heading { display: flex; align-items: center; gap: 9px; padding: 12px 15px 12px 21px; border-bottom: 1px solid var(--line); }
-.figure-dialog-heading p { flex: 1; min-width: 0; margin: 0; font-size: 12px; color: var(--text-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.figure-dialog-heading p { flex: 1; min-width: 0; margin: 0; font-size: 14px; color: var(--text-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .figure-dialog-heading button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--accent); }
 .figure-dialog-stage { display: flex; justify-content: center; align-items: center; min-height: 160px; max-height: calc(92svh - 120px); padding: 22px; overflow: auto; overscroll-behavior: contain; background: #fff; }
 .figure-dialog .figure-dialog-image { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(92svh - 164px); object-fit: contain; flex-shrink: 0; }
 .figure-dialog-stage[data-original-size="true"] { display: block; }
 .figure-dialog-stage[data-original-size="true"] .figure-dialog-image { width: auto; height: auto; max-width: none; max-height: none; margin: 0 auto; }
-.figure-dialog-hint { margin: 0; padding: 10px 20px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 10px; }
-.blog-search kbd { display: inline-grid; place-items: center; width: 20px; height: 22px; border: 1px solid #e0e9ef; border-radius: 4px; color: #91a5b2; font: 10px var(--font-mono), monospace; }
+.figure-dialog-hint { margin: 0; padding: 10px 20px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 12px; }
+.blog-search kbd { display: inline-grid; place-items: center; width: 20px; height: 22px; border: 1px solid #e0e9ef; border-radius: 4px; color: #91a5b2; font: 12px var(--font-mono), monospace; }
 .brand-mark img { transition: transform 400ms cubic-bezier(.2,.65,.3,1); }
 .brand-link:hover .brand-mark img { transform: scale(1.08) rotate(-3deg); }
 .route-button > svg, .blog-card-art svg { transition: transform 350ms cubic-bezier(.2,.65,.3,1); }
 .route-button:hover .route-arrow { transform: translate(2px, -2px); }
 .blog-card:hover .blog-card-art svg { transform: translateY(-2px) rotate(-3deg); }
 .portrait-frame { position: relative; }
-.portrait-frame::after { content: ""; position: absolute; inset: -8px; border: 1px solid #b4d3e24d; border-radius: 50%; pointer-events: none; }
+.portrait-frame::after { content: ""; position: absolute; inset: -7px; border: 1px solid #b4d3e24d; border-radius: inherit; pointer-events: none; }
 .footer-current { will-change: auto; }
-.quote-source { display: inline-block; margin-top: 7px; color: var(--muted); font-size: 11px; text-underline-offset: 4px; }
+.quote-source { display: inline-block; margin-top: 7px; color: var(--muted); font-size: 12px; text-underline-offset: 4px; }
 .quote-source:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: no-preference) {
   html[data-motion="gentle"] .portrait-frame::after { animation: quiet-breath 8s ease-in-out infinite; }
@@ -56,11 +56,11 @@ html[data-motion="paused"] *, html[data-motion="paused"] *::before, html[data-mo
   .reading-ring { width: 38px; height: 38px; }
   .figure-dialog { width: calc(100vw - 20px); max-height: 94svh; border-radius: 9px; }
   .figure-dialog-heading { padding: 9px 10px; }
-  .figure-dialog-heading p { font-size: 10px; }
+  .figure-dialog-heading p { font-size: 12px; }
   .figure-dialog-stage { padding: 12px; }
-  .figure-dialog-hint { padding: 9px; font-size: 9px; }
+  .figure-dialog-hint { padding: 9px; font-size: 12px; }
   .sea-note { margin-top: 18px; }
-  .sea-note-message p { font-size: 11px; }
+  .sea-note-message p { font-size: 15px; }
   .blog-search kbd { display: none; }
 }
 @media print {

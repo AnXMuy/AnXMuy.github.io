@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FileText, Github } from "lucide-react";
 import { site } from "@/data/site";
+import { PrimaryNavigation } from "@/components/primary-navigation";
 
 export function SiteHeader() {
   return (
@@ -14,6 +15,8 @@ export function SiteHeader() {
           </span>
           <span className="brand-name">Zixuan Jiang</span>
         </Link>
+
+        <PrimaryNavigation />
 
         <nav className="utility-nav" aria-label="Profile links">
           <LanguageSwitch />

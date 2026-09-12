@@ -7,7 +7,7 @@ export type BlogPost = {
   category: BlogCategory;
   date?: string;
   image?: string;
-  tags: string[];
+  tags: { en: string; zh: string }[];
   external?: boolean;
   download?: string;
   paper?: string;
@@ -25,7 +25,11 @@ export const blogPosts: BlogPost[] = [
     category: "research",
     date: "2026-07-30",
     image: "/agenticasr/teaser.png",
-    tags: ["ASR", "Agent", "arXiv"],
+    tags: [
+      { en: "Speech Refinement", zh: "语音整理" },
+      { en: "Intent Preservation", zh: "意图保留" },
+      { en: "Bilingual Recognition", zh: "双语识别" },
+    ],
     paper: "https://arxiv.org/abs/2607.28175",
   },
   {
@@ -38,7 +42,11 @@ export const blogPosts: BlogPost[] = [
     },
     category: "notes",
     date: "2026-09-09",
-    tags: ["AuK", "Audio Generation", "Audio Editing", "Open Source"],
+    tags: [
+      { en: "Speech Generation", zh: "语音生成" },
+      { en: "Audio Editing", zh: "音频编辑" },
+      { en: "Fast Inference", zh: "推理加速" },
+    ],
     external: true,
   },
   {
@@ -51,7 +59,11 @@ export const blogPosts: BlogPost[] = [
     },
     category: "documents",
     date: "2026-05-27",
-    tags: ["Theoretical Computer Science", "PDF"],
+    tags: [
+      { en: "Recurrences", zh: "递推关系" },
+      { en: "Randomized Algorithms", zh: "随机算法" },
+      { en: "Complexity Analysis", zh: "复杂度分析" },
+    ],
     download: "/files/TCS_SUM.pdf",
   },
   {
@@ -63,7 +75,11 @@ export const blogPosts: BlogPost[] = [
       zh: "机器人导航课程项目与实现笔记，从代码出发理解实践过程。",
     },
     category: "projects",
-    tags: ["Robotics", "GitHub"],
+    tags: [
+      { en: "Robot Navigation", zh: "机器人导航" },
+      { en: "Navigation Experiments", zh: "导航实验" },
+      { en: "Course Project", zh: "课程项目" },
+    ],
     external: true,
   },
 ];

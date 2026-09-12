@@ -91,7 +91,7 @@ function renderCompany(entry) {
   return `<div class="company">
   <div class="company-name">${escapeHtml(entry.title)}<span>${entry.detail ? ` - ${escapeHtml(entry.detail)}` : ""}</span></div>
   <div class="company-meta">${escapeHtml(entry.date)}</div>
-</div>${entry.meta ? `<p class="meta-note">${escapeHtml(entry.meta)}</p>` : ""}`;
+</div>${entry.meta ? `<p class="meta-note">${entry.metaHref ? `<a href="${escapeHtml(entry.metaHref)}" target="_blank" rel="noreferrer">${escapeHtml(entry.meta)}</a>` : escapeHtml(entry.meta)}</p>` : ""}`;
 }
 
 function publicationBullets(pub) {

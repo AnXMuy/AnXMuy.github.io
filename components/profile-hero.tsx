@@ -17,16 +17,17 @@ export function ProfileHero() {
             width={864}
             height={864}
             priority
-            sizes="(max-width: 640px) 144px, 176px"
+            sizes="(max-width: 640px) 112px, 216px"
           />
         </div>
       </Reveal>
 
       <Reveal className="identity-block" delay={0.08}>
-        <p className="hero-kicker"><T>{"Multimodal LLMs · Human–Computer Interaction"}</T></p>
+        <p className="hero-kicker"><T>{"Academic homepage"}</T></p>
         <h1 id="profile-name">
           Zixuan Jiang <span>(Andrew)</span>
         </h1>
+        <p className="hero-affiliation"><T>{site.institution}</T></p>
       </Reveal>
 
       <AgentRive />
@@ -37,6 +38,14 @@ export function ProfileHero() {
           <div aria-hidden="true" />
         </div>
         <div className="profile-news-list">
+          <article className="profile-news-item">
+            <time dateTime="2026-09-12">2026.09.12</time>
+            <p>
+              <a href="https://arxiv.org/abs/2509.25654" target="_blank" rel="noreferrer"><strong>DescribeEarth</strong><ArrowUpRight aria-hidden="true" /></a>{" "}
+              <T zh="获">has been accepted by</T>{" "}
+              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a><T zh=" 录用。">.</T>
+            </p>
+          </article>
           <article className="profile-news-item">
             <time dateTime="2026-09-09">2026.09.09</time>
             <p>
@@ -53,6 +62,8 @@ export function ProfileHero() {
               <strong>AgenticASR</strong> <T>{"is now on arXiv, with the code and AASR-Bench released."}</T> <a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://github.com/AnXMuy/AgenticASR" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/Andrew0425/AASR-Bench" target="_blank" rel="noreferrer">AASR-Bench <ArrowUpRight aria-hidden="true" /></a>
             </p>
           </article>
+          <details className="news-archive">
+            <summary><T>{"Earlier updates"}</T></summary>
           <article className="profile-news-item">
             <time dateTime="2026-07-29">2026.07.29</time>
             <p>
@@ -66,11 +77,20 @@ export function ProfileHero() {
             </p>
           </article>
           <article className="profile-news-item">
+            <time dateTime="2026-04">2026.04</time>
+            <p>
+              <T>{"Our"}</T>{" "}
+              <a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260163/" target="_blank" rel="noreferrer"><T>{"survey paper"}</T><ArrowUpRight aria-hidden="true" /></a>{" "}
+              <T>{"on remote sensing open-vocabulary perception has been accepted by Journal of Image and Graphics (中国图象图形学报)."}</T>
+            </p>
+          </article>
+          <article className="profile-news-item">
             <time dateTime="2025-09-30">2025.09.30</time>
             <p>
               <strong>DescribeEarth</strong> <T>{"was made public with open-source code, dataset, and benchmark."}</T> <a href="https://arxiv.org/abs/2509.25654" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://github.com/earth-insights/DescribeEarth" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/earth-insights/DE-Dataset" target="_blank" rel="noreferrer"><T>{"Dataset"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/earth-insights/DE-Benchmark" target="_blank" rel="noreferrer"><T>{"Benchmark"}</T> <ArrowUpRight aria-hidden="true" /></a>
             </p>
           </article>
+          </details>
         </div>
       </Reveal>
     </section>

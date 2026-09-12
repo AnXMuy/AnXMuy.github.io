@@ -1,7 +1,7 @@
 import { T } from "@/components/language-provider";
 import { ZoomableImage as Image } from "@/components/zoomable-image";
-import { ArrowUpRight, Layers3 } from "lucide-react";
-import { Reveal } from "@/components/reveal";
+import { ArrowUpRight, FileText, Github, Globe, Layers3 } from "lucide-react";
+import { SeriesReader } from "@/components/series-reader";
 import { GitHubStars } from "@/components/github-stars";
 import type {
   FeaturedPublication,
@@ -29,6 +29,7 @@ function ResourceLinks({ resources }: { resources: { label: string; href: string
       {resources.map((resource) => (
         <span className="resource-entry" key={resource.href}>
           <a href={resource.href} target="_blank" rel="noreferrer">
+            {resource.href.startsWith("https://github.com/") ? <Github aria-hidden="true" /> : resource.label === "Paper" ? <FileText aria-hidden="true" /> : <Globe aria-hidden="true" />}
             <T>{resource.label}</T><ArrowUpRight aria-hidden="true" />
           </a>
           {resource.href.startsWith("https://github.com/") ? <GitHubStars repositoryUrl={resource.href} /> : null}
@@ -39,10 +40,11 @@ function ResourceLinks({ resources }: { resources: { label: string; href: string
 }
 
 function FeaturedPaper({ paper }: { paper: FeaturedPublication }) {
+  const venue = <>{paper.venue}{paper.showVenueYear === false ? null : ` ${paper.year}`}</>;
   return (
     <article className="featured-paper">
       <div className="featured-visual">
-        <span className="venue-chip">{paper.venue} {paper.year}</span>
+        {paper.venueHref ? <a className="venue-chip" href={paper.venueHref} target="_blank" rel="noreferrer">{venue}</a> : <span className="venue-chip">{venue}</span>}
         {paper.imageStack?.length ? (
           <div className="featured-stack">
             {paper.imageStack.map((image) => (
@@ -134,11 +136,9 @@ function PublicationNodeView({ node, depth }: { node: PublicationNode; depth: nu
 export function PublicationTree({ nodes }: { nodes: PublicationNode[] }) {
   return (
     <div className="publication-tree">
-      {nodes.map((node, index) => (
-        <Reveal key={node.id} delay={index * 0.06}>
-          <PublicationNodeView node={node} depth={0} />
-        </Reveal>
-      ))}
+      <SeriesReader pages={nodes.map((node) => ({ id: node.id, title: node.title, count: node.kind === "series" ? countPapers(node.items) : 1 }))}>
+        {nodes.map((node) => <PublicationNodeView node={node} depth={0} key={node.id} />)}
+      </SeriesReader>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import { Localized, T } from "@/components/language-provider";
 import { ArrowUpRight } from "lucide-react";
 import { ContentSection } from "@/components/content-section";
 import { ProfileHero } from "@/components/profile-hero";
-import { RouteDock } from "@/components/route-dock";
 import { Timeline } from "@/components/timeline";
 import { education, internships } from "@/data/resume";
 
@@ -12,7 +11,6 @@ export default function Home() {
       <main className="home-main">
         <div className="content-container">
           <ProfileHero />
-          <RouteDock />
 
           <div className="home-sections">
             <ContentSection index="01" title="About Me" id="about">
