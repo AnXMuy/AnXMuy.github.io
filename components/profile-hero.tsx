@@ -14,8 +14,8 @@ export function ProfileHero() {
           <Image
             src={site.avatar}
             alt="Portrait of Zixuan Jiang"
-            width={864}
-            height={864}
+            width={1024}
+            height={1280}
             priority
             sizes="(max-width: 640px) 112px, 216px"
           />

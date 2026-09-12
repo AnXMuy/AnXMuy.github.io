@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Research in multimodal large language models and human-computer interaction.",
     url: "https://anxmuy.github.io",
     siteName: "Zixuan Jiang",
-    images: [{ url: "/images/prof_pic.png", width: 864, height: 864 }],
+    images: [{ url: "/images/prof_pic.png", width: 1024, height: 1280 }],
     type: "website",
   },
   icons: {
