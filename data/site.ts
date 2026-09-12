@@ -13,6 +13,7 @@ export const site = {
     scholar: "https://scholar.google.com/citations?user=hu8iqsMAAAAJ",
     researchGate: "https://www.researchgate.net/profile/Zixuan-Jiang-8?ev=hdr_xprf",
     orcid: "https://orcid.org/0009-0008-2706-553X",
+    xiaohongshu: "https://www.xiaohongshu.com/user/profile/68ce2ceb00000000210237e2",
   },
 } as const;
 

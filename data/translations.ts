@@ -55,6 +55,7 @@ export const translations: Record<string, string> = {
   "paper": "篇论文",
   "Xi'an, China": "中国 · 西安",
   "Email": "邮箱",
+  "RedNote": "小红书",
   "Artificial Intelligence Experimental Class": "人工智能试验班",
   "Outstanding Talent Program, Xi'an Jiaotong University": "西安交通大学 · Outstanding Talent Program",
   "Young Gifted Program": "西安交通大学少年班",
