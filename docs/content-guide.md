@@ -44,8 +44,8 @@
 - 英文统一使用 DM Sans；中文优先使用本机苹方、冬青黑体、微软雅黑，缺失时回退到本地托管的 Noto Sans SC。标题与正文采用同一字体体系，不再混用 Manrope 与 Inter。正文桌面 18–20px、手机 17–18px；新闻 16–17px、论文作者 15px，辅助标签 12–14px。字体由 Next.js 在构建时下载并随静态站点托管；构建需能访问 Google Fonts，读者不需要连接 Google 字体服务。
 - 首页保留原有栏目与内容顺序，首屏采用左侧姓名／研究方向、右侧照片的布局；新闻默认显示最近三条，往期动态使用原生 details 展开，不再使用嵌套滚动框。照片、研究卡、导航、各页面正文与页尾共用同一容器对齐。
 - 全站页尾由根布局统一渲染一次。插画使用径向透明遮罩融入相同背景，不能通过裁出一个有底色的矩形来替代。
-- `/images/siam-logo.webp` 和 `siam-icon-*.png` 来自项目上一级用户提供的 `Logo.png`。
-- `/images/siam-background.webp` 来自用户提供的 `background_01.png`，是节日插画，用作页尾装饰，不覆盖正文。原图不改动，WebP 仅用于降低传输体积。
+- `/images/siam-logo.webp` 和 `siam-icon-*.png` 来自工作区 `assets/source-images/Logo.png`。
+- `/images/siam-background.webp` 来自工作区 `assets/source-images/background_01.png`，是节日插画，用作页尾装饰，不覆盖正文。原图不改动，WebP 仅用于降低传输体积。
 - 人物照片、论文图表、CV、PDF、演示音视频保持原资源。此次未引入第三方下载插画。
 - 滚动恢复为浏览器原生行为；波纹仅在用户未要求减少动态效果时启用。正文不会依赖动画完成才可见。
 
@@ -64,6 +64,12 @@
 - Blog：分类、中文和英文搜索、无结果状态、零篇分类、PDF 下载和站外项目链接。
 - 辅助访问：键盘焦点、跳至正文、减少动态效果、禁用 JavaScript 时的内容可读性。
 - 不要把 `out/`、`.next/` 或 `*.tsbuildinfo` 提交到仓库。
+
+## 简历下载维护
+
+当前简历维护源位于工作区 `career/resume/`（Overleaf / XeLaTeX）。英文公开文件为 `public/images/CV.pdf`，中文为 `public/images/CV-zh.pdf`，页头下载入口跟随语言切换，原英文 URL 不变。更新源文件后编译并运行 `verify.py`，目视检查两版各2页，再替换公开 PDF；不公开整个 Overleaf 源包。旧 `npm run resume:pdf` 仅导出到 `public/resume/asu-resume.pdf`，不会覆盖上述下载件。
+
+简历仅展示7篇 Selected Publications，网站保留完整论文清单。`submission` 专门表示在投，不得作为已录用 `venue` 使用。
 
 ## 固定 URL 约束
 

@@ -1,4 +1,5 @@
 export const translations: Record<string, string> = {
+  "Cumulative score: 92.26/100 (first five semesters); 94.78/100 (first six semesters). Rank: 5/66 in both periods.": "前五学期总成绩：92.26/100；前六学期总成绩：94.78/100；两个阶段排名均为5/66。",
   "Andrew’s field notes": "Andrew 的随记",
   "Ideas, along the way.": "沿途，记下一些思考。",
   "A place for paper notes, things I build, and the journey of learning. Take your time; there is no finish line here.": "分享读过的论文、动手做的项目，也记录求学与成长。慢慢看，这里不赶路。",
@@ -20,6 +21,7 @@ export const translations: Record<string, string> = {
   "My research focuses on multimodal large language models and human-computer interaction.": "我的研究聚焦于多模态大模型与人机交互。",
   "Multimodal LLMs · Human–Computer Interaction": "多模态大模型 · 人机交互",
   "News": "近期动态",
+  "SCI District I Top · IF 12.4": "一区 Top · IF 12.4",
   "Academic homepage": "个人学术主页",
   "Earlier updates": "往期动态",
   "Our": "我们的",

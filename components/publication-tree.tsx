@@ -70,6 +70,8 @@ function FeaturedPaper({ paper }: { paper: FeaturedPublication }) {
       </div>
       <div className="featured-copy">
         <p className="paper-type"><T>{"Featured work"}</T></p>
+        {paper.venueNote ? <p className="paper-venue-note"><T>{paper.venueNote}</T></p> : null}
+        {paper.submission ? <p className="paper-submission"><T zh={`${paper.submission} · 在投`}>{`${paper.submission} · Under review`}</T></p> : null}
         <h3><a href={paper.href} target="_blank" rel="noreferrer">{paper.title}</a></h3>
         <p className="paper-authors">{formatAuthors(paper.authors)}</p>
         <ResourceLinks resources={paper.resources} />

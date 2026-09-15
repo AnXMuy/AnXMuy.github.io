@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { AgentRive } from "@/components/agent-rive";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/data/site";
+import { describeEarthVenueNote } from "@/data/publications";
 
 export function ProfileHero() {
   return (
@@ -43,7 +44,7 @@ export function ProfileHero() {
             <p>
               <a href="https://arxiv.org/abs/2509.25654" target="_blank" rel="noreferrer"><strong>DescribeEarth</strong><ArrowUpRight aria-hidden="true" /></a>{" "}
               <T zh="获">has been accepted by</T>{" "}
-              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a><T zh=" 录用。">.</T>
+              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a>{" "}(<T>{describeEarthVenueNote}</T>)<T zh=" 录用。">.</T>
             </p>
           </article>
           <article className="profile-news-item">

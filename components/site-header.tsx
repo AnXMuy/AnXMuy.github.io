@@ -1,9 +1,10 @@
 import { LanguageSwitch } from "@/components/language-provider";
 import Link from "next/link";
 import Image from "next/image";
-import { FileText, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { site } from "@/data/site";
 import { PrimaryNavigation } from "@/components/primary-navigation";
+import { CVLink } from "@/components/cv-link";
 
 export function SiteHeader() {
   return (
@@ -20,10 +21,7 @@ export function SiteHeader() {
 
         <nav className="utility-nav" aria-label="Profile links">
           <LanguageSwitch />
-          <a href={site.cv} target="_blank" rel="noreferrer" title="View CV">
-            <FileText aria-hidden="true" />
-            <span>CV</span>
-          </a>
+          <CVLink />
           <a href={site.links.github} target="_blank" rel="noreferrer" title="GitHub">
             <Github aria-hidden="true" />
             <span className="utility-label">GitHub</span>

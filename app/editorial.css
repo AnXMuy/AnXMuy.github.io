@@ -78,6 +78,8 @@ html[lang="zh-CN"] .about-copy, html[lang="zh-CN"] .timeline p { letter-spacing:
 .featured-copy h3 a, .standard-copy h3 a { background-image: linear-gradient(#b5d5eb, #b5d5eb); background-size: 0 1px; background-repeat: no-repeat; background-position: left bottom; transition: color 200ms, background-size 300ms; }
 .featured-copy h3 a:hover, .standard-copy h3 a:hover { color: var(--accent); background-size: 100% 1px; }
 .paper-type { font-size: 12px; font-weight: 600; }
+.paper-venue-note { color: var(--accent); font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+.paper-submission { display: inline-block; margin-bottom: 12px; padding: 3px 9px; border: 1px solid var(--line); border-radius: 6px; color: var(--text-soft); background: #f3f8fc; font-size: 14px; line-height: 1.6; }
 .paper-authors, .standard-copy > p { font-size: 16px; line-height: 1.75; }
 .resource-entry { border-radius: 7px; }
 .resource-entry a { gap: 7px; }

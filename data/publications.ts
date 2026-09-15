@@ -10,6 +10,8 @@ export type FeaturedPublication = {
   year: string;
   showVenueYear?: boolean;
   venueHref?: string;
+  venueNote?: string;
+  submission?: string;
   title: string;
   href: string;
   authors: string;
@@ -46,6 +48,8 @@ export type PublicationNode =
   | StandardPublication
   | PublicationSeries;
 
+export const describeEarthVenueNote = "SCI District I Top · IF 12.4";
+
 export const publications: PublicationNode[] = [
   {
     kind: "series",
@@ -59,6 +63,7 @@ export const publications: PublicationNode[] = [
         kind: "featured",
         id: "describe-earth",
         venue: "ISPRS P&RS",
+        venueNote: describeEarthVenueNote,
         venueHref: "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
         year: "2026",
         showVenueYear: false,
@@ -151,6 +156,7 @@ export const publications: PublicationNode[] = [
       {
         kind: "featured",
         id: "agenticasr",
+        submission: "AAAI 2027",
         venue: "arXiv",
         year: "2026",
         title: "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach",
@@ -178,6 +184,7 @@ export const publications: PublicationNode[] = [
       {
         kind: "featured",
         id: "human-like-interactive-asr",
+        submission: "TASLP",
         venue: "arXiv",
         year: "2026",
         title:

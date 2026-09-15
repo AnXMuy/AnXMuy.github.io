@@ -3,6 +3,7 @@ export const education = [
     date: "2023.09 - Present",
     title: "Artificial Intelligence Experimental Class",
     detail: "Outstanding Talent Program, Xi'an Jiaotong University",
+    meta: "Cumulative score: 92.26/100 (first five semesters); 94.78/100 (first six semesters). Rank: 5/66 in both periods.",
   },
   {
     date: "2021.09 - 2023.06",

@@ -8,6 +8,7 @@ export const site = {
   institution: "Xi'an Jiaotong University",
   avatar: "/images/prof_pic.png",
   cv: "/images/CV.pdf",
+  cvChinese: "/images/CV-zh.pdf",
   links: {
     github: "https://github.com/AnXMuy",
     scholar: "https://scholar.google.com/citations?user=hu8iqsMAAAAJ",
