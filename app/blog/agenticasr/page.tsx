@@ -16,6 +16,10 @@ import {
   Timer,
 } from "lucide-react";
 import { CitationCopy } from "@/components/citation-copy";
+import teaserImage from "@/public/agenticasr/teaser.webp";
+import methodImage from "@/public/agenticasr/method.webp";
+import resultsScenesImage from "@/public/agenticasr/results-scenes.webp";
+import windowAblationImage from "@/public/agenticasr/window-ablation.webp";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -167,7 +171,7 @@ export default function AgenticASRPage() {
             <div><h2><T>{"From verbatim speech to usable text."}</T></h2><p><T>{"Speech is full of abandoned starts, fillers, repetitions, and corrections. AgenticSR keeps the final intent while making the output ready for reading and downstream use."}</T></p></div>
           </div>
           <figure className={styles.figure}>
-            <Image src="/agenticasr/teaser.png" alt="AgenticASR transforms speech into clean written text" width={1396} height={420} priority />
+            <Image src={teaserImage} alt="AgenticASR transforms speech into clean written text" placeholder="blur" priority />
             <figcaption><T>{"AgenticASR targets clean, final-intent-preserving transcription instead of verbatim speech recognition."}</T></figcaption>
           </figure>
           <div className={styles.explainGrid}>
@@ -210,7 +214,7 @@ export default function AgenticASRPage() {
             <div><h2><T>{"An ASR frontend, a bounded active context, and one clean replacement."}</T></h2><p><T>{"The Refiner is deliberately separated from acoustic recognition, which lets the same text-to-text correction model work across different ASR backbones."}</T></p></div>
           </div>
           <figure className={styles.figure}>
-            <Image src="/agenticasr/method.png" alt="AgenticASR data pipeline and online inference method" width={3456} height={1296} />
+            <Image src={methodImage} alt="AgenticASR data pipeline and online inference method" placeholder="blur" loading="eager" />
             <figcaption><T>{"Method overview: the five-stage data pipeline creates Oral/Clean training pairs; online inference uses VAD and a sliding window with default K=3."}</T></figcaption>
           </figure>
           <div className={styles.methodGrid}>
@@ -234,7 +238,7 @@ export default function AgenticASRPage() {
             <div><strong>0.82</strong><span><T>{"human–AI Spearman agreement"}</T></span></div>
           </div>
           <div className={styles.resultSplit}>
-            <figure className={styles.figure}><Image src="/agenticasr/results-scenes.png" alt="Scene-level Overall scores for Qwen3-ASR systems" width={797} height={992} /><figcaption><T>{"Scene-level Overall scores across ten usage scenes and a pass-through control. AgenticASR with the 1.7B frontend leads both baselines in every scene."}</T></figcaption></figure>
+            <figure className={styles.figure}><Image src={resultsScenesImage} alt="Scene-level Overall scores for Qwen3-ASR systems" placeholder="blur" loading="eager" /><figcaption><T>{"Scene-level Overall scores across ten usage scenes and a pass-through control. AgenticASR with the 1.7B frontend leads both baselines in every scene."}</T></figcaption></figure>
             <div className={styles.resultNotes}>
               <h3><T>{"What the table shows"}</T></h3>
               <p><T>{"With Qwen3-ASR-1.7B, AgenticASR reaches"}</T> <b><T>{"79.95 Overall"}</T></b> <T>{"and leads all four rubric dimensions. Its advantage over the API transformation baseline ranges from 1.73 to 10.02 points across matched ASR backbones, with substantially lower latency."}</T></p>
@@ -260,7 +264,7 @@ export default function AgenticASRPage() {
             <div><h2><T>{"Quality, evidence, and latency move together."}</T></h2><p><T>{"The ablations make the design trade-offs explicit: larger Refiners improve contextual rewriting, while a three-chunk online window recovers most of the useful right context."}</T></p></div>
           </div>
           <div className={styles.ablationFeature}>
-            <figure className={styles.figure}><Image src="/agenticasr/window-ablation.png" alt="Effect of active window size on online revision" width={996} height={488} /><figcaption><T>{"Window size K=3 keeps enough local context to revise a destination across VAD boundaries."}</T></figcaption></figure>
+            <figure className={styles.figure}><Image src={windowAblationImage} alt="Effect of active window size on online revision" placeholder="blur" loading="eager" /><figcaption><T>{"Window size K=3 keeps enough local context to revise a destination across VAD boundaries."}</T></figcaption></figure>
             <div className={styles.resultNotes}><h3><T>{"Online window"}</T></h3><p><T>{"Moving from K=1 to K=3 raises Rephrase from"}</T> <b>36.17</b> <T>{"to"}</T> <b>70.47</b> <T>{"and Explanation from"}</T> <b>19.43</b> <T>{"to"}</T> <b>74.00</b><T>{", while latency grows by only 0.87 s. K=3 closes the gap to offline inference to 2.36 Rephrase points and 1.20 Explanation points."}</T></p><p><T>{"This is the mechanism that lets AgenticASR correct a previously emitted destination when a later chunk contains the self-repair."}</T></p></div>
           </div>
           <div className={styles.ablationRows}>

@@ -2,7 +2,7 @@ export const site = {
   name: "Zixuan Jiang",
   preferredName: "Andrew",
   initials: "ZJ",
-  description: "Research in multimodal large language models and human-computer interaction",
+  description: "Research in multimodal large language models and audio-visual intelligence",
   email: "andrewjiang@stu.xjtu.edu.cn",
   location: "Xi'an, China",
   institution: "Xi'an Jiaotong University",

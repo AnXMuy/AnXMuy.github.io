@@ -34,7 +34,7 @@ export default function Home() {
                   <T>{"I study how multimodal models can perceive, reason about, and interact with the world through language, vision, and speech."}</T>
                 </p>
                 <p>
-                  <T>{"My work combines model building with datasets and evaluation, with current projects spanning remote sensing image interpretation, interactive speech recognition, and human–computer interaction."}</T>
+                  <T>{"Going forward, I will focus on multimodal large language models and audio-visual intelligence."}</T>
                 </p>
               </div>
             </ContentSection>

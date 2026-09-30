@@ -9,7 +9,7 @@ export function AgentRive() {
     <aside className="research-card" aria-label="Research and contact">
       <div className="research-card-heading">
         <Image src="/images/siam-logo.webp" alt="" width={52} height={52} />
-        <div><span className="research-overline">RESEARCH, WITH CURIOSITY</span><p><T>Multimodal LLMs · Human–Computer Interaction</T></p></div>
+        <div><span className="research-overline">RESEARCH, WITH CURIOSITY</span><p><T>Multimodal LLMs · Audio-Visual Intelligence</T></p></div>
       </div>
       <div className="agent-rive-links">
         <span><MapPin aria-hidden="true" /><T>{site.location}</T></span>
