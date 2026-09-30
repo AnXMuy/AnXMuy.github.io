@@ -92,7 +92,7 @@ export const publications: PublicationNode[] = [
           "Releases the associated dataset and evaluation benchmark.",
         ],
         media: [
-          { label: "遥感与深度学习", href: "https://mp.weixin.qq.com/s/qhFIZ6QMmikZ9L7q3cKFaw" },
+          { label: "遥感与深度学习", href: "https://mp.weixin.qq.com/s/SYjhLgzOq-Yi5lnaxUhQAA" },
           { label: "码科智能", href: "https://mp.weixin.qq.com/s/FjmlKo0EkEzXhAk82AdeFQ" },
           { label: "CV炼丹术", href: "https://mp.weixin.qq.com/s/LfGuwxEoIwpEOZXAi6w0fg" },
         ],
