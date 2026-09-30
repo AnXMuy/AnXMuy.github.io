@@ -72,6 +72,7 @@ html[lang="zh-CN"] .about-copy, html[lang="zh-CN"] .timeline p { letter-spacing:
 .content-section > section { border-top: 0; padding-block: 22px 30px; }
 .about-copy { font-size: 19px; line-height: 1.8; }
 .timeline strong { font-size: 21px; }
+.timeline-tag { display: inline-block; margin-left: 9px; padding: 2px 8px; border: 1px solid #c6ddd5; border-radius: 999px; color: var(--accent); background: #f1f8f5; font: 600 11px/1.4 var(--font-mono), monospace; letter-spacing: .04em; text-transform: uppercase; vertical-align: middle; }
 .page-intro { margin-bottom: 28px; }
 .research-directory { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
 .research-directory a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--accent); font-size: 14px; transition: background 200ms, border-color 200ms; }
@@ -141,6 +142,7 @@ html[lang="zh-CN"] .about-copy, html[lang="zh-CN"] .timeline p { letter-spacing:
   .route-copy small { font-size: 13px; }
   .about-copy { font-size: 18px; }
   .timeline strong { font-size: 19px; }
+  .timeline-tag { margin-left: 7px; font-size: 10px; }
   .subpage-main { padding-top: 143px; }
   .research-directory { gap: 7px; }
   .research-directory a { font-size: 13px; padding: 9px 11px; }

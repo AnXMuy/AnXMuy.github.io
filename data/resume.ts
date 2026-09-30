@@ -2,17 +2,20 @@ export const education = [
   {
     date: "2027.09 - 2032.06 (expected)",
     title: "PhD of Computer Science",
+    tag: "PhD",
     detail: "Shanghai Innovation Institute & School of Computer Science, Shanghai Jiao Tong University",
     meta: "Advisor: Xie Chen",
   },
   {
     date: "2023.09 - 2027.06 (expected)",
-    title: "Bachelor of Artificial Intelligence",
+    title: "Artificial Intelligence Experimental Class",
+    tag: "Bachelor",
     detail: "Outstanding Talent Program, Xi'an Jiaotong University",
   },
   {
     date: "2021.09 - 2023.06",
-    title: "Preparatory Program",
+    title: "Young Gifted Program",
+    tag: "Preparatory",
     detail: "Xi'an Jiaotong University",
   },
 ] as const;

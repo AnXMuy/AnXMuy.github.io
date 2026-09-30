@@ -2,6 +2,7 @@ import { T } from "@/components/language-provider";
 type TimelineItem = {
   date: string;
   title: string;
+  tag?: string;
   detail?: string;
   meta?: string;
   metaHref?: string;
@@ -15,7 +16,7 @@ export function Timeline({ items }: { items: readonly TimelineItem[] }) {
           <span className="timeline-dot" aria-hidden="true" />
           <time><T>{item.date}</T></time>
           <div>
-            <strong><T>{item.title}</T></strong>
+            <strong><T>{item.title}</T>{item.tag ? <span className="timeline-tag"><T>{item.tag}</T></span> : null}</strong>
             {item.detail ? <p><T>{item.detail}</T></p> : null}
             {item.meta ? item.metaHref ? <a className="timeline-meta" href={item.metaHref} target="_blank" rel="noreferrer"><T>{item.meta}</T></a> : <span className="timeline-meta"><T>{item.meta}</T></span> : null}
           </div>
