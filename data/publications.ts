@@ -48,7 +48,7 @@ export type PublicationNode =
   | StandardPublication
   | PublicationSeries;
 
-export const describeEarthVenueNote = "SCI District I Top · IF 12.4";
+export const describeEarthVenueNote = "Vol. 242 · pp. 860–872";
 
 export const publications: PublicationNode[] = [
   {
@@ -67,14 +67,15 @@ export const publications: PublicationNode[] = [
         venueHref: "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
         year: "2026",
         showVenueYear: false,
-        title: "DescribeEarth: Describe Anything for Remote Sensing Images",
-        href: "https://arxiv.org/abs/2509.25654",
+        title: "DescribeEarth: Detailed localized captioning for remote sensing images",
+        href: "https://www.sciencedirect.com/science/article/pii/S092427162600465X",
         authors:
-          "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
+          "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Jing Yao, Chen Wu, Deyu Meng, Zhi Wang",
         image: "/images/describeearth.png",
         imageAlt: "DescribeEarth method and sample results",
         resources: [
-          { label: "Paper", href: "https://arxiv.org/abs/2509.25654" },
+          { label: "Paper", href: "https://www.sciencedirect.com/science/article/pii/S092427162600465X" },
+          { label: "Preprint", href: "https://arxiv.org/abs/2509.25654" },
           { label: "Code", href: "https://github.com/earth-insights/DescribeEarth" },
           {
             label: "Dataset",

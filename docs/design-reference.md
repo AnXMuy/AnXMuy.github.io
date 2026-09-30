@@ -7,6 +7,10 @@ Reviewed on 2026-09-12:
 
 Implementation is original; no third-party code, photos, icons or personal content are copied. Icons use the existing Lucide dependency. Existing personal links, article routes, author lists and research claims remain authoritative.
 
+## 2026 visual refresh
+
+The homepage now uses a brighter, younger academic visual system: DM Sans/Noto Sans SC for a cleaner reading rhythm, a mint-and-teal base with coral accents, shorter rounded corners, lighter dividers, and restrained motion/hover feedback. The system keeps the editorial hierarchy and accessible contrast while removing the previous serif-heavy, blue-gray presentation. This direction was informed by current portfolio and academic homepage patterns: strong sans-serif type scales, compact dated news, restrained surfaces, and one clear accent color rather than decorative gradients or dense card stacks.
+
 `app/editorial.css` is the shared visual layer after the base, Blog and experience styles. It defines the blue palette, Lora display typography, responsive navigation, compact section rhythm, contact controls and publication directory. Chinese body text retains system CJK sans-serif with locally hosted Noto Sans SC fallback; English body text remains DM Sans. Paper titles remain sans-serif for readability. Article-specific structural styles remain in the AgenticASR CSS module.
 
 Accessibility constraints: English by default; explicit language preference persists; active navigation has `aria-current`; copy status uses a live region without replacing the original mailto link; no content hidden until JavaScript executes; all new motion respects the existing pause control and system reduced-motion setting. Header height is shared across routes so mobile content and anchor destinations are not obscured.

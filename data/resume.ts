@@ -1,30 +1,35 @@
 export const education = [
   {
-    date: "2023.09 - Present",
-    title: "Artificial Intelligence Experimental Class",
+    date: "2027.09 - 2032.06 (expected)",
+    title: "PhD of Computer Science",
+    detail: "Shanghai Innovation Institute & School of Computer Science, Shanghai Jiao Tong University",
+    meta: "Advisor: Xie Chen",
+  },
+  {
+    date: "2023.09 - 2027.06 (expected)",
+    title: "Bachelor of Artificial Intelligence",
     detail: "Outstanding Talent Program, Xi'an Jiaotong University",
-    meta: "Cumulative score: 92.26/100 (first five semesters); 94.78/100 (first six semesters). Rank: 5/66 in both periods.",
   },
   {
     date: "2021.09 - 2023.06",
-    title: "Young Gifted Program",
+    title: "Preparatory Program",
     detail: "Xi'an Jiaotong University",
   },
 ] as const;
 
 export const internships = [
   {
-    date: "2024.09 - Present",
-    title: "Xi'an Jiaotong University",
-    detail: "School of Computer Science",
-    meta: "Mentor: Xiangyong Cao · Associate Professor · PhD Supervisor",
-  },
-  {
     date: "2025.12 - Present",
     title: "Shanghai Innovation Institute · Shanghai Jiao Tong University",
     detail: "X-LANCE Lab",
     meta: "Mentor: Xie Chen · Associate Professor · PhD Supervisor",
     metaHref: "https://chenxie95.github.io/zh",
+  },
+  {
+    date: "2024.09 - Present",
+    title: "Xi'an Jiaotong University",
+    detail: "School of Computer Science",
+    meta: "Mentor: Xiangyong Cao · Associate Professor · PhD Supervisor",
   },
 ] as const;
 

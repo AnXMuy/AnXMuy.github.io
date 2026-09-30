@@ -9,8 +9,8 @@
   "claims": [
     {
       "id": "claim-publication-describe-earth",
-      "source_fact": "DescribeEarth: Describe Anything for Remote Sensing Images; ISPRS P&RS 2026; authors: Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
-      "candidate_wording": "DescribeEarth: Describe Anything for Remote Sensing Images (ISPRS P&RS 2026)",
+      "source_fact": "DescribeEarth: Detailed localized captioning for remote sensing images; ISPRS Journal of Photogrammetry and Remote Sensing, Volume 242, pages 860-872; authors: Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Jing Yao, Chen Wu, Deyu Meng, Zhi Wang",
+      "candidate_wording": "DescribeEarth: Detailed localized captioning for remote sensing images (ISPRS P&RS 2026)",
       "sources": [
         {
           "type": "homepage",
@@ -19,7 +19,7 @@
         },
         {
           "type": "url",
-          "location": "https://arxiv.org/abs/2509.25654",
+          "location": "https://www.sciencedirect.com/science/article/pii/S092427162600465X",
           "public": true
         }
       ],

@@ -16,23 +16,25 @@ export default function Home() {
             <ContentSection index="01" title="About Me" id="about">
               <div className="about-copy">
                 <p>
-                  <Localized en={<>
-                  I&apos;m currently an undergraduate student with the{" "}
-                  <a href="http://www.aiar.xjtu.edu.cn/" target="_blank" rel="noreferrer">
-                    College of Artificial Intelligence<ArrowUpRight aria-hidden="true" />
-                  </a>,{" "}
-                  <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">
-                    Xi&apos;an Jiaotong University<ArrowUpRight aria-hidden="true" />
-                  </a>, and a member of the Young Gifted Program since 2021.
-                  </>} zh={<>
-                    我目前本科就读于
-                    <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">西安交通大学<ArrowUpRight aria-hidden="true" /></a>
-                    <a href="http://www.aiar.xjtu.edu.cn/" target="_blank" rel="noreferrer">人工智能学院<ArrowUpRight aria-hidden="true" /></a>
-                    ，于 2021 年进入西安交通大学少年班。
-                  </>} />
+                  <Localized
+                    en={<>
+                      I am an undergraduate student in Artificial Intelligence at{" "}
+                      <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">
+                        Xi&apos;an Jiaotong University<ArrowUpRight aria-hidden="true" />
+                      </a>, and will begin a PhD in Computer Science at Shanghai Innovation Institute and the School of Computer Science, Shanghai Jiao Tong University in September 2027.
+                    </>}
+                    zh={<>
+                      我目前就读于
+                      <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">西安交通大学<ArrowUpRight aria-hidden="true" /></a>
+                      人工智能专业，并将于 2027 年 9 月开始在上海创智学院与上海交通大学计算机学院攻读计算机科学博士。
+                    </>}
+                  />
                 </p>
                 <p>
-                  <T>{"My research focuses on multimodal large language models and human-computer interaction."}</T>
+                  <T>{"I study how multimodal models can perceive, reason about, and interact with the world through language, vision, and speech."}</T>
+                </p>
+                <p>
+                  <T>{"My work combines model building with datasets and evaluation, with current projects spanning remote sensing image interpretation, interactive speech recognition, and human–computer interaction."}</T>
                 </p>
               </div>
             </ContentSection>

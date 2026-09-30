@@ -1,4 +1,4 @@
-import { T } from "@/components/language-provider";
+import { Localized, T } from "@/components/language-provider";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { AgentRive } from "@/components/agent-rive";
@@ -40,11 +40,25 @@ export function ProfileHero() {
         </div>
         <div className="profile-news-list">
           <article className="profile-news-item">
+            <time dateTime="2026-09-24">2026.09.24</time>
+            <Localized
+              en={<p>
+                I have been officially admitted to the Computer Science PhD program at{" "}
+                <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">Shanghai Innovation Institute<ArrowUpRight aria-hidden="true" /></a>{" "}
+                and{" "}
+                <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">School of Computer Science, Shanghai Jiao Tong University<ArrowUpRight aria-hidden="true" /></a>.
+              </p>}
+              zh={<p>
+                正式被<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院<ArrowUpRight aria-hidden="true" /></a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院<ArrowUpRight aria-hidden="true" /></a>录取为计算机科学博士。
+              </p>}
+            />
+          </article>
+          <article className="profile-news-item">
             <time dateTime="2026-09-12">2026.09.12</time>
             <p>
-              <a href="https://arxiv.org/abs/2509.25654" target="_blank" rel="noreferrer"><strong>DescribeEarth</strong><ArrowUpRight aria-hidden="true" /></a>{" "}
-              <T zh="获">has been accepted by</T>{" "}
-              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a>{" "}(<T>{describeEarthVenueNote}</T>)<T zh=" 录用。">.</T>
+              <a href="https://www.sciencedirect.com/science/article/pii/S092427162600465X" target="_blank" rel="noreferrer"><strong>DescribeEarth: Detailed localized captioning for remote sensing images</strong><ArrowUpRight aria-hidden="true" /></a>{" "}
+              <T zh="终稿现已发表于">is now published in</T>{" "}
+              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a>{" "}(<T>{describeEarthVenueNote}</T>).
             </p>
           </article>
           <article className="profile-news-item">

@@ -19,13 +19,19 @@
   "resume": {
     "education": [
       {
-        "date": "2023.09 - Present",
-        "title": "Artificial Intelligence Experimental Class",
+        "date": "2027.09 - 2032.06 (expected)",
+        "title": "PhD of Computer Science",
+        "detail": "Shanghai Innovation Institute & School of Computer Science, Shanghai Jiao Tong University",
+        "meta": "Advisor: Xie Chen"
+      },
+      {
+        "date": "2023.09 - 2027.06 (expected)",
+        "title": "Bachelor of Artificial Intelligence",
         "detail": "Outstanding Talent Program, Xi'an Jiaotong University"
       },
       {
         "date": "2021.09 - 2023.06",
-        "title": "Young Gifted Program",
+        "title": "Preparatory Program",
         "detail": "Xi'an Jiaotong University"
       }
     ],
@@ -141,14 +147,18 @@
       "venueHref": "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
       "year": "2026",
       "showVenueYear": false,
-      "title": "DescribeEarth: Describe Anything for Remote Sensing Images",
-      "href": "https://arxiv.org/abs/2509.25654",
-      "authors": "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Deyu Meng, Zhi Wang",
+      "title": "DescribeEarth: Detailed localized captioning for remote sensing images",
+      "href": "https://www.sciencedirect.com/science/article/pii/S092427162600465X",
+      "authors": "Kaiyu Li*, Zixuan Jiang*, Xiangyong Cao†, Jiayu Wang, Yuchen Xiao, Jing Yao, Chen Wu, Deyu Meng, Zhi Wang",
       "image": "/images/describeearth.png",
       "imageAlt": "DescribeEarth method and sample results",
       "resources": [
         {
           "label": "Paper",
+          "href": "https://www.sciencedirect.com/science/article/pii/S092427162600465X"
+        },
+        {
+          "label": "Preprint",
           "href": "https://arxiv.org/abs/2509.25654"
         },
         {
