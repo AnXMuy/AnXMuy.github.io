@@ -143,7 +143,8 @@ export default function AgenticASRPage() {
             </a>
             <div className={styles.actionAudio}>
               <span><AudioLines aria-hidden="true" /> <T>{"Audio"}</T></span>
-              <audio controls preload="metadata">
+              <audio controls preload="none">
+                <source src="/agenticasr/paper-deep-dive.webm" type="audio/webm" />
                 <source src="/agenticasr/paper-deep-dive.mp3" type="audio/mpeg" />
                 <T>{"Your browser does not support the audio element."}</T>
               </audio>
@@ -191,14 +192,16 @@ export default function AgenticASRPage() {
           <div className={styles.videoGrid}>
             <article className={styles.videoCard}>
               <div className={styles.videoLabel}><span><T>{"EN / English"}</T></span><span><Play aria-hidden="true" /> 00:34</span></div>
-              <video controls preload="metadata" poster="/agenticasr/en-poster.jpg" playsInline>
+              <video controls preload="none" poster="/agenticasr/en-poster.jpg" playsInline>
+                <source src="/agenticasr/en-demo.webm" type="video/webm" />
                 <source src="/agenticasr/en-demo.mp4" type="video/mp4" />
               </video>
               <p><T>{"English streaming example: disfluencies and incomplete phrasing are rewritten into clean text."}</T></p>
             </article>
             <article className={styles.videoCard}>
               <div className={styles.videoLabel}><span><T>{"ZH / 中文"}</T></span><span><Play aria-hidden="true" /> 00:50</span></div>
-              <video controls preload="metadata" poster="/agenticasr/zh-poster.jpg" playsInline>
+              <video controls preload="none" poster="/agenticasr/zh-poster.jpg" playsInline>
+                <source src="/agenticasr/zh-demo.webm" type="video/webm" />
                 <source src="/agenticasr/zh-demo.mp4" type="video/mp4" />
               </video>
               <p><T>{"中文演示：系统在保留最终意图的同时，持续清理口语表达并更新局部结果。"}</T></p>
