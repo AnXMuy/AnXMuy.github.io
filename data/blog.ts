@@ -82,4 +82,20 @@ export const blogPosts: BlogPost[] = [
     ],
     external: true,
   },
+  {
+    slug: "ai-chip-design",
+    href: "https://github.com/AnXMuy/AI_ChipDesign_Assignment",
+    title: { en: "Introduction to AI Chip Design · Course Project", zh: "AI芯片设计导论 · 课程项目" },
+    summary: {
+      en: "Course assignments and implementation notes for an introduction to AI chip design.",
+      zh: "AI芯片设计导论课程作业与实现笔记，记录从算法到硬件的实践过程。",
+    },
+    category: "projects",
+    tags: [
+      { en: "AI Chip Design", zh: "AI芯片设计" },
+      { en: "Hardware Acceleration", zh: "硬件加速" },
+      { en: "Course Project", zh: "课程项目" },
+    ],
+    external: true,
+  },
 ];

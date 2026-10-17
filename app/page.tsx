@@ -21,17 +21,30 @@ export default function Home() {
                       I am an undergraduate student in Artificial Intelligence at{" "}
                       <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">
                         Xi&apos;an Jiaotong University<ArrowUpRight aria-hidden="true" />
-                      </a>, and will begin a PhD in Computer Science at Shanghai Innovation Institute and the School of Computer Science, Shanghai Jiao Tong University in September 2027.
+                      </a>, where I first joined the Young Gifted Program before entering the Artificial Intelligence Experimental Class. I will begin a PhD in Computer Science at{" "}
+                      <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">
+                        Shanghai Innovation Institute<ArrowUpRight aria-hidden="true" />
+                      </a>{" "}and the{" "}
+                      <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">
+                        School of Computer Science, Shanghai Jiao Tong University<ArrowUpRight aria-hidden="true" />
+                      </a>{" "}in September 2027.
                     </>}
                     zh={<>
-                      我目前就读于
+                      我目前是
                       <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer">西安交通大学<ArrowUpRight aria-hidden="true" /></a>
-                      人工智能专业，并将于 2027 年 9 月开始在上海创智学院与上海交通大学计算机学院攻读计算机科学博士。
+                      人工智能专业本科生，曾先后就读于少年班和人工智能试验班。我将于 2027 年 9 月开始在
+                      <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院<ArrowUpRight aria-hidden="true" /></a>
+                      与
+                      <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院<ArrowUpRight aria-hidden="true" /></a>
+                      攻读计算机科学博士。
                     </>}
                   />
                 </p>
                 <p>
-                  <T>{"I study how multimodal models can perceive, reason about, and interact with the world through language, vision, and speech."}</T>
+                  <Localized
+                    en={<>My research interests lie in how multimodal models perceive, reason about, and interact with the world through language, vision, and speech.</>}
+                    zh={<>我的研究兴趣是探索多模态模型如何通过语言、视觉与语音感知、理解并与世界交互。</>}
+                  />
                 </p>
                 <p>
                   <T>{"Going forward, I will focus on multimodal large language models and audio-visual intelligence."}</T>
