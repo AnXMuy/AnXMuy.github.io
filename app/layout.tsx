@@ -4,11 +4,12 @@ import { SiteHeader } from "@/components/site-header";
 import { LanguageProvider } from "@/components/language-provider";
 import { FooterVisual } from "@/components/footer-visual";
 import { ExperienceProvider } from "@/components/experience-provider";
+import { site } from "@/data/site";
 import "./globals.css";
 import "./ocean.css";
 import "./experience.css";
-import "./editorial.css";
 import "./series-motion.css";
+import "./editorial.css";
 
 const chinese = Noto_Sans_SC({ weight: ["400", "500", "600"], preload: false, variable: "--font-cjk", display: "swap" });
 const body = DM_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
@@ -21,11 +22,11 @@ export const metadata: Metadata = {
     default: "Zixuan Jiang | Academic Homepage",
     template: "%s | Zixuan Jiang",
   },
-  description: "Zixuan Jiang's academic homepage: multimodal large language models and human-computer interaction.",
+  description: site.description,
   authors: [{ name: "Zixuan Jiang" }],
   openGraph: {
     title: "Zixuan Jiang | Academic Homepage",
-    description: "Research in multimodal large language models and human-computer interaction.",
+    description: site.description,
     url: "https://anxmuy.github.io",
     siteName: "Zixuan Jiang",
     images: [{ url: "/images/prof_pic.png", width: 1024, height: 1280 }],

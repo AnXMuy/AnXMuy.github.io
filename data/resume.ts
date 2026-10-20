@@ -1,8 +1,8 @@
 export const education = [
   {
-    date: "2027.09 - 2032.06 (expected)",
-    title: "PhD of Computer Science",
-    tag: "PhD",
+    date: "Starting September 2027",
+    title: "PhD in Computer Science",
+    tag: "Incoming",
     detail: "Shanghai Innovation Institute & School of Computer Science, Shanghai Jiao Tong University",
     meta: "Advisor: Xie Chen",
   },
@@ -27,12 +27,14 @@ export const internships = [
     detail: "X-LANCE Lab",
     meta: "Mentor: Xie Chen · Associate Professor · PhD Supervisor",
     metaHref: "https://chenxie95.github.io/zh",
+    focus: "Speech recognition, generation and editing",
   },
   {
     date: "2024.09 - Present",
     title: "Xi'an Jiaotong University",
     detail: "School of Computer Science",
     meta: "Mentor: Xiangyong Cao · Associate Professor · PhD Supervisor",
+    focus: "Remote sensing image interpretation and open-vocabulary perception",
   },
 ] as const;
 

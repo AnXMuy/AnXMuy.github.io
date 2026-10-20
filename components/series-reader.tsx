@@ -6,7 +6,7 @@ import { useLanguage } from "@/components/language-provider";
 import { useExperience } from "@/components/experience-provider";
 
 type SeriesPage = { id: string; title: string; count: number };
-const icons = [Globe2, AudioLines, Waves];
+const icons: Record<string, typeof Globe2> = { "remote-sensing": Globe2, "audio-intelligence": AudioLines, "audio-generation-editing": Waves };
 
 export function SeriesReader({ pages, children }: { pages: SeriesPage[]; children: ReactNode[] }) {
   const { language, translate } = useLanguage();
@@ -71,7 +71,7 @@ export function SeriesReader({ pages, children }: { pages: SeriesPage[]; childre
         <div className="series-reader-heading"><p>{text("Explore by research series", "按研究系列浏览")}</p></div>
         <div className="series-tabs" role="tablist" aria-label={text("Research series", "研究系列")}>
           {pages.map((page, index) => {
-            const Icon = icons[index % icons.length];
+            const Icon = icons[page.id] ?? Globe2;
             return (
               <button key={page.id} ref={(element) => { tabs.current[index] = element; }} id={`tab-${page.id}`} type="button" role="tab" aria-selected={index === active} aria-controls={`panel-${page.id}`} tabIndex={index === active ? 0 : -1} onClick={() => select(index)} onKeyDown={(event) => onKeyDown(event, index)}>
                 <span className="series-tab-top"><Icon aria-hidden="true" /><span>{String(index + 1).padStart(2, "0")}</span></span>

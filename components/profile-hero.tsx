@@ -1,113 +1,21 @@
-import { Localized, T } from "@/components/language-provider";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import { AgentRive } from "@/components/agent-rive";
-import { Reveal } from "@/components/reveal";
+import { Localized, T } from "@/components/language-provider";
+import { ContactLinks } from "@/components/contact-links";
 import { site } from "@/data/site";
-import { describeEarthVenueNote } from "@/data/publications";
 
 export function ProfileHero() {
   return (
-    <section className="profile-hero" aria-labelledby="profile-name">
-      <div className="hero-grid" aria-hidden="true" />
-      <Reveal className="portrait-wrap">
-        <div className="portrait-frame">
-          <Image
-            src={site.avatar}
-            alt="Portrait of Zixuan Jiang"
-            width={1024}
-            height={1280}
-            priority
-            sizes="(max-width: 640px) 112px, 216px"
-          />
-        </div>
-      </Reveal>
-
-      <Reveal className="identity-block" delay={0.08}>
-        <p className="hero-kicker"><T>{"Academic homepage"}</T></p>
-        <h1 id="profile-name">
-          Zixuan Jiang <span>(Andrew)</span>
-        </h1>
-        <p className="hero-affiliation"><T>{site.institution}</T></p>
-      </Reveal>
-
-      <AgentRive />
-
-      <Reveal className="profile-news" delay={0.22}>
-        <div className="profile-news-heading">
-          <span><T>{"News"}</T></span>
-          <div aria-hidden="true" />
-        </div>
-        <div className="profile-news-list">
-          <article className="profile-news-item">
-            <time dateTime="2026-09-24">2026.09.24</time>
-            <Localized
-              en={<p>
-                I have been officially admitted to the Computer Science PhD program at{" "}
-                <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">Shanghai Innovation Institute<ArrowUpRight aria-hidden="true" /></a>{" "}
-                and{" "}
-                <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">School of Computer Science, Shanghai Jiao Tong University<ArrowUpRight aria-hidden="true" /></a>.
-              </p>}
-              zh={<p>
-                正式被<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院<ArrowUpRight aria-hidden="true" /></a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院<ArrowUpRight aria-hidden="true" /></a>录取为计算机科学博士。
-              </p>}
-            />
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2026-09-12">2026.09.12</time>
-            <p>
-              <a href="https://www.sciencedirect.com/science/article/pii/S092427162600465X" target="_blank" rel="noreferrer"><strong>DescribeEarth: Detailed localized captioning for remote sensing images</strong><ArrowUpRight aria-hidden="true" /></a>{" "}
-              <T zh="终稿现已发表于">is now published in</T>{" "}
-              <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" rel="noreferrer">ISPRS P&amp;RS</a>{" "}(<T>{describeEarthVenueNote}</T>).
-            </p>
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2026-09-09">2026.09.09</time>
-            <p>
-              <strong>AuK 🍌</strong> <T>{"is now open source: unified speech generation and editing, with AuK-Flash and AuK-VAE."}</T>{" "}
-              <a href="https://arxiv.org/abs/2609.08936" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
-              <a href="https://github.com/Tencent-Hunyuan/AuK" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
-              <a href="https://auk-project.github.io/" target="_blank" rel="noreferrer"><T>{"Project Page"}</T> <ArrowUpRight aria-hidden="true" /></a>{" "}
-              <a href="https://huggingface.co/papers/2609.08936" target="_blank" rel="noreferrer"><T>{"HF Daily Paper"}</T> <ArrowUpRight aria-hidden="true" /></a>
-            </p>
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2026-07-30">2026.07.30</time>
-            <p>
-              <strong>AgenticASR</strong> <T>{"is now on arXiv, with the code and AASR-Bench released."}</T> <a href="https://arxiv.org/abs/2607.28175" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://github.com/AnXMuy/AgenticASR" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/Andrew0425/AASR-Bench" target="_blank" rel="noreferrer">AASR-Bench <ArrowUpRight aria-hidden="true" /></a>
-            </p>
-          </article>
-          <details className="news-archive">
-            <summary><T>{"Earlier updates"}</T></summary>
-          <article className="profile-news-item">
-            <time dateTime="2026-07-29">2026.07.29</time>
-            <p>
-              <strong>OVEarth-Bench</strong> <T>{"was released on arXiv with a project page for open-vocabulary Earth observation evaluation."}</T> <a href="https://arxiv.org/abs/2607.27278" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://earth-insights.github.io/OVEarth-bench" target="_blank" rel="noreferrer"><T>{"Project"}</T> <ArrowUpRight aria-hidden="true" /></a>
-            </p>
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2026-07-28">2026.07.28</time>
-            <p>
-              <T>{"The"}</T> <strong>VibeXASR</strong> <T>{"project, in collaboration with Jun Guo, Tao Liu, and Chonghao Cai, won the Grand Prize at the Speech OPC Innovation & Entrepreneurship Competition."}</T> <a href="https://vibexasr.speech.wiki/" target="_blank" rel="noreferrer"><T>{"Project"}</T> <ArrowUpRight aria-hidden="true" /></a>
-            </p>
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2026-04">2026.04</time>
-            <p>
-              <T>{"Our"}</T>{" "}
-              <a href="https://www.cjig.cn/zh/article/doi/10.11834/jig.260163/" target="_blank" rel="noreferrer"><T>{"survey paper"}</T><ArrowUpRight aria-hidden="true" /></a>{" "}
-              <T>{"on remote sensing open-vocabulary perception has been accepted by Journal of Image and Graphics (中国图象图形学报)."}</T>
-            </p>
-          </article>
-          <article className="profile-news-item">
-            <time dateTime="2025-09-30">2025.09.30</time>
-            <p>
-              <strong>DescribeEarth</strong> <T>{"was made public with open-source code, dataset, and benchmark."}</T> <a href="https://arxiv.org/abs/2509.25654" target="_blank" rel="noreferrer"><T>{"Paper"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://github.com/earth-insights/DescribeEarth" target="_blank" rel="noreferrer"><T>{"Code"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/earth-insights/DE-Dataset" target="_blank" rel="noreferrer"><T>{"Dataset"}</T> <ArrowUpRight aria-hidden="true" /></a> <a href="https://huggingface.co/datasets/earth-insights/DE-Benchmark" target="_blank" rel="noreferrer"><T>{"Benchmark"}</T> <ArrowUpRight aria-hidden="true" /></a>
-            </p>
-          </article>
-          </details>
-        </div>
-      </Reveal>
-    </section>
+    <aside className="academic-profile" aria-labelledby="profile-name">
+      <div className="academic-portrait">
+        <Image src={site.avatar} alt="Portrait of Zixuan Jiang / 蒋梓轩" width={1024} height={1280} priority sizes="(max-width: 400px) 90px, (max-width: 700px) 110px, 180px" />
+      </div>
+      <div className="academic-identity">
+        <h1 id="profile-name">Zixuan Jiang <span lang="zh-CN">蒋梓轩</span></h1>
+        <p className="preferred-name">Andrew</p>
+        <p className="profile-position"><Localized en="Undergraduate in Artificial Intelligence" zh="人工智能专业本科生" /><br /><a href="https://www.xjtu.edu.cn/" target="_blank" rel="noreferrer"><T>{site.institution}</T></a></p>
+        <p className="profile-incoming"><Localized en="Incoming PhD student · September 2027" zh="博士录取 · 2027 年 9 月入学" /><br /><Localized en="Shanghai Innovation Institute & Shanghai Jiao Tong University" zh="上海创智学院 · 上海交通大学" /></p>
+      </div>
+      <ContactLinks />
+    </aside>
   );
 }

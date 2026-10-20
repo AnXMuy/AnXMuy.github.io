@@ -6,19 +6,21 @@ type TimelineItem = {
   detail?: string;
   meta?: string;
   metaHref?: string;
+  focus?: string;
 };
 
 export function Timeline({ items }: { items: readonly TimelineItem[] }) {
   return (
     <ol className="timeline">
       {items.map((item) => (
-        <li key={`$<T>{item.date}</T>-$<T>{item.title}</T>`}>
+        <li key={`${item.date}-${item.title}`}>
           <span className="timeline-dot" aria-hidden="true" />
           <time><T>{item.date}</T></time>
           <div>
             <strong><T>{item.title}</T>{item.tag ? <span className="timeline-tag"><T>{item.tag}</T></span> : null}</strong>
             {item.detail ? <p><T>{item.detail}</T></p> : null}
             {item.meta ? item.metaHref ? <a className="timeline-meta" href={item.metaHref} target="_blank" rel="noreferrer"><T>{item.meta}</T></a> : <span className="timeline-meta"><T>{item.meta}</T></span> : null}
+            {item.focus ? <p className="timeline-focus"><T>{item.focus}</T></p> : null}
           </div>
         </li>
       ))}
