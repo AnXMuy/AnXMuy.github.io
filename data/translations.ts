@@ -83,6 +83,7 @@ export const translations: Record<string, string> = {
   "Mentor: Xie Chen · Associate Professor · PhD Supervisor": "导师：陈谐 · 副教授 · 博士生导师",
   "Shanghai Innovation Institute · Shanghai Jiao Tong University": "上海创智学院 · 上海交通大学",
   "National Scholarship": "国家奖学金",
+  "Second award": "第二次获奖",
   "Outstanding Student": "优秀学生",
   "Shuiyou First-Class Scholarship": "Shuiyou 一等奖学金",
   "Top 4 in the university": "全校前 4 名",

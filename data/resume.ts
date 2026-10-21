@@ -39,6 +39,7 @@ export const internships = [
 ] as const;
 
 export const honors = [
+  { date: "2026.10", title: "National Scholarship", tag: "Second award" },
   { date: "2025.10", title: "National Scholarship" },
   { date: "2025.10", title: "Outstanding Student", detail: "Xi'an Jiaotong University" },
   { date: "2024.11", title: "Shuiyou First-Class Scholarship", detail: "Top 4 in the university" },

@@ -6,6 +6,13 @@ export function News() {
   return (
     <div className="profile-news-list">
       <article className="profile-news-item">
+        <time dateTime="2026-10">2026.10</time>
+        <Localized
+          en={<p>I received the <strong>National Scholarship</strong> for the second time!</p>}
+          zh={<p>第二次获得<strong>国家奖学金</strong>！</p>}
+        />
+      </article>
+      <article className="profile-news-item">
         <time dateTime="2026-09-24">2026.09.24</time>
         <Localized
           en={<p>
