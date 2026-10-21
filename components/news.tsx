@@ -6,7 +6,7 @@ export function News() {
   return (
     <div className="profile-news-list">
       <article className="profile-news-item">
-        <time dateTime="2026-10">2026.10</time>
+        <time dateTime="2026-10-16">2026.10.16</time>
         <Localized
           en={<p>I received the <strong>National Scholarship</strong> for the second time!</p>}
           zh={<p>第二次获得<strong>国家奖学金</strong>！</p>}
