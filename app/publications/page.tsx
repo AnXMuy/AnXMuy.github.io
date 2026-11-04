@@ -20,7 +20,7 @@ export default function PublicationsPage() {
         <PageIntro
           eyebrow="Research archive"
           title="Publications"
-          description="Selected work, connected research series, and the broader publication record. * Equal contribution. † Corresponding author."
+          description="Featured work, research series, and the full publication record. * Equal contribution. † Corresponding author."
         />
         <PublicationTree nodes={orderedPublications} />
       </div>

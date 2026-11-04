@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
 import { BlogExplorer } from "@/components/blog-explorer";
 
-export const metadata: Metadata = { title: "Blog", description: "Research notes, study resources, projects, and personal reflections by Zixuan Jiang." };
+export const metadata: Metadata = { title: "Blog", description: "Research notes, course documents, projects, and occasional notes by Zixuan Jiang." };
 
 export default function BlogPage() {
   return (
     <main className="subpage-main blog-main">
       <div className="wide-container">
-        <PageIntro eyebrow="Andrew’s field notes" title="Blog" description="A place for paper notes, things I build, and the journey of learning. Take your time; there is no finish line here." />
+        <PageIntro eyebrow="Andrew’s notebook" title="Blog" description="Notes on papers I read, projects I build, and ideas I keep coming back to. Browse by topic or search for something specific." />
         <BlogExplorer />
       </div>
     </main>

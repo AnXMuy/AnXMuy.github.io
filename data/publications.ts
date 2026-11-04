@@ -57,7 +57,7 @@ export const publications: PublicationNode[] = [
     title: "Remote Sensing Image Interpretation",
     eyebrow: "Research Series 01",
     description:
-      "Open-vocabulary perception and detailed language grounding for understanding the Earth at scale.",
+      "Open-vocabulary perception and fine-grained language grounding for Earth observation.",
     items: [
       {
         kind: "featured",
@@ -87,8 +87,8 @@ export const publications: PublicationNode[] = [
           },
         ],
         highlights: [
-          "Introduces geo-spatial detailed localized captioning.",
-          "Builds the first describe-anything model for remote sensing.",
+          "Defines a detailed localized captioning task for geospatial images.",
+          "Builds the first remote-sensing model that can describe any specified region.",
           "Releases the associated dataset and evaluation benchmark.",
         ],
         media: [
@@ -152,7 +152,7 @@ export const publications: PublicationNode[] = [
     title: "Agentic Speech Recognition",
     eyebrow: "Research Series 02",
     description:
-      "Interactive speech systems and evaluation methods that move recognition beyond a single pass.",
+      "Interactive speech systems and evaluation methods for recognition that can be corrected and revised.",
     items: [
       {
         kind: "featured",
@@ -177,9 +177,9 @@ export const publications: PublicationNode[] = [
           { label: "AASR-Bench", href: "https://huggingface.co/datasets/Andrew0425/AASR-Bench" },
         ],
         highlights: [
-          "Defines Agentic Speech Recognition as final-intent-preserving audio-to-clean-text recognition.",
-          "Introduces a decoupled ASR–Refiner system for bilingual online and offline refinement.",
-          "Releases AASR-Bench with 6,637 atomic rubrics and leads the evaluated ASR families.",
+          "Defines Agentic Speech Recognition: turning spoken audio into clean text while preserving final intent.",
+          "Separates ASR from a text Refiner, enabling bilingual online and offline cleanup.",
+          "Releases AASR-Bench (6,637 fine-grained rubric items) and outperforms the other evaluated ASR families.",
         ],
       },
       {
@@ -216,6 +216,9 @@ export const publications: PublicationNode[] = [
         href: "https://arxiv.org/abs/2604.09121",
         authors:
           "Peng Wang*, Yanqiao Zhu*, Zixuan Jiang*, Qinyuan Chen, Xingjian Zhao, Xipeng Qiu, Wupeng Wang, Zhifu Gao, Xiangang Li, Kai Yu, Xie Chen†",
+        resources: [
+          { label: "Code", href: "https://github.com/InteractiveASR/AgenticASR" },
+        ],
       },
     ],
   },

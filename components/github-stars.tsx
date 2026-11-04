@@ -23,6 +23,7 @@ function formatCount(count: number) {
 
 export function GitHubStars({ repositoryUrl }: { repositoryUrl: string }) {
   const [count, setCount] = useState<number | null>(null);
+  const slug = repositorySlug(repositoryUrl);
 
   useEffect(() => {
     const slug = repositorySlug(repositoryUrl);
@@ -70,10 +71,26 @@ export function GitHubStars({ repositoryUrl }: { repositoryUrl: string }) {
     return () => controller.abort();
   }, [repositoryUrl]);
 
-  return (
-    <span className="github-stars" aria-label={count === null ? "GitHub stars" : `${count} GitHub stars`}>
+  const content = (
+    <>
       <Star aria-hidden="true" />
       <span>{count === null ? "Stars" : formatCount(count)}</span>
+    </>
+  );
+
+  return slug ? (
+    <a
+      className="github-stars"
+      href={`https://github.com/${slug}/stargazers`}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${slug} stargazers on GitHub${count === null ? "" : ` (${count} stars)`}`}
+    >
+      {content}
+    </a>
+  ) : (
+    <span className="github-stars" aria-label={count === null ? "GitHub stars" : `${count} GitHub stars`}>
+      {content}
     </span>
   );
 }

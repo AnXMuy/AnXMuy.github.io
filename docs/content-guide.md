@@ -30,8 +30,8 @@
 1. 在 `app/blog/<slug>/page.tsx` 创建真实文章，并导出 `metadata`。使用 `PageIntro` 与 `T` 提供双语内容；`app/notes/tcs-review/page.tsx` 可作为简单资料文章的参考。
 2. 在 `data/blog.ts` 添加 `BlogPost`：唯一 `slug`、实际 `href`、双语 `title` / `summary`、分类、标签。原有三条内容保持不变，新增的 AuK 开源记录链接到官方项目主页，不复制或迁移外部页面。
    `tags` 使用 `{ en, zh }` 对象数组，写具体内容主题，而不是 arXiv、PDF、GitHub 等发布平台或文件格式。标签显示随语言切换，搜索同时匹配中英文。
-3. 分类按固定顺序展示：`research` 论文分享、`projects` Project、`documents` 文档资料、`notes` 随手记。不要为填满页面添加虚构文章；零篇分类会展示明确空状态。AgenticASR 归论文分享，机器人导航归 Project，TCS 复习资料归文档资料，AuK 开源记录归随手记；分类调整不改变文章 URL。非 GitHub 外链显示「访问项目主页」，不显示仓库星标。
-4. `date` 只写确认的发布日期。外部项目没有已确认日期时留空；不要使用当前日期伪装发布时间。外链设 `external: true`；PDF 放在 `public/files/`，可用 `download` 暴露下载入口。
+3. 分类按固定顺序展示：`research` 论文分享、`projects` Project、`documents` 文档资料、`notes` 随手记。不要为填满页面添加虚构文章；零篇分类会展示明确空状态。AgenticASR 归论文分享，机器人导航归 Project，TCS 复习资料与《现代控制工程》大作业归文档资料，AuK 开源记录归随手记；分类调整不改变文章 URL。非 GitHub 外链显示「访问项目主页」，不显示仓库星标。
+4. `date` 只写确认的发布日期。外部项目没有已确认日期时留空；不要使用当前日期伪装发布时间。外链设 `external: true`；PDF 放在 `public/files/`，可用 `download` 暴露下载入口。课程大作业页可用 iframe 嵌入原 PDF，同时保留下载和新标签页打开；原始文件与网页概述需逐项核对。
 5. 首页精选默认使用目录第一条。其他条目按目录顺序显示。分类计数、双语搜索和内部文章 sitemap 自动读取该目录。
 6. 运行 `npm run lint` 和 `npm run build`，确认 `out/blog/<slug>/index.html` 生成，再按已有 GitHub Pages 流程发布。
 
@@ -39,9 +39,9 @@
 
 ## 视觉与素材
 
-- `app/globals.css` 是全站基础样式的唯一来源，统一浅海蓝配色、1120px 最大容器宽度、页头、页尾、中文字体与共用组件；`app/ocean.css` 仅管理 Blog 列表组件，避免重复覆盖基础样式。
+- `app/globals.css` 提供全站基础样式，`app/editorial.css` 统一学术阅读层级、字体与内容页组件；`app/ocean.css` 仅管理 Blog 列表组件，避免重复覆盖基础样式。
 - `app/blog/agenticasr/page.module.css` 只定义论文项目页布局，复用全站字体、配色和容器变量。不要再给项目页建立独立的深色主题。
-- 英文统一使用 DM Sans；中文优先使用本机苹方、冬青黑体、微软雅黑，缺失时回退到本地托管的 Noto Sans SC。标题与正文采用同一字体体系，不再混用 Manrope 与 Inter。正文桌面 18–20px、手机 17–18px；新闻 16–17px、论文作者 15px，辅助标签 12–14px。字体由 Next.js 在构建时下载并随静态站点托管；构建需能访问 Google Fonts，读者不需要连接 Google 字体服务。
+- 英文标题使用 Lora，英文正文使用 DM Sans；中文正文优先使用本机苹方、冬青黑体、微软雅黑，缺失时回退到本地托管的 Noto Sans SC，中文标题回退到宋体系。正文桌面约 16–18px、手机 16–17px；新闻 14–16px、论文作者 14–15px，辅助标签 12–14px。字体由 Next.js 在构建时下载并随静态站点托管；构建需能访问 Google Fonts，读者不需要连接 Google 字体服务。
 - 首页保留原有栏目与内容顺序，首屏采用左侧姓名／研究方向、右侧照片的布局；新闻默认显示最近三条，往期动态使用原生 details 展开，不再使用嵌套滚动框。照片、研究卡、导航、各页面正文与页尾共用同一容器对齐。
 - 全站页尾由根布局统一渲染一次。插画使用径向透明遮罩融入相同背景，不能通过裁出一个有底色的矩形来替代。
 - `/images/siam-logo.webp` 和 `siam-icon-*.png` 来自工作区 `assets/source-images/Logo.png`。
@@ -82,6 +82,7 @@
 - `/blog/`
 - `/blog/agenticasr/`
 - `/blog/tcs-review/`
+- `/blog/modern-control-engineering/`
 - `/blog/2026-05-27-test-post/`
 - `/notes/`
 - `/notes/tcs-review/`

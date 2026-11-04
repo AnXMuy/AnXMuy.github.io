@@ -27,7 +27,7 @@ export const internships = [
     detail: "X-LANCE Lab",
     meta: "Mentor: Xie Chen · Associate Professor · PhD Supervisor",
     metaHref: "https://chenxie95.github.io/zh",
-    focus: "Speech recognition, generation and editing",
+    focus: "Speech recognition, generation, and editing",
   },
   {
     date: "2024.09 - Present",

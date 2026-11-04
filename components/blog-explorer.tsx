@@ -7,11 +7,11 @@ import { useLanguage } from "@/components/language-provider";
 import { blogPosts, type BlogCategory, type BlogPost } from "@/data/blog";
 
 const categories = [
-  { id: "all", en: "All writing", zh: "全部内容" },
-  { id: "research", en: "Paper notes", zh: "论文分享" },
-  { id: "projects", en: "Project", zh: "Project" },
-  { id: "documents", en: "Documents", zh: "文档资料" },
-  { id: "notes", en: "Paper notes", zh: "论文笔记" },
+  { id: "all", en: "All posts", zh: "全部" },
+  { id: "research", en: "Research notes", zh: "研究笔记" },
+  { id: "projects", en: "Projects", zh: "项目" },
+  { id: "documents", en: "Documents", zh: "文档" },
+  { id: "notes", en: "Occasional notes", zh: "随记" },
 ] as const;
 
 function PostLink({ post, children, className }: { post: BlogPost; children: React.ReactNode; className?: string }) {
@@ -57,7 +57,7 @@ export function BlogExplorer() {
           {query && <button type="button" aria-label={text("Clear search", "清空搜索")} onClick={() => setQuery("")}><X size={16} /></button>}
         </div>
       </div>
-      <p className="blog-result-count" role="status">{text(`${filtered.length} entries · A growing collection`, `${filtered.length} 篇内容 · 持续积累中`)}</p>
+      <p className="blog-result-count" role="status">{text(`${filtered.length} ${filtered.length === 1 ? "entry" : "entries"}`, `${filtered.length} 条内容`)}</p>
       <div className="blog-list">
         {filtered.map((post) => <article className="blog-row" key={post.slug}>
           <PostLink post={post} className="blog-row-link">
@@ -66,8 +66,8 @@ export function BlogExplorer() {
           </PostLink>
         </article>)}
       </div>
-      {filtered.length === 0 && <div className="blog-empty"><Waves size={36} strokeWidth={1} /><h2>{text(query.trim() ? "No notes found" : "A little space for future notes", query.trim() ? "暂时没有找到相关内容" : "留一点空白，记一些日常")}</h2><p>{text(query.trim() ? "Try another keyword, or explore all topics." : "No posts here yet. Small observations, everyday ideas, and personal reflections will live here.", query.trim() ? "试试其他关键词，或返回全部内容。" : "这里还没有发布内容。零散的想法、日常发现和阶段复盘，之后会记录在这里。")}</p><button type="button" onClick={() => { setCategory("all"); setQuery(""); }}>{text("Explore all writing", "浏览全部内容")}<ArrowRight size={16} /></button></div>}
-      <aside className="blog-colophon"><Waves size={24} strokeWidth={1.3} /><div><strong>{text("Small notes, a longer journey.", "把沿途的思考，慢慢写下来。")}</strong><p>{text("Research, study, and the things learned in between. This collection grows one entry at a time.", "论文、学习，以及其间的经历与发现。这里会一篇一篇地更新。")}</p></div><span>ANDREW’S FIELD NOTES</span></aside>
+      {filtered.length === 0 && <div className="blog-empty"><Waves size={36} strokeWidth={1} /><h2>{text(query.trim() ? "No matching posts" : "Nothing here yet", query.trim() ? "没有找到相关内容" : "这个分类还没有内容")}</h2><p>{text(query.trim() ? "Try another keyword, or browse all posts." : "There are no posts in this section yet.", query.trim() ? "可以换个关键词，或查看全部内容。" : "这个分类目前还没有发布内容。")}</p><button type="button" onClick={() => { setCategory("all"); setQuery(""); }}>{text("View all posts", "查看全部内容")}<ArrowRight size={16} /></button></div>}
+      <aside className="blog-colophon"><Waves size={24} strokeWidth={1.3} /><div><strong>{text("Notes from the workbench.", "案头笔记。")}</strong><p>{text("Research, coursework, and the practical details that rarely make it into a paper.", "记录科研、课程与实践中那些通常不会写进论文的细节。")}</p></div><span>ANDREW’S NOTEBOOK</span></aside>
     </div>
   );
 }

@@ -23,32 +23,32 @@ export default function Home() {
               </p>
               <p>
                 <Localized
-                  en={<>I have been admitted to the PhD program in Computer Science at <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">Shanghai Innovation Institute</a> and the <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">School of Computer Science, Shanghai Jiao Tong University</a>. I will begin my studies in <strong>September 2027</strong> under the supervision of <a href="https://chenxie95.github.io/" target="_blank" rel="noreferrer">Xie Chen</a>. I currently conduct research with the X-LANCE Lab.</>}
-                  zh={<>我已获<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院</a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院</a>计算机科学博士录取，将于 <strong>2027 年 9 月</strong>入学，导师为<a href="https://chenxie95.github.io/" target="_blank" rel="noreferrer">陈谐老师</a>。目前我在 X-LANCE 实验室开展研究。</>}
+                  en={<>I have been admitted to the Computer Science PhD program at <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">Shanghai Innovation Institute</a> and the <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">School of Computer Science, Shanghai Jiao Tong University</a>. I will begin my doctoral studies in <strong>September 2027</strong> under the supervision of <a href="https://chenxie95.github.io/" target="_blank" rel="noreferrer">Xie Chen</a>, and I am currently working with the X-LANCE Lab.</>}
+                  zh={<>我已获<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院</a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院</a>计算机科学博士项目录取，将于 <strong>2027 年 9 月</strong>入学，导师为<a href="https://chenxie95.github.io/" target="_blank" rel="noreferrer">陈谐老师</a>。目前我在 X-LANCE 实验室开展研究。</>}
                 />
               </p>
               <p>
                 <Localized
-                  en={<>My research centers on <strong>Audio-Visual Intelligence</strong>: how audio-visual systems can better understand and represent the world, and interact and collaborate with people.</>}
-                  zh={<>我的研究主线是<strong>音视频多模态智能（Audio-Visual Intelligence）</strong>，关注音视频系统如何更好地理解和表征世界，并与人交互、协作。</>}
+                  en={<>My research centers on <strong>Audio-Visual Intelligence</strong>: how audio-visual systems understand and represent the world, and how they interact and collaborate with people.</>}
+                  zh={<>我的研究主线是<strong>音视频多模态智能（Audio-Visual Intelligence）</strong>，关注音视频系统如何理解并表征世界，以及如何与人交互、协作。</>}
                 />
               </p>
               <p className="collaboration-note">
                 <Localized
-                  en={<>I am open to research collaborations and internship opportunities in audio-visual intelligence. Please feel free to <a href={`mailto:${site.email}`}>get in touch</a>.</>}
-                  zh={<>欢迎交流音视频多模态智能方向的科研合作及研究实习机会，请通过<a href={`mailto:${site.email}`}>邮箱联系我</a>。</>}
+                  en={<>I am always glad to hear about research collaborations or internships in audio-visual intelligence. Feel free to <a href={`mailto:${site.email}`}>send me an email</a>.</>}
+                  zh={<>如果有音视频多模态智能方向的科研合作或实习机会，欢迎<a href={`mailto:${site.email}`}>发邮件联系我</a>。</>}
                 />
               </p>
-              <p className="personal-interests"><Localized en="Outside research, I enjoy music and playing the piano." zh="科研之外，我喜欢音乐，也喜欢弹钢琴。" /></p>
+              <p className="personal-interests"><Localized en="Outside of research, I enjoy music and playing the piano." zh="科研之外，我喜欢音乐，也喜欢弹钢琴。" /></p>
             </div>
           </ContentSection>
 
           <ContentSection index="02" title="Research Interests" id="research">
             <ul className="research-interests">
-              <li><Localized en={<><strong>Multimodal understanding & representation.</strong> I am interested in how audio and video can be used together to understand events and their context, and to learn representations of the world.</>} zh={<><strong>多模态理解与表征。</strong>联合音频与视频信息，理解事件及其上下文，探索对世界的多模态表征。</>} /></li>
-              <li><Localized en={<><strong>Human–AI interaction & collaboration.</strong> I explore how audio-visual systems can understand human intent, incorporate feedback, and support natural interaction and collaboration.</>} zh={<><strong>人机交互与协作。</strong>探索音视频系统如何理解人的意图与反馈，支持自然的交互与协作。</>} /></li>
+              <li><Localized en={<><strong>Multimodal understanding & representation.</strong> I study how audio and video can be combined to understand what is happening and why, and how models can learn representations that capture both.</>} zh={<><strong>多模态理解与表征。</strong>我研究如何结合音频与视频来理解正在发生什么、为何发生，以及模型如何学习保留两种模态信息的表征。</>} /></li>
+              <li><Localized en={<><strong>Human–AI interaction & collaboration.</strong> I study how audio-visual systems can interpret human intent, learn from feedback, and support natural interaction.</>} zh={<><strong>人机交互与协作。</strong>我关注音视频系统如何理解人的意图、利用反馈，并支持自然的交互与协作。</>} /></li>
             </ul>
-            <p className="earlier-research"><Localized en={<>My earlier research explored <strong>remote sensing image interpretation</strong>, including detailed localized captioning and open-vocabulary perception.</>} zh={<>此前，我开展了<strong>遥感图像解译</strong>相关研究，关注精细化区域描述与开放词汇感知。</>} /> <Link href="/publications/"><T zh="完整论文列表">Full publication list</T> →</Link></p>
+            <p className="earlier-research"><Localized en={<>My earlier work focused on <strong>remote sensing image interpretation</strong>, especially detailed localized captioning and open-vocabulary perception.</>} zh={<>我此前的研究聚焦<strong>遥感图像解译</strong>，尤其是精细区域描述与开放词汇感知。</>} /> <Link href="/publications/"><T zh="完整论文列表">Full publication list</T> →</Link></p>
           </ContentSection>
 
           <ContentSection index="03" title="News" id="news"><News /></ContentSection>

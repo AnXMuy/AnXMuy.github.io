@@ -10,7 +10,7 @@ export default function HonorsPage() {
   return (
     <main className="subpage-main">
       <div className="content-container">
-        <PageIntro eyebrow="Recognition" title="Honors & Awards" description="Scholarships and university distinctions earned throughout my undergraduate study." />
+        <PageIntro eyebrow="Recognition" title="Honors & Awards" description="Scholarships and university honors from my undergraduate years." />
         <div className="subpage-sections">
           <ContentSection index="01" title="Selected Honors"><Timeline items={honors} /></ContentSection>
         </div>

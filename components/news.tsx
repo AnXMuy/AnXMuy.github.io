@@ -8,21 +8,21 @@ export function News() {
       <article className="profile-news-item">
         <time dateTime="2026-10-16">2026.10.16</time>
         <Localized
-          en={<p>I received the <strong>National Scholarship</strong> for the second time!</p>}
-          zh={<p>第二次获得<strong>国家奖学金</strong>！</p>}
+          en={<p>I was awarded the <strong>National Scholarship</strong> for the second time.</p>}
+          zh={<p>再次获得<strong>国家奖学金</strong>。</p>}
         />
       </article>
       <article className="profile-news-item">
         <time dateTime="2026-09-24">2026.09.24</time>
         <Localized
           en={<p>
-            I have been officially admitted to the Computer Science PhD program at{" "}
+            I have been admitted to the Computer Science PhD program at{" "}
             <a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">Shanghai Innovation Institute<ArrowUpRight aria-hidden="true" /></a>{" "}
             and{" "}
             <a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">School of Computer Science, Shanghai Jiao Tong University<ArrowUpRight aria-hidden="true" /></a>, starting in September 2027.
           </p>}
           zh={<p>
-            正式被<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院<ArrowUpRight aria-hidden="true" /></a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院<ArrowUpRight aria-hidden="true" /></a>录取为计算机科学博士，将于 2027 年 9 月入学。
+            我已正式被<a href="https://www.sii.edu.cn/" target="_blank" rel="noreferrer">上海创智学院<ArrowUpRight aria-hidden="true" /></a>与<a href="https://cs.sjtu.edu.cn/" target="_blank" rel="noreferrer">上海交通大学计算机学院<ArrowUpRight aria-hidden="true" /></a>计算机科学博士项目录取，将于 2027 年 9 月入学。
           </p>}
         />
       </article>

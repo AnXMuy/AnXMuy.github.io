@@ -12,9 +12,9 @@ export default function TcsReviewPage() {
       <div className="content-container article-container">
         <PageIntro eyebrow="Document · 2026-05-27" title="TCS — Review & Cheatlist" description="Open-source Theoretical Computer Science exam review material for structured study and quick revision." />
         <Reveal className="article-body">
-          <h2><T>{"What is included"}</T></h2>
+          <h2><T>{"Overview"}</T></h2>
           <ul>
-            <li><T>{"Full review notes for Theoretical Computer Science exam preparation."}</T></li>
+            <li><T>{"Complete review notes for Theoretical Computer Science."}</T></li>
             <li><T>{"A compact cheat list for fast lookup before exams."}</T></li>
             <li><T>{"A downloadable 71-page PDF for offline reading."}</T></li>
           </ul>
