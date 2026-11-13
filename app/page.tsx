@@ -29,13 +29,13 @@ export default function Home() {
               </p>
               <p>
                 <Localized
-                  en={<>My research centers on <strong>Audio-Visual Intelligence</strong>: how audio-visual systems understand and represent the world, and how they interact and collaborate with people.</>}
-                  zh={<>我的研究主线是<strong>音视频多模态智能（Audio-Visual Intelligence）</strong>，关注音视频系统如何理解并表征世界，以及如何与人交互、协作。</>}
+                  en={<>My research centers on <strong>Audio-Visual Multimodal Intelligence</strong>: how audio-visual systems understand and represent the world, and how they interact and collaborate with people.</>}
+                  zh={<>我的研究主线是<strong>音视频多模态智能（Audio-Visual Multimodal Intelligence）</strong>，关注音视频系统如何理解并表征世界，以及如何与人交互、协作。</>}
                 />
               </p>
               <p className="collaboration-note">
                 <Localized
-                  en={<>I am always glad to hear about research collaborations or internships in audio-visual intelligence. Feel free to <a href={`mailto:${site.email}`}>send me an email</a>.</>}
+                  en={<>I am always glad to hear about research collaborations or internships in audio-visual multimodal intelligence. Feel free to <a href={`mailto:${site.email}`}>send me an email</a>.</>}
                   zh={<>如果有音视频多模态智能方向的科研合作或实习机会，欢迎<a href={`mailto:${site.email}`}>发邮件联系我</a>。</>}
                 />
               </p>

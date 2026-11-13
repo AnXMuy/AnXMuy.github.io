@@ -101,6 +101,7 @@ function StandardPaper({ paper }: { paper: StandardPublication }) {
       <div className="standard-copy">
         <h3><a href={paper.href} target="_blank" rel="noreferrer">{paper.title}</a></h3>
         <p>{formatAuthors(paper.authors)}</p>
+        {paper.submission ? <p className="standard-submission"><T zh={`${paper.submission} · 在投`}>{`${paper.submission} · Under review`}</T></p> : null}
         {paper.resources?.length ? <ResourceLinks resources={paper.resources} /> : null}
       </div>
       <a className="paper-open" href={paper.href} target="_blank" rel="noreferrer" aria-label={`Open ${paper.title}`}>

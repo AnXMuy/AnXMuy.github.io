@@ -28,6 +28,7 @@ export type StandardPublication = {
   id: string;
   venue: string;
   year: string;
+  submission?: string;
   title: string;
   href: string;
   authors: string;
@@ -185,7 +186,7 @@ export const publications: PublicationNode[] = [
       {
         kind: "featured",
         id: "human-like-interactive-asr",
-        submission: "TASLP",
+        submission: "Speech Communication",
         venue: "arXiv",
         year: "2026",
         title:
@@ -235,6 +236,7 @@ export const publications: PublicationNode[] = [
         id: "auk",
         venue: "arXiv",
         year: "2026",
+        venueNote: "Technical Report",
         title: "AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing",
         href: "https://arxiv.org/abs/2609.08936",
         authors:
@@ -260,6 +262,7 @@ export const publications: PublicationNode[] = [
         id: "mmae",
         venue: "arXiv",
         year: "2026",
+        submission: "ICLR 2027",
         title: "MMAE: A Massive Multitask Audio Editing Benchmark",
         href: "https://arxiv.org/abs/2606.07229",
         authors:

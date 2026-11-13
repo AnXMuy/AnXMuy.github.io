@@ -2,7 +2,7 @@ export const site = {
   name: "Zixuan Jiang",
   preferredName: "Andrew",
   initials: "ZJ",
-  description: "Zixuan Jiang's academic homepage. Research areas: audio-visual intelligence, multimodal perception and representation, and human–AI interaction.",
+  description: "Zixuan Jiang's academic homepage. Research areas: audio-visual multimodal intelligence, multimodal perception and representation, and human–AI interaction.",
   email: "zixuanjiang2006@gmail.com",
   backupEmail: "andrewjiang@stu.xjtu.edu.cn",
   location: "Xi'an, China",

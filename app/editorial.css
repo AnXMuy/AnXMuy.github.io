@@ -122,6 +122,7 @@ html[lang="zh-CN"] .page-intro h1 { letter-spacing: 0; line-height: 1.38; }
 .featured-copy h3 a, .standard-copy h3 a { color: var(--accent); }
 .paper-authors, .standard-copy > p { font-size: 14px; line-height: 1.75; }
 .paper-venue-note, .paper-submission { margin-bottom: 10px; font-size: 13px; color: var(--muted); }
+.standard-submission { margin-top: 6px; font-size: 12px; color: var(--muted); }
 .paper-highlights { font-size: 15px; margin-top: 14px; }
 .resource-links { gap: 6px; margin-top: 12px; }
 .resource-entry { border-radius: 3px; background: #fff; }
